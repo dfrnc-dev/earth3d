@@ -2,13 +2,10 @@
 .vscode/
 node_modules/
 dist/
-src/assets/media/
-src/assets/img/
-src/assets/model/
+src/assets/css/.sass-cache
 .DS_Store
 *.tgz
 *.zip
-template/src/__tests__/__snapshots__/
 lerna-debug.log
 npm-debug.log*
 yarn-debug.log*
