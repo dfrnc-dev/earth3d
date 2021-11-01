@@ -33,17 +33,9 @@ import vertex from "@assets/shader/vertex.glsl"
 import atmosphereFragment from "@assets/shader/atmosphereFragment.glsl"
 import atmosphereVertex from "@assets/shader/atmosphereVertex.glsl"
 
-
-
-// import '@assets/model/textures/earth.jpg'
-// import '@assets/model/earth3D.bin'
-// import gltfPath from '@assets/model/earth3D.gltf'
-//
-
-// import '@assets/model/textures/earth2.jpg'
-// import '@assets/model/earthgrid.bin'
-// import gltfPath from '@assets/model/earthgrid.gltf'
-
+/**
+ * 3d model
+ */
 import gltfPath from '@assets/model/allModels.gltf'
 require("@assets/model/allModels.bin")
 require("@assets/model/textures/Red_plastic_baseColor.jpg")
@@ -60,12 +52,12 @@ import earthShineBlobeTextureImg from '@assets/img/fair_clouds.jpg'
 import moonTextureImg from '@assets/img/moonText.jpg'
 import moonTextureNormalsImg from '@assets/img/moonNormals.jpg'
 import sunTextureImg from '@assets/img/sunShine.jpg'
-import spaceTextureImg from '@assets/img/galaxy_starfield.png'
+
 
 import audioStoryMP3 from "@assets/media/scenario-v2.7.mp3"
 import {textForAnimation} from "@assets/js/text_for_animation.js"
-import {Scene} from "three";
-import {Vec3} from "three/examples/jsm/libs/OimoPhysics";
+
+
 
 let genesisDate = "Nov 05, 2021 13:45:00"
 let timerInterval
@@ -1176,9 +1168,10 @@ window.addEventListener("load",function () {
             .to(".endTitle .content",{duration:3,opacity:0,ease:"sine.out"},">-3")
             .add(
                 gsap.timeline()
-                    .to(audioStory,{duration:0.01,progress:2058.11})
-                    .to(audioStory.id,{duration:0.01,attr:{"data-play": true},volume:1,currentTime:2058.11},"<")
-                    .to(audioStory,{duration:228,progress:2058.11 + 228,ease:"none"},">")
+                    .to(audioStory,{duration:0.01,progress:2059})
+                    .to(audioStory.id,{duration:0.01,attr:{"data-play": true},volume:0,currentTime:2059},"<")
+                    .to(audioStory.id,{duration:3,volume:1},">")
+                    .to(audioStory,{duration:228,progress:2059 + 228,ease:"none"},"<")
                     // .to(audioStory.id,{duration:2,volume:0.2},">-10")
                     .to(audioStory.id,{duration:0.01,attr:{"data-play": false},volume:0},">")
 
