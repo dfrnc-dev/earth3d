@@ -1,0 +1,198 @@
+.chatForStory{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Play", sans-serif;
+    z-index: 15;
+    opacity: 0;
+    visibility: hidden;
+
+    .title{
+        margin: 5% 10%;
+        text-align: center;
+        color: #C8CAFF;
+
+        h2 {
+            font-size: 50px;
+            margin: 0;
+            line-height: 1.3em;
+            font-weight: normal;
+            opacity: 0;
+        }
+        h3{
+            font-size: 45px;
+            margin: 0;
+            line-height: 1.3em;
+            font-weight: normal;
+            opacity: 0;
+        }
+    }
+
+    .content{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #ffffff;
+        font-size: calc( 1.5vw + 1.5vh);
+        width: 50%;
+        height: max-content;
+        min-height: 1em;
+        max-height: 50%;
+        padding: 20px 25px;
+        margin:  auto;
+        display: flex;
+        line-height: 1.3em;
+
+
+        .contentClip{
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            //margin-bottom: -20px;
+        }
+
+
+
+        .column-left{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: rgba(236,236,251,1);
+            box-shadow: 0 0 10px rgba(236,236,251,0.5), 0 0 22px rgba(1,46,151,0.5);
+        }
+
+        .column-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(3, 3, 107);
+            background: linear-gradient(90deg, rgba(3, 3, 107, 0.5) 0%, rgba(3, 3, 107, 0) 50%);
+        }
+        .dialog{
+            position: relative;
+            //display: flex;
+            //align-items: flex-end;
+            //flex-direction: column;
+            //justify-content: flex-end;
+            //position: absolute;
+            //bottom: 0;
+            //min-height: calc(50% + 1em / 2);
+
+            .label-pink{
+                color: #E960FF;
+            }
+            .label-blue{
+                color: #1FCBFF;
+            }
+            .label-yellow{
+                color: #FFD900;
+            }
+        }
+        .dialog_role{
+            //margin-bottom: 1.3em;
+        }
+    }
+}
+
+.chatAfterManifest,
+.chatAfterDodecadron{
+
+    .content {
+        left: 5%;
+        right: initial;
+    }
+
+}
+.chatCheckDodecadron,
+.chatForBottom{
+    .checkPlate{
+        position: absolute;
+        top: 8%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 75%;
+        height: 67%;
+
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+
+            .column{
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-between;
+            }
+        }
+
+        .item{
+            position: relative;
+            padding: 2% 5%;
+            margin: 2%;
+            //width: max-content;
+
+            .column-left{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0.2vw;
+                height: 100%;
+                background: rgba(236,236,251,1);
+                box-shadow: 0px 0px 5px 1px rgba(54, 214, 174, 1);
+                border-radius: 0px 0px 1px 1px;
+            }
+
+            .column-back {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255,255,255,0.5);
+                background: linear-gradient(-90deg, rgba(217, 217, 217, 0) 0%, rgba(54, 214, 174, 0.2) 100%);
+            }
+
+            h3{
+                color: #FFD900;
+                font-size: calc( 0.8vw + 0.8vh);
+                font-weight: 400;
+            }
+
+            p{
+                color: #ffffff;
+                font-size: calc( 0.6vw + 0.6vh);
+
+                span{
+                    color: #36D6AE;
+                }
+            }
+        }
+
+
+    }
+
+    .content{
+        width: 80%;
+        max-height: 2.6em;
+        top: initial;
+        bottom: 5%;
+    }
+}
+.chatHeartBlock{
+    .content{
+        width: max-content;
+        max-height: 100%;
+    }
+
+}

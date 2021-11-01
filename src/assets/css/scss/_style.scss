@@ -1,0 +1,137 @@
+html{
+    min-height: -webkit-fill-available;
+}
+body{
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
+h1{
+    position: relative;
+    color: #ffffff;
+    font-size: 58px;
+    text-align: center;
+    padding: 100px;
+    z-index: 10;
+}
+
+/********************/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+}
+/********************/
+.wrapper-animation{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    font-family: "Play", sans-serif;
+}
+
+.timerEnd{
+    font-family: "Play", sans-serif ;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+}
+.timer_container {
+    font-size: calc(16px + (30 - 16) * (100vw - 400px) / (800 - 400));
+    color: #ffffff;
+    text-align: center;
+}
+
+.btn-home {
+    font-family: "Play", sans-serif ;
+    height: 42px;
+    white-space: nowrap;
+    background-color: #000;
+    border: none;
+    font-family: "Play",sans-serif;
+    outline: none;
+    padding: 0 50px;
+    font-size: 18px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0 #38d6ae;
+    text-shadow: 0 0 25px #36d6ae;
+    color: #36d6ae;
+    -webkit-text-stroke: .5px rgba(54,214,174,.403921568627451);
+    transition: opacity .4s;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin-right: -50%;
+    left: 50%;
+    bottom: 50px;
+    z-index: 20;
+    cursor: pointer;
+}
+
+
+.chatContainer{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slidesContainer{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    opacity: 0;
+    visibility: hidden;
+    background: black;
+}
+.slide-content {
+    padding: 10%;
+    font-size: calc(16px + (30 - 16) * (100vw - 400px) / (800 - 400));
+    text-align: justify;
+    overflow: hidden;
+    color: yellow;
+}
+.slide-title {
+    color: rgb(75, 213, 238);
+    font-size: calc(16px + (30 - 16) * (100vw - 400px) / (800 - 400));
+    line-height: 1em;
+    font-weight: 200;
+}
+
+.finalTitleContainer{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    opacity: 0;
+    visibility: hidden;
+    background: #000343;
+}
+
+
+
+.gs-dev-tools{
+    z-index: 9999;
+    position: fixed;
+}
+.gs-dev-tools .time-scale,
+.gs-dev-tools .rewind,
+.gs-dev-tools .select-animation,
+.gs-dev-tools .loop{
+    display: none;
+}

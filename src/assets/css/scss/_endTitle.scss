@@ -1,0 +1,39 @@
+.endTitle{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+
+    .content{
+        transform: translateY(100vh);
+        text-align: center;
+        color: white;
+
+        h2{
+            margin: 7% auto;
+            font-size: calc(3vw + 3vh);
+        }
+
+        h3{
+            margin: 5% auto;
+            font-size: calc(2.5vw + 2.5vh);
+        }
+        h4{
+            margin: 3% auto;
+            font-size: calc(2vw + 2vh);
+        }
+        p{
+            font-size: calc(1vw + 1vh);
+            line-height: 1.3em;
+        }
+
+
+    }
+}
