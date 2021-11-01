@@ -262,20 +262,20 @@ window.addEventListener("load",function () {
 
 
 
-        const params = {
-            // exposure: 1,
-            bloomStrength: 0.3,
-            bloomThreshold: 0.1,
-            bloomRadius: 1
-        };
-        const renderScene = new RenderPass( scene, camera );
-        const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
-        bloomPass.threshold = params.bloomThreshold;
-        bloomPass.strength = params.bloomStrength;
-        bloomPass.radius = params.bloomRadius;
-        composer = new EffectComposer( renderer );
-        composer.addPass( renderScene );
-        composer.addPass( bloomPass );
+        // const params = {
+        //     // exposure: 1,
+        //     bloomStrength: 0.3,
+        //     bloomThreshold: 0.1,
+        //     bloomRadius: 1
+        // };
+        // const renderScene = new RenderPass( scene, camera );
+        // const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
+        // bloomPass.threshold = params.bloomThreshold;
+        // bloomPass.strength = params.bloomStrength;
+        // bloomPass.radius = params.bloomRadius;
+        // composer = new EffectComposer( renderer );
+        // composer.addPass( renderScene );
+        // composer.addPass( bloomPass );
 
         // const controls = new OrbitControls( camera, renderer.domElement );
         // controls.update();
@@ -331,6 +331,7 @@ window.addEventListener("load",function () {
             // }
             renderer.setSize( width, height );
             renderer.setPixelRatio(window.devicePixelRatio);
+            if(composer)composer.setPixelRatio(window.devicePixelRatio);
 
         }
 
@@ -348,7 +349,7 @@ window.addEventListener("load",function () {
         }
         let starsColors = [0x7F5096,0x6E98B4,0xffffff]
 
-        for ( let i = 0; i < 4000; i ++ ) {
+        for ( let i = 0; i < (window.innerWidth/1920*4000); i ++ ) {
 
             const object = new THREE.Mesh(
                 new THREE.SphereGeometry( Math.random()*1+0.5, 10,10 ),
@@ -559,10 +560,10 @@ window.addEventListener("load",function () {
 
 
         cameraTarget = new THREE.Mesh(
-            new THREE.SphereGeometry(1, 10, 10),
-            new THREE.MeshStandardMaterial({color: 0xff0000})
+            // new THREE.SphereGeometry(1, 10, 10),
+            // new THREE.MeshStandardMaterial({color: 0xff0000})
         )
-        if(window.location.hostname != "localhost") cameraTarget.material.visible = false
+        // if(window.location.hostname != "localhost") cameraTarget.material.visible = false
         cameraTarget.position.set(0,500,0)
         moonWrap.add(cameraTarget)
 
@@ -789,7 +790,6 @@ window.addEventListener("load",function () {
             .to(audioStory,{duration:0.01,progress:0})
             .to(audioStory.id,{duration:0.01,attr:{"data-play": true},volume:0.5,currentTime:0},"<")
 
-            .to(".timerEnd",{duration:0.5,top:"-10%",fontSize:10,scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"sine.inOut"},">")
             .to(".story #title",{duration:0.5,autoAlpha:1},"qq")
 
 
@@ -1145,18 +1145,19 @@ window.addEventListener("load",function () {
         let presentationTl = gsap.timeline({paused:true})
             .to(".smartapePresentation .chatForStory",{autoAlpha:1})
             .add(typeAnim(".smartapePresentation .chatForStory .title h2","title"),"<")
+            .to(".smartapePresentation .chatForStory .title",{duration:2,autoAlpha:0,ease:"sine.out"},">+1")
 
             .from(".smartapePresentation .chatForStory .content",{duration:1,width:"0%",ease:"back.out(1)"},">")
             .from(".smartapePresentation .chatForStory .content",{duration:1,opacity:0,ease:"none"},"<")
-            // .to(".chatAfterManifest .title > *",{opacity:0,y:-10,ease:"sine.in",stagger:0.2})
-            // .from(".chatAfterManifest .dialog_role",{duration:1,y:20,opacity:0,ease:"sine.out",stagger:{amount:5}},"<")
-            .add(typeAnim(".smartapePresentation .chatForStory .dialog1 .dialog_role","dialog"),"<")
 
-            .to(".smartapePresentation .chatForStory .content .dialog",{duration:0.5,opacity:0,ease:"sine.in"},">+5")
+            .add(arrTextAnim["chatForPresentation"].restart(),"<")
+
+            .to(".smartapePresentation .chatForStory .content .dialog",{duration:0.5,opacity:0,ease:"sine.in"},">")
             .to(".smartapePresentation .chatForStory .content",{duration:1,width:"0%",ease:"back.out(1)"},">")
             .to(".smartapePresentation .chatForStory",{autoAlpha:0},"<")
 
-            .to(".smartapePresentation .slideContainer .slide",{autoAlpha:1,stagger:{each:2,repeat:1,yoyo:true,repeatDelay:1.5}},">")
+            // .to(".smartapePresentation .slideContainer .slide",{autoAlpha:1,stagger:{each:2,repeat:1,yoyo:true,repeatDelay:1.5}},">")
+
 
         /**
          * endTitleTl
@@ -1196,6 +1197,8 @@ window.addEventListener("load",function () {
         mainTl = gsap.timeline({id:"mainTl",paused:true})
             .set(".text-wrapper",{opacity:0,y:10})
             .to(".btn-home",{duration:0.5,autoAlpha:0})
+            .to(".timerEnd",{duration:0.1,top:"-10%",fontSize:10,scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"sine.inOut"},"<")
+            .to(".startScreen",{duration:1,autoAlpha:0,display:"none"},"<")
             .add(starWarsTl.restart())
             .add(chatAfterStoryTl.restart(),">-2")
 
@@ -1249,7 +1252,7 @@ window.addEventListener("load",function () {
             .to(cameraTarget.position,{duration:3,x:0,y:0, z:0,ease:"sine.inOut"},"<")
 
 
-        timeRotate = sputnikTl.duration()-1
+        timeRotate = sputnikTl.duration()
         mainTl
             .add(sputnikTl.restart(),"<-1")
             .add("endPlanetParad",">")
@@ -1259,42 +1262,35 @@ window.addEventListener("load",function () {
             .to(cameraWrapper.rotation,{duration:20,y:"+="+THREE.MathUtils.degToRad(-40),ease:"none"},">-80")
             .to(cameraWrapper.rotation,{duration:20,y:"+="+THREE.MathUtils.degToRad(20),ease:"none"},">")
 
-        timeRotate = 284
+        timeRotate = chatItWorksTl.duration()
         mainTl
             .to(moonWrap.rotation,{duration:timeRotate,y:"+=-"+THREE.MathUtils.degToRad(360*timeRotate/120),ease:"none"},"endPlanetParad-=1")
             .to(earth.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*timeRotate/60),ease:"none"},"<")
-            .to(cameraWrapper.rotation,{duration:timeRotate-15,y:"+="+THREE.MathUtils.degToRad(360*(timeRotate-15)/120),ease:"none"},"endPlanetParad+=15")
+            .to(cameraWrapper.rotation,{duration:timeRotate-16,y:"+="+THREE.MathUtils.degToRad(360*(timeRotate-16)/120),ease:"none"},"endPlanetParad+=15")
             .add(chatItWorksTl.restart(),"endPlanetParad")
             .add("startPresentation",">")
 
             .to(".header",{duration:1,autoAlpha:1},"<+5")
             .to(cameraTarget.position,{duration:15,x:19,y:0,z:0,ease:"sine.inOut"},"<")
-            .to(camera.position,{duration:15,x:0,y:0,z:20,ease:"sine.inOut"},"<+3")
+            .to(camera.position,{duration:15,x:-1.5,y:0,z:20,ease:"sine.inOut"},"<+3")
 
-            .add(presentationTl.restart(),"startPresentation")
+        timeRotate = presentationTl.duration()+endTitleTl.duration()+1
+        mainTl
+            .to(moonWrap.rotation,{duration:timeRotate,y:"+=-"+THREE.MathUtils.degToRad(360*timeRotate/120),ease:"none"},"-=1")
+            .to(earth.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*timeRotate/60),ease:"none"},"<")
+            .to(cameraWrapper.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*(timeRotate)/120),ease:"none"},"<")
+
+            .add(presentationTl.restart(),"<")
 
             .add(endTitleTl.restart(),">")
-            .to(".wrapper-animation > *",{autoAlpha:0},">")
+            .to(".wrapper-animation > *",{duration:1,autoAlpha:0},">")
+
 
         /**
          * function start/stop audio
          */
         let mainTlProg = 0
         setInterval(()=>{
-            // if(audioStory.id.getAttribute("data-play") == "true"){
-            //     if(mainTl.paused() || mainTl.progress() == mainTlProg){
-            //         audioStory.id.pause()
-            //         audioStory.id.currentTime = audioStory.progress
-            //     }else{
-            //         if(audioStory.id.paused){
-            //             // console.log(audioStory.id.currentTime,audioStory.progress)
-            //             audioStory.id.currentTime = audioStory.progress
-            //         }
-            //         audioStory.id.play()
-            //     }
-            //     mainTlProg = mainTl.progress()
-            // }
-
             if (audioStory.id.paused !== undefined) {
                 if (mainTl.paused() || mainTl.progress() == mainTlProg) {
                     if (audioStory.id.getAttribute("data-play") == "true" && !audioStory.id.paused) {

@@ -8,4 +8,9 @@ require("@assets/img/chatSvg.svg")
 
 
 import '@assets/css/style.css'
+import {textForTitle} from '@assets/js/text_for_title.js'
+import '@assets/js/startScreen.js'
 import '@assets/js/animation.js'
+
+textForTitle(".endTitle .column_wraper")
+

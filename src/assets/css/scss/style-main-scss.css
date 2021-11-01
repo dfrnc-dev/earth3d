@@ -67,7 +67,9 @@ h1 {
   left: 50%;
   bottom: 50px;
   z-index: 20;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden; }
 
 .chatContainer {
   position: absolute;
@@ -122,6 +124,39 @@ h1 {
 .gs-dev-tools .select-animation,
 .gs-dev-tools .loop {
   display: none; }
+
+.startScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  z-index: 10; }
+  .startScreen svg {
+    width: 100%;
+    height: 100%;
+    max-height: 80%;
+    opacity: 0; }
+  .startScreen .genesis-text {
+    font-family: 'Play', sans-serif;
+    font-size: 90px;
+    color: #ffffff;
+    text-align: center; }
+  .startScreen .genesis-text-small {
+    font-family: 'Play', sans-serif;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+    opacity: .5; }
+  .startScreen .timer_container {
+    font-family: 'Play', sans-serif;
+    font-size: 70px;
+    color: #ffffff;
+    text-align: center; }
 
 .story {
   /*background-color: black;*/
@@ -422,7 +457,7 @@ h1 {
       font-size: calc(3vw + 3vh); }
   .smartapePresentation .chatForStory .content {
     width: 80%;
-    max-height: 20%;
+    max-height: 3.9em;
     top: initial;
     bottom: 5%; }
   .smartapePresentation .slideContainer {
@@ -455,6 +490,20 @@ h1 {
     transform: translateY(100vh);
     text-align: center;
     color: white; }
+    .endTitle .content .item {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 2% 0; }
+      .endTitle .content .item .item-title {
+        min-width: 56%;
+        text-align: left; }
+      .endTitle .content .item .item-num1 {
+        min-width: 22%;
+        text-align: right; }
+      .endTitle .content .item .item-num2 {
+        min-width: 22%;
+        text-align: right; }
     .endTitle .content h2 {
       margin: 7% auto;
       font-size: calc(3vw + 3vh); }
@@ -462,8 +511,8 @@ h1 {
       margin: 5% auto;
       font-size: calc(2.5vw + 2.5vh); }
     .endTitle .content h4 {
-      margin: 3% auto;
-      font-size: calc(2vw + 2vh); }
+      margin: 1% auto;
+      font-size: calc(1.5vw + 1.5vh); }
     .endTitle .content p {
       font-size: calc(1vw + 1vh);
       line-height: 1.3em; }

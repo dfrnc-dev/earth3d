@@ -16,6 +16,26 @@
         text-align: center;
         color: white;
 
+        .item{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 2% 0;
+
+            .item-title{
+                min-width: 56%;
+                text-align: left;
+            }
+            .item-num1{
+                min-width: 22%;
+                text-align: right;
+            }
+            .item-num2{
+                min-width: 22%;
+                text-align: right;
+            }
+        }
+
         h2{
             margin: 7% auto;
             font-size: calc(3vw + 3vh);
@@ -26,14 +46,13 @@
             font-size: calc(2.5vw + 2.5vh);
         }
         h4{
-            margin: 3% auto;
-            font-size: calc(2vw + 2vh);
+            margin: 1% auto;
+            font-size: calc(1.5vw + 1.5vh);
         }
         p{
             font-size: calc(1vw + 1vh);
             line-height: 1.3em;
         }
-
 
     }
 }
