@@ -1,9 +1,46 @@
+.videoHowInstall{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 100%;
+    overflow: hidden;
+
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+    }
+}
+.smartapeMonkey {
+    position: absolute;
+    bottom: -1%;
+    right: 0;
+    width: 20%;
+    max-width: 300px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
 .smartapePresentation{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
+
+    svg{
+        width: 100%;
+        height: 100%;
+    }
 
     .chatForStory{
 
@@ -27,12 +64,26 @@
 
     .slideContainer{
         position: absolute;
-        top: 0;
+        top: 10%;
+        left: 0;
         right: 0;
-        width: 80%;
-        height: 100%;
-        overflow: hidden;
+        width: 90%;
+        height: 70%;
+        margin: auto;
 
+        .slide-content {
+            padding: 10%;
+            font-size: calc(16px + (30 - 16) * (100vw - 400px) / (800 - 400));
+            text-align: justify;
+            overflow: hidden;
+            color: yellow;
+        }
+        .slide-title {
+            color: rgb(75, 213, 238);
+            font-size: calc(16px + (30 - 16) * (100vw - 400px) / (800 - 400));
+            line-height: 1em;
+            font-weight: 200;
+        }
         .slide{
             position: absolute;
             top: 0;
@@ -40,6 +91,49 @@
             opacity: 0;
             visibility: hidden;
         }
+        .header-talking {
+            position: absolute;
+            transform-origin: center;
+            transform: rotate(60deg);
+            width: 40px;
+            height: 40px;
+            border-right : 2px solid #7AFAA1;
+            border-radius: 50%;
+            left: 0;
+            top: 12px;
+            left: 4px;
+            z-index: 55;
+        }
+        .header-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .header-container img {
+            z-index: 2;
+        }
+        #sl18, #sl19, #sl22 {
+            position: absolute;
+            width: 100%;
+            top: 15%;
+        }
+        #sl18 img, #sl19 img, #sl22 img {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #sl22 img:last-of-type {
+            position: absolute;
+            max-width: 60%;
+        }
+        #sl1T, #sl1, #gsl12, #gsl13,
+        #sl2,#sl2Mon,#sl2P,#sl3,#gsl32,#gsl33,#sl4,#sl5, #gsl52, #gsl53, #gsl54,
+        #sl6,#gsl62,#sl7,#sl8,#gsl82,#sl10,#sl11,#sl12,#sl13,#gsl132,#gsl133,#sl14,
+        #sl15,#gsl152,#sl16,#gsl162,#sl17,#sl18,#sl19,#sl20,#sl21,#gsl212,#sl22{
+            opacity: 0;
+        }
+
     }
+
 
 }

@@ -659,31 +659,32 @@ gsap.set('.startScreen svg', {opacity: 1})
 gsap.set('#gH1 > *, #gH2 > *', {pointerEvents: 'all', cursor: 'pointer'})
 gsap.set('#gF > *', {opacity: .4})
 
-document.querySelectorAll('#gH1 > *').forEach(item => {
-    const id = item.id.replace(/\D/g,'')
-    item.addEventListener('mouseenter', () => {
-        gsap.to(`#gA > path:nth-of-type(${id})`, {scale: 1.3, transformOrigin: 'center'})
-    })
-    item.addEventListener('mouseleave', () => {
-        gsap.to(`#gA > path:nth-of-type(${id})`, {scale: 1, transformOrigin: 'center'})
-    })
-})
-
-document.querySelectorAll('#gH2 > *').forEach(item => {
-    const id = item.id.replace(/\D/g,'')
-    item.addEventListener('mouseenter', () => {
-        groupsStartScreen[+id - 1].forEach(grad => {
-            gsap.to(`#gF > path:nth-of-type(${grad})`, {opacity: 1})
-        })
-    })
-    item.addEventListener('mouseleave', () => {
-        groupsStartScreen[+id - 1].forEach(grad => {
-            gsap.to(`#gF > path:nth-of-type(${grad})`, {opacity: .4})
-        })
-    })
-})
+// document.querySelectorAll('#gH1 > *').forEach(item => {
+//     const id = item.id.replace(/\D/g,'')
+//     item.addEventListener('mouseenter', () => {
+//         gsap.to(`#gA > path:nth-of-type(${id})`, {scale: 1.3, transformOrigin: 'center'})
+//     })
+//     item.addEventListener('mouseleave', () => {
+//         gsap.to(`#gA > path:nth-of-type(${id})`, {scale: 1, transformOrigin: 'center'})
+//     })
+// })
+//
+// document.querySelectorAll('#gH2 > *').forEach(item => {
+//     const id = item.id.replace(/\D/g,'')
+//     item.addEventListener('mouseenter', () => {
+//         groupsStartScreen[+id - 1].forEach(grad => {
+//             gsap.to(`#gF > path:nth-of-type(${grad})`, {opacity: 1})
+//         })
+//     })
+//     item.addEventListener('mouseleave', () => {
+//         groupsStartScreen[+id - 1].forEach(grad => {
+//             gsap.to(`#gF > path:nth-of-type(${grad})`, {opacity: .4})
+//         })
+//     })
+// })
 
 
 function onCompleteStartScreen(){
+    if(!document.body.classList.contains("animEarthStart"))
     gsap.to(".btn-home",{autoAlpha:1})
 }

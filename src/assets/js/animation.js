@@ -2,6 +2,7 @@ import * as THREE from 'three'
 import { gsap } from "gsap/all";
 import GSDevTools from "@assets/js/dtgsap.min.js"
 import {typeAnim} from "@assets/js/typeAnim"
+import { slideAnimation } from "@assets/js/slideAnimation";
 import { WEBGL } from 'three/examples/jsm/WebGL.js';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'
 import { Flow  } from "three/examples/jsm/modifiers/CurveModifier";
@@ -54,7 +55,11 @@ import moonTextureNormalsImg from '@assets/img/moonNormals.jpg'
 import sunTextureImg from '@assets/img/sunShine.jpg'
 
 
-import audioStoryMP3 from "@assets/media/scenario-v2.7.mp3"
+// import audioStoryMP3 from "@assets/media/Genesis_full_mix2_100VBR.mp3"
+// import audioStoryMP3 from "@assets/media/scenario-v2.7.mp3"
+import audioStoryMP3 from "@assets/media/scenario-final.mp3"
+import videoHowInstall from "@assets/media/genesis-video.mp4"
+
 import {textForAnimation} from "@assets/js/text_for_animation.js"
 
 
@@ -148,6 +153,10 @@ window.addEventListener("load",function () {
         id : "",
         progress : 0,
     }
+    let videoStory = {
+        id : "",
+        progress : 0,
+    }
     var materialShader;
 
 
@@ -175,6 +184,7 @@ window.addEventListener("load",function () {
         RectAreaLightUniformsLib.init();
 
         audioStory.id = document.getElementById("audioStory")
+        videoStory.id = document.getElementById("videoStory")
 
         const container = document.querySelector( '.animationContainer-canvas' );
         const  textureLoader = new THREE.TextureLoader()
@@ -349,7 +359,7 @@ window.addEventListener("load",function () {
         }
         let starsColors = [0x7F5096,0x6E98B4,0xffffff]
 
-        for ( let i = 0; i < (window.innerWidth/1920*4000); i ++ ) {
+        for ( let i = 0; i < 1000; i ++ ) {
 
             const object = new THREE.Mesh(
                 new THREE.SphereGeometry( Math.random()*1+0.5, 10,10 ),
@@ -754,6 +764,16 @@ window.addEventListener("load",function () {
             }
         })
 
+        dodecahedron.userData.rotY = 0
+        dodecahedron.userData.tempRotY = 0
+        // dodecahedron.rotateY(-30*Math.PI/180)
+        let dodecahedronRotTl = gsap.timeline({paused:false}).to(dodecahedron.userData,{duration:120,rotY:360,repeat:-1,ease:"none"
+            ,onUpdate:function () {
+                dodecahedron.rotateZ(dodecahedron.userData.rotY*Math.PI/180 - dodecahedron.userData.tempRotY)
+                dodecahedron.userData.tempRotY = dodecahedron.userData.rotY*Math.PI/180;
+            }
+        })
+
 
 
 
@@ -788,7 +808,7 @@ window.addEventListener("load",function () {
         let starWarsTl = gsap.timeline({paused:true})
 
             .to(audioStory,{duration:0.01,progress:0})
-            .to(audioStory.id,{duration:0.01,attr:{"data-play": true},volume:0.5,currentTime:0},"<")
+            .to(audioStory.id,{duration:0.01,attr:{"data-play": true},volume:1,currentTime:0},"<")
 
             .to(".story #title",{duration:0.5,autoAlpha:1},"qq")
 
@@ -801,8 +821,8 @@ window.addEventListener("load",function () {
             .to(".story .content #text",{duration:3,top:"-20%",ease:"sine.in"},"<")
 
             .to(audioStory,{duration:69,progress:69,ease:"none"},"qq")
-            .to(audioStory.id,{duration:4,volume:0,ease:"sine.in"},">-3")
-            .to(".story",{duration:3,autoAlpha:0},"<+3")
+            .to(audioStory.id,{duration:4,volume:0,ease:"sine.in"},">-4")
+            .to(".story",{duration:3,autoAlpha:0},">-3")
             .to(audioStory.id,{duration:0.01,attr:{"data-play": false},volume:0})
 
 
@@ -1055,7 +1075,8 @@ window.addEventListener("load",function () {
             .to(moonRoketIn.rotation,{duration:20,x:THREE.MathUtils.degToRad(-90),y:THREE.MathUtils.degToRad(-90),z:THREE.MathUtils.degToRad(10),ease:"none"},">-40")
             .to(moonRoket.rotation,{duration:20,x:THREE.MathUtils.degToRad(0),y:THREE.MathUtils.degToRad(20),z:THREE.MathUtils.degToRad(0),ease:"none"},"<")
             .add("endPussi",">")
-            .to(".chatAsBeautiful",{autoAlpha:1},">-5")
+
+            .to(".chatAsBeautiful",{autoAlpha:1},"endPussi-=5")
             .from(".chatAsBeautiful .content",{duration:1,width:"0%",ease:"back.out(1)"},">")
             .from(".chatAsBeautiful .content",{duration:1,opacity:0,ease:"none"},"<")
 
@@ -1083,11 +1104,12 @@ window.addEventListener("load",function () {
         sputnik.userData.curvePos = 0.01
         let sputnikTl = gsap.timeline({paused:true,repeat:0})
             .from(sputnik.scale,{duration:0.01,x:0,y:0,z:0,ease:"none"})
-            .to(sputnik.userData,{duration:121.9,curvePos:1,ease:"none"
+            .to(sputnik.userData,{duration:(21*60+6.2)-(19*60+5.2),curvePos:1,ease:"none"
                 ,onUpdate:function () {
                         sputnik.visible = true;
                         sputnik.position.copy(curve.getPoint(sputnik.userData.curvePos))
                         sputnik.quaternion.setFromUnitVectors ( axisX, curve.getTangent( sputnik.userData.curvePos ) );
+
 
                     genesisDate = new Date().getTime() + (this.duration() - this.time()) * 1000
                     clearInterval(timerInterval)
@@ -1097,16 +1119,17 @@ window.addEventListener("load",function () {
             })
             .add(
                 gsap.timeline()
-                    .to(audioStory,{duration:0.01,progress:1144.63})
-                    .to(audioStory.id,{duration:0.01,attr:{"data-play": true},volume:1,currentTime:1144.63},"<")
-                    .to(audioStory,{duration:121.9,progress:1144.63+121.9,ease:"none"},">")
+                    .to(audioStory,{duration:0.01,progress:(19*60+5.2)})
+                    .to(audioStory.id,{duration:0.01,attr:{"data-play": true},volume:1,currentTime:(19*60+5.2)},"<")
+                    .to(audioStory,{duration:(21*60+6.2)-(19*60+5.2),progress:(21*60+6.2),ease:"none"},">")
                     .to(audioStory.id,{duration:0.01,attr:{"data-play": false},volume:0},">")
 
             ,"<")
             .add("endTimer",">")
             .to(".timerEnd",{duration:5,top:"15%",fontSize:10,scale:1,autoAlpha:1,transformOrigin:"50% 50%",ease:"sine.inOut"},"<")
             .to(".timerEnd",{duration:0.5,repeat:19,yoyo:true,textShadow:"0px 0px 5px #ff1111",webkitTextStroke:"1px #ff0000",ease:"sine.inOut"},"endTimer-=10")
-            .to(audioStory.id,{duration:0.01,attr:{"data-play": false}})
+            .add(moonRoketTl.restart(),"endTimer-=82")
+            // .to(audioStory.id,{duration:0.01,attr:{"data-play": false}})
             .to(sputnik.scale,{duration:0.01,x:0,y:0,z:0,ease:"none"})
 
 
@@ -1117,46 +1140,105 @@ window.addEventListener("load",function () {
             .to(".timerEnd",{duration:1,autoAlpha:0,ease:"sine.inOut"},)
             .add(
                 gsap.timeline()
-                    .to(audioStory,{duration:0.01,progress:1266.53})
-                    .to(audioStory.id,{duration:0.01,attr:{"data-play": true},volume:1,currentTime:1266.53},"<")
-                    .to(audioStory,{duration:10.5,progress:1266.53+10.5,ease:"none"},">")
+                    .to(audioStory,{duration:0.01,progress:(21*60+6.2)})
+                    .to(audioStory.id,{duration:0.01,attr:{"data-play": true},volume:1,currentTime:(21*60+6.2)},"<")
+                    .to(audioStory,{duration:(21*60+17.1)-(21*60+6.2),progress:(21*60+17.1),ease:"none"},">")
                     // .to(audioStory.id,{duration:2,volume:0.2},">-10")
                     .to(audioStory.id,{duration:0.01,attr:{"data-play": false},volume:0},">")
 
 
                 ,0)
-            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},"<")
-            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},"<+4.5")
-            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},"<+5.5")
+            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},0)
+            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},4.5)
+            .set(".chatHeartBlock .content",{left:"10%",right:"initial"},9.8)
+            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},10)
+
             .to(".chatItWorks",{autoAlpha:1},">+1")
             .from(".chatItWorks .content",{duration:1,width:"0%",ease:"back.out(1)"},">")
             .from(".chatItWorks .content",{duration:1,opacity:0,ease:"none"},"<")
 
             .add(arrTextAnim["chatItWorks"].restart(),"<")
+            .from(".smartapeMonkey",{duration:2,y:"100%",ease:"back.in(1.5)"    },">-15")
 
-            .to(".chatItWorks .content .dialog",{duration:0.5,opacity:0,ease:"sine.in"},">+0.5")
+            .to(".chatItWorks .content .dialog",{duration:0.5,opacity:0,ease:"sine.in"})
             .to(".chatItWorks .content",{duration:1,width:"0%",ease:"back.out(1)"},">")
             .to(".chatItWorks",{autoAlpha:0},"<")
+
+            .set(".chatHeartBlock .content",{left:"initial",right:"10%"},14.8)
+            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},15)
+            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},20)
 
 
         /**
          * presentationTl
          */
+        let slideChatTl = arrTextAnim["chatForPresentation"]
         let presentationTl = gsap.timeline({paused:true})
             .to(".smartapePresentation .chatForStory",{autoAlpha:1})
             .add(typeAnim(".smartapePresentation .chatForStory .title h2","title"),"<")
-            .to(".smartapePresentation .chatForStory .title",{duration:2,autoAlpha:0,ease:"sine.out"},">+1")
+            .to(".smartapePresentation .chatForStory .title",{duration:2,autoAlpha:0,ease:"sine.out"},">+0.5")
 
-            .from(".smartapePresentation .chatForStory .content",{duration:1,width:"0%",ease:"back.out(1)"},">")
-            .from(".smartapePresentation .chatForStory .content",{duration:1,opacity:0,ease:"none"},"<")
+            .from(".smartapePresentation .chatForStory .content",{duration:1,width:"0%",ease:"back.out(1)"},"<")
+            .from(".smartapePresentation .chatForStory .content",{duration:1,opacity:0,ease:"none"},"<+2")
 
-            .add(arrTextAnim["chatForPresentation"].restart(),"<")
+            .add(slideChatTl.restart(),">")
+            .add("startPres","<")
+            .add("endPresentation","<")
 
-            .to(".smartapePresentation .chatForStory .content .dialog",{duration:0.5,opacity:0,ease:"sine.in"},">")
+            .to(".smartapePresentation .chatForStory .content .dialog",{duration:0.5,opacity:0,ease:"sine.in"})
             .to(".smartapePresentation .chatForStory .content",{duration:1,width:"0%",ease:"back.out(1)"},">")
             .to(".smartapePresentation .chatForStory",{autoAlpha:0},"<")
 
-            // .to(".smartapePresentation .slideContainer .slide",{autoAlpha:1,stagger:{each:2,repeat:1,yoyo:true,repeatDelay:1.5}},">")
+            .to(".videoHowInstall",{autoAlpha:1},"startPres-=2")
+            .from(".videoHowInstall",{duration:2,scale:0,transformOrigin:"50% 50%"},"<")
+            .to(".videoHowInstall",{duration:2,borderRadius:"0%",transformOrigin:"50% 50%"},"<")
+            .from(".videoHowInstall video",{duration:2,scale:3,transformOrigin:"50% 50%"},"<")
+            .add(
+                gsap.timeline({})
+                    .to(videoStory,{duration:0.01,progress:0})
+                    .to(videoStory.id,{duration:0.01,attr:{"data-play": true},volume:1,currentTime:0},"<")
+                    .to(videoStory,{duration:35,progress:35,ease:"none"},">")
+                    // .to(videoStory.id,{duration:2,volume:0.2},">-10")
+                    .to(videoStory.id,{duration:0.01,attr:{"data-play": false},volume:0},">")
+
+
+                ,"startPres")
+            .to(".videoHowInstall",{duration:2,scale:0,transformOrigin:"50% 50%"},">+2")
+            .to(".videoHowInstall",{duration:2,borderRadius:"100%",transformOrigin:"50% 50%"},"<")
+            .to(".videoHowInstall video",{duration:2,scale:3,transformOrigin:"50% 50%"},"<")
+            .to(".videoHowInstall",{autoAlpha:0},">")
+
+
+        //slide
+        for(let i = 1; i <= 22; i++ ){
+
+            if( i!=9 ){
+                presentationTl
+                    .to(slideAnimation(`slide${i}`),{duration:(slideChatTl.labels[`slide${i}E`]-slideChatTl.labels[`slide${i}S`]),progress:1,ease:"none"},"startPres+="+slideChatTl.labels[`slide${i}S`])
+                if( i==1){
+                    //slide1i1
+                    presentationTl
+                        .to(slideAnimation("slide1i1"),{duration:(slideChatTl.labels["slide1i1E"]-slideChatTl.labels["slide1i1S"]),progress:1,ease:"none"},"startPres+="+slideChatTl.labels["slide1i1S"])
+                }
+            }else{
+                //slide9
+                presentationTl
+                    .add(
+                        gsap.timeline()
+                            .to(cameraTarget.position,{duration:2,x:13,y:0,z:0,ease:"sine.inOut"},"<")
+                            .to(camera.position,{duration:2,x:-1.5,y:0,z:16,ease:"sine.inOut"},"<")
+                            .to(cameraTarget.position,{duration:2,x:19,y:0,z:0,ease:"sine.inOut"},">+36")
+                            .to(camera.position,{duration:2,x:-1.5,y:0,z:20,ease:"sine.inOut"},"<")
+                            .duration(slideChatTl.labels["slide9E"]-slideChatTl.labels["slide9S"])
+                        ,"startPres+="+slideChatTl.labels["slide9S"])
+            }
+        }
+        presentationTl
+            .to(".smartapePresentation",{duration:1,autoAlpha:0})
+
+
+
+        //////////
 
 
         /**
@@ -1194,7 +1276,10 @@ window.addEventListener("load",function () {
         cameraTarget.position.set(0,500,0)
         // console.log(arrTextAnim["subtitleEarth"].labels)
 
-        mainTl = gsap.timeline({id:"mainTl",paused:true})
+        mainTl = gsap.timeline({id:"mainTl",paused:true,onStart:()=>{
+                document.body.classList.add("animEarthStart");
+            } })
+
             .set(".text-wrapper",{opacity:0,y:10})
             .to(".btn-home",{duration:0.5,autoAlpha:0})
             .to(".timerEnd",{duration:0.1,top:"-10%",fontSize:10,scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"sine.inOut"},"<")
@@ -1239,7 +1324,7 @@ window.addEventListener("load",function () {
             .to(camera.position,{duration:3,x:-10,y:0,z:14,ease:"sine.inOut"})
             .to(cameraTarget.position,{duration:3,x:13,y:-0.5, z:0,ease:"sine.inOut"},"<")
 
-        timeRotate = chatCheckDodecadronTl.duration()
+        timeRotate = chatCheckDodecadronTl.duration()+2
         mainTl
             .to(moonWrap.rotation,{duration:timeRotate,y:"+=-"+THREE.MathUtils.degToRad(360*timeRotate/120*(720/(360*timeRotate/120))),ease:"none"},"<")
             .to(earth.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*timeRotate/60*(720/(360*timeRotate/120))),ease:"none"},"<")
@@ -1254,21 +1339,19 @@ window.addEventListener("load",function () {
 
         timeRotate = sputnikTl.duration()
         mainTl
-            .add(sputnikTl.restart(),"<-1")
+            .add(sputnikTl.restart(),">-3")
             .add("endPlanetParad",">")
-            .add(moonRoketTl.restart(),"<+40")
-            .to(moonWrap.rotation,{duration:timeRotate,y:"+=-"+THREE.MathUtils.degToRad(360*timeRotate/120*0.85),ease:"none"},"<-38")
+            .to(moonWrap.rotation,{duration:timeRotate,y:"+=-"+THREE.MathUtils.degToRad(360*timeRotate/120*0.85),ease:"none"},"<")
             .to(earth.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*timeRotate/60*0.85),ease:"none"},"<")
             .to(cameraWrapper.rotation,{duration:20,y:"+="+THREE.MathUtils.degToRad(-40),ease:"none"},">-80")
             .to(cameraWrapper.rotation,{duration:20,y:"+="+THREE.MathUtils.degToRad(20),ease:"none"},">")
 
         timeRotate = chatItWorksTl.duration()
         mainTl
-            .to(moonWrap.rotation,{duration:timeRotate,y:"+=-"+THREE.MathUtils.degToRad(360*timeRotate/120),ease:"none"},"endPlanetParad-=1")
+            .to(moonWrap.rotation,{duration:timeRotate,y:"+=-"+THREE.MathUtils.degToRad(360*timeRotate/120),ease:"none"},"endPlanetParad")
             .to(earth.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*timeRotate/60),ease:"none"},"<")
             .to(cameraWrapper.rotation,{duration:timeRotate-16,y:"+="+THREE.MathUtils.degToRad(360*(timeRotate-16)/120),ease:"none"},"endPlanetParad+=15")
             .add(chatItWorksTl.restart(),"endPlanetParad")
-            .add("startPresentation",">")
 
             .to(".header",{duration:1,autoAlpha:1},"<+5")
             .to(cameraTarget.position,{duration:15,x:19,y:0,z:0,ease:"sine.inOut"},"<")
@@ -1280,7 +1363,7 @@ window.addEventListener("load",function () {
             .to(earth.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*timeRotate/60),ease:"none"},"<")
             .to(cameraWrapper.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*(timeRotate)/120),ease:"none"},"<")
 
-            .add(presentationTl.restart(),"<")
+            .add(presentationTl.restart(),"<-4")
 
             .add(endTitleTl.restart(),">")
             .to(".wrapper-animation > *",{duration:1,autoAlpha:0},">")
@@ -1298,13 +1381,29 @@ window.addEventListener("load",function () {
                         audioStory.id.currentTime = audioStory.progress
                     }
                 } else {
-                    if (audioStory.id.paused) {
+                    if (audioStory.id.getAttribute("data-play") == "true" && audioStory.id.paused) {
                         audioStory.id.currentTime = audioStory.progress
+                        audioStory.id.play()
                     }
-                    audioStory.id.play()
                 }
-                mainTlProg = mainTl.progress()
+                // mainTlProg = mainTl.progress()
             }
+            if (videoStory.id.paused !== undefined) {
+                if (mainTl.paused() || mainTl.progress() == mainTlProg) {
+                    if (videoStory.id.getAttribute("data-play") == "true" && !videoStory.id.paused) {
+                        videoStory.id.pause()
+                        videoStory.id.currentTime = videoStory.progress
+                    }
+                } else {
+                    if (videoStory.id.getAttribute("data-play") == "true" && videoStory.id.paused) {
+                        console.log(videoStory.progress)
+                        videoStory.id.currentTime = videoStory.progress
+                        videoStory.id.play()
+                    }
+                }
+                // mainTlProg = mainTl.progress()
+            }
+            mainTlProg = mainTl.progress()
         }, 100)
 
         function firstLoadAudio(){
@@ -1316,6 +1415,14 @@ window.addEventListener("load",function () {
                 audioStory.id.currentTime = 0
                 audioStory.id.setAttribute("data-load","true")
                 audioStory.id.src = audioStoryMP3;
+
+                videoStory.id.load()
+                videoStory.id.src = videoHowInstall;
+                videoStory.id.volume = 0;
+                videoStory.id.muted = false;
+                videoStory.id.pause()
+                videoStory.id.currentTime = 0
+                videoStory.id.setAttribute("data-load","true")
             }
         }
 

@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 html{
     min-height: -webkit-fill-available;
 }
@@ -25,6 +28,31 @@ h1{
     z-index: 100;
     opacity: 0;
     visibility: hidden;
+
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+}
+.header-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    margin: auto;
+}
+.header-talking {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    left: 30px;
+
+    #ctg-talking > *{
+        opacity: 0;
+        transform: translate(-5px,-5px);
+    }
+
 }
 /********************/
 .wrapper-animation{
@@ -88,30 +116,6 @@ h1{
     visibility: hidden;
 }
 
-.slidesContainer{
-    position: absolute;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 15;
-    opacity: 0;
-    visibility: hidden;
-    background: black;
-}
-.slide-content {
-    padding: 10%;
-    font-size: calc(16px + (30 - 16) * (100vw - 400px) / (800 - 400));
-    text-align: justify;
-    overflow: hidden;
-    color: yellow;
-}
-.slide-title {
-    color: rgb(75, 213, 238);
-    font-size: calc(16px + (30 - 16) * (100vw - 400px) / (800 - 400));
-    line-height: 1em;
-    font-weight: 200;
-}
 
 .finalTitleContainer{
     position: absolute;
@@ -137,3 +141,10 @@ h1{
 .gs-dev-tools .loop{
     display: none;
 }
+
+//.gs-top,
+//.gs-bottom{
+//    opacity: 0;
+//    overflow: hidden;
+//    transform: translateY(50px);
+//}
