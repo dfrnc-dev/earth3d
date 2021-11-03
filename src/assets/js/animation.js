@@ -64,7 +64,8 @@ import {textForAnimation} from "@assets/js/text_for_animation.js"
 
 
 
-let genesisDate = "Nov 05, 2021 13:45:00"
+// let genesisDate = "Nov 05, 2021 13:45:00"
+let genesisDate = "2021-11-05T13:45:00Z";
 let timerInterval
 
 function timerEnd() {
@@ -78,7 +79,7 @@ function timerEnd() {
     const countDown = new Date(genesisDate).getTime()
     const changeTime = () => {
 
-        const now = new Date().getTime()
+        const now = Date.parse(new Date().toUTCString());
         let distanceTemp = countDown - now;
         const distance = (distanceTemp > 0) ? countDown - now : now - countDown;
 
@@ -100,6 +101,96 @@ function timerEnd() {
     timerInterval = setInterval(changeTime, 1000)
 }
 timerEnd()
+
+let wsUrl = "wss://rpc.bostrom.cybernode.ai/websocket";
+// let wsUrl = "ws://localhost:26657/websocket";
+let wsClient = null;
+let timeReConnectWS = 1000;
+
+const closeHandler = () => {
+  console.log(`close WS`);
+  setTimeout(createConnect, timeReConnectWS);
+};
+
+const handlerOpen = () => {
+  wsClient.send(
+    JSON.stringify({
+      method: "subscribe",
+      params: ["tm.event='NewBlockHeader'"],
+      id: "1",
+      jsonrpc: "2.0",
+    })
+  );
+};
+
+const handlerMessage = (evt) => {
+  const message = JSON.parse(evt.data);
+  if (message.result && Object.keys(message.result).length > 0) {
+    const height = message.result.data.value.header.height;
+    const blockTime = message.result.data.value.header.time;
+    const blockHash = message.result.data.value.header.app_hash;
+    const numTxs = message.result.data.value.num_txs;
+    const dataBlockInfo = {
+      height,
+      blockTime,
+      blockHash: `${blockHash.substring(0, 5)}...${blockHash.substring(
+        blockHash.length - 5
+      )}`,
+      numTxs,
+    };
+
+    // if (parseFloat(height) >= 6) {
+    //   closeWsfnc()
+
+    // } else {
+    chatHeartBlockFnc(dataBlockInfo);
+
+    // }
+  }
+};
+
+const listenNewBlock = () => {
+  if (wsClient !== null) {
+    wsClient.addEventListener("open", handlerOpen);
+  }
+
+  if (wsClient !== null) {
+    wsClient.addEventListener("message", handlerMessage);
+  }
+};
+
+const createConnect = () => {
+  let ws = null;
+  if (ws !== null) {
+    ws.removeEventListener("close", closeHandler);
+  }
+  ws = new WebSocket(wsUrl);
+  ws.addEventListener("close", closeHandler);
+  console.log(`open`);
+  wsClient = ws;
+  if (wsClient !== null) {
+    listenNewBlock();
+  }
+};
+createConnect();
+
+const chatHeartBlockFnc = (dataBlockInfo) => {
+  const { height, blockTime, blockHash, numTxs } = dataBlockInfo;
+  document.querySelector("#height").innerText = `Height: ${height}`;
+  document.querySelector("#blockTime").innerText = `Block Time: ${blockTime}`;
+  document.querySelector("#blockHash").innerText = `Block Hash: ${blockHash}`;
+  document.querySelector(
+    "#numTxs"
+  ).innerText = `Number Of Transactions: ${numTxs}`;
+};
+
+const closeWsfnc = () => {
+  if (wsClient !== null) {
+    wsClient.removeEventListener("close", closeHandler);
+    wsClient.close();
+    console.log(`close WS closeWsfnc`);
+  }
+};
 
 
 
