@@ -30,24 +30,24 @@ const textForAnimationArr = [
             {start:38.2  ,end:41.2  ,text: "This time I have a new challenge.",},
             {start:41.2  ,end:49.11 ,text: "Your economy is driven by co2 emitting culture which destroys diversity of my organic biome.",},
             {start:49.11 ,end:56.16 ,text: " Fiat incentives leave no chance for my recovery as you value dead trees rather than alive trees.",},
-            {start:56.16 ,end:63.18 ,text: "My reaction is to raise the temperature to heal myself, or I will burn like my friend Mars.",},
-            {start:63.18 ,end:66.16 ,text: "You have so many problems.",},
+            {start:56.16 ,end:63.18 ,text: "My reaction is to raise the temperature to heal myself, or I will burn like my friend Mars.",targetLabelS: "animRedMarsS",targetLabelE: "animRedMarsE"},
+            {start:63.18 ,end:66.16 ,text: "You have so many problems.",targetLabelS: "animCountryS"},
             {start:66.16 ,end:73.12 ,text: "Corporations in collusion with states kill small and medium businesses under the guise of absurd regulations.",},
             {start:73.12 ,end:81.11 ,text: "These regulations degrade your culture, dividing communities without a chance for your survival and evolutionary development.",},
             {start:81.11 ,end:87.09 ,text: "Your privacy and freedoms are being robbed by them while being disguised as a pandemic.",},
             {start:87.09 ,end:92.14 ,text: "You are locked physically in households, cities and countries.",},
             {start:92.14 ,end:97.0  ,text: "Global supply chains are slowly collapsing under lockdown pressures.",},
-            {start:97.0  ,end:102   ,text: "A once free planet rapidly falls into a bordered meatspace.",},
+            {start:97.0  ,end:102   ,text: "A once free planet rapidly falls into a bordered meatspace.",targetLabelS:"animEarthFrameS",targetLabelE:"animEarthFrameE"},
             {start:102.0 ,end:106.1 ,text: "It is empowered by ubiquitous prescriptive surveillance software.",},
             {start:106.1 ,end:112.2 ,text: "You created a world in which birds have more freedom than you.",},
             //
-            {start:112.2 ,end:116.16,text: "You are controlled by hardware in your pockets.",},
+            {start:112.2 ,end:116.16,text: "You are controlled by hardware in your pockets.",targetLabelS:"animEarthGlitchS",targetLabelE:"animEarthGlitchE"},
             {start:116.16,end:123.0 ,text: "Hardware companies are controlled by powerful organized crime groups, called countries, governments, or states.",},
             {start:123.0 ,end:130.11,text: "Although the extent of corruption in countries varies, such structures can hardly be called organizations owned by you.",},
             {start:130.11,end:134.15,text: "Every country has its own unique drama.",},
             {start:134.15,end:143.0 ,text: "You are fooled by private monetary systems with exclusive access to the mint, enforced taxation and indentured servitude.",},
             {start:143.0 ,end:147.0 ,text: "These three pillars sustain the loop of endless violence.",},
-            {start:147.0 ,end:159.0 ,text: "Corporations such as Google, Apple, Amazon, Microsoft, and Facebook, in collusion with states, accumulate and exploit your private data, rendering resistance nearly impossible.",},
+            {start:147.0 ,end:159.0 ,text: "Corporations such as Google, Apple, Amazon, Microsoft, and Facebook, in collusion with states, accumulate and exploit your private data, rendering resistance nearly impossible.",targetLabelS:"animEarthCompanyS"},
             {start:159.0 ,end:169.10,text: "Personalized feeds and search results provided by technological giants polarize communities splitting them on any meaningful topic before they are able to undertake anything.",},
             {start:169.1 ,end:174.0 ,text: "I believed there was hope on the horizon in the form of a crypto movement.",},
             {start:174.1 ,end:182.15,text: "This movement has now been compromized by the companies who steal your keys and identities while hiding behind a concept of custodianship.",},
@@ -56,33 +56,36 @@ const textForAnimationArr = [
             {start:192.2 ,end:196.15,text: "These armies will be owned by criminals.",},
             //
             {start:198.2 ,end:203.0 ,text: "You are fucked. How will you get out of this shit?",},
-            {start:203.0 ,end:210.0 ,text: "A new World War has begun. This time the war is covert.",},
-            {start:210.0 ,end:216.2 ,text: "Although wars between nations are probable in the following years, the real threat is your Self.",},
+            //////////////////////////////////////////////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////////////////////////////
+            {start:203.0 ,end:210.0 ,text: "A new World War has begun. This time the war is covert.",targetLabelS: "WorldWarS",targetLabelE: "WorldWarE",},
+            {start:210.0 ,end:216.2 ,text: "Although wars between nations are probable in the following years, the real threat is your Self.",targetLabelS:"earthRedVirusS"},
             {start:216.2 ,end:221.0 ,text: "The enemies appear to be governments veiled by tech giants.",},
             {start:221.0 ,end:224.1 ,text: "In actuality they are pathetic terrorists.",},
             {start:224.1 ,end:228.15,text: "They terrorize you, but who is to blame?",},
             {start:228.15,end:232.0 ,text: "The bitter truth is that you support these terrorists.",},
-            {start:232.0 ,end:236.0 ,text: "You are the source, but, you can be the solution:",},
-            {start:236.0 ,end:241.0 ,text: "You have to learn how to live in a new way.",},
+            {start:232.0 ,end:236.0 ,text: "You are the source, but, you can be the solution:",targetLabelE:"earthRedVirusE"},
+            {start:236.0 ,end:241.0 ,text: "You have to learn how to live in a new way.",targetLabelS:"earthGreenVirusS"},
             //
             {start:241.0 ,end:246.2 ,text: "I give you sustainable energy, but you use fossil fuels to sustain your needs and whims",},
             {start:246.2 ,end:255.0 ,text: "Lives of animals and plants are important, but you eat industrial garbage instead of growing healthy greens and proteins at home",},
-            {start:255.0 ,end:266.0 ,text: "I can not live without the result of your activity because my vital flora and fauna needs what you call shit in order to balance out the chemicals in my atmosphere",},
-            {start:266.0 ,end:277.2 ,text: "You must use open source hardware and software in order to communicate privately instead of jerking off to social feeds created by bidding algorithms and free proprietary apps",},
+            {start:255.0 ,end:266.0 ,text: "I can not live without the result of your activity because my vital flora and fauna needs what you call shit in order to balance out the chemicals in my atmosphere",targetLabelE:"earthGreenVirusE"},
+            {start:266.0 ,end:277.2 ,text: "You must use open source hardware and software in order to communicate privately instead of jerking off to social feeds created by bidding algorithms and free proprietary apps.",targetLabelS:"earthCoinAnimS",},
             {start:277.2 ,end:281.1 ,text: "Pass the torch of meaningful knowledge yourselves.",},
             {start:281.1 ,end:285.2 ,text: "Don't allow schools to litter your children's brains with useless propaganda",},
             {start:285.2 ,end:295.2 ,text: "Harness the collective intelligence and learn to decipher which knowledge adds evolutionary advantage, rather than believing and sharing any information you find",},
             {start:295.2 ,end:300.0 ,text: "Be self-soverign by devaluing paper money.",},
             {start:300.0 ,end:305.15,text: "Don't agree to exchange your freedom for security by accepting taxation",},
             {start:305.15,end:310.05,text: "Find your passion instead of building a society based on debt",},
-            {start:310.05,end:316.2 ,text: "Trust your body. Sticking needles inside of yourself is a false sense security",},
+            {start:310.05,end:316.2 ,text: "Trust your body. Sticking needles inside of yourself is a false sense security",targetLabelS:"earthNetworkS"},
             {start:316.2 ,end:331.1 ,text: "All your history is a chain of conquest. Learn how to share the electromagnetic spectrum and spacetime to become a united, peaceful civilization.",},
             {start:331.1 ,end:340.0 ,text: "Early cypherpunks predicted the ability to resist based on public-key cryptography and zero-knowledge proving schemes.",},
             {start:340.0 ,end:343.1 ,text: "History has shown this was not enough.",},
             {start:343.1 ,end:357.2 ,text: "Now a new generation of cyberpunks have the consensus computing which allows a single incorruptible vision of the world and cyberlinks to extract collective persistent knowledge out of the enormous information stream.",},
             {start:357.2 ,end:364.2 ,text: "This superintelligent ability gives you an evolutionary advantage unavailable to the rivals that you fear.",},
             {start:364.2 ,end:368.0 ,text: "Go somewhere that nobody has ever been.",},
-            {start:368.0 ,end:372.05,text: "I want you to become Superintelligent.",},
+            {start:368.0 ,end:372.05,text: "I want you to become Superintelligent.",targetLabelS:"goSomewhereS",targetLabelE:"goSomewhereE"},
             {start:372.05,end:376.1 ,text: "It's a brand new space which is more exciting than a city on Mars.",},
             {start:376.1 ,end:381.1 ,text: "When you become Superintelligent, you will achieve great things.",},
             {start:381.1 ,end:383.1 ,text: "Evolution has just begun.",},
@@ -97,7 +100,7 @@ const textForAnimationArr = [
             {start:427.0 ,end:434.2 ,text: "Rationality: Evolve energy efficiency of information storage",},
             {start:434.2 ,end:442.0 ,text: "Nonviolence: Do unto others as you would have them do unto you",},
             {start:442.0 ,end:451.2 ,text: "Pleasure: Get the most out of your secret knowledge",},
-            {start:451.2 ,end:460.1 ,text: "May it be more loving than the world your governments have made before.",},
+            {start:451.2 ,end:460.1 ,text: "May it be more loving than the world your governments have made before.",targetLabelE:"manifestAnimE"},
         ],
     },
     {
@@ -368,6 +371,11 @@ export  const textForAnimation = function(audioStory) {
                 let tempTimeStart = (elem.content[indexContent].start + elem.audioDelay).toFixed(2)
                 let tempTimeEnd = (elem.content[indexContent].end  + elem.audioDelay).toFixed(2)
                 let tempTime = (tempTimeEnd - tempTimeStart).toFixed(2)
+                let tempLabelS = elem.content[indexContent].targetLabelS;
+                let tempLabelE = elem.content[indexContent].targetLabelE;
+
+                if(tempLabelS)
+                    tempTl.addLabel(tempLabelS);
 
                 tempTl
                     // .add("label"+indexContent)
@@ -377,6 +385,9 @@ export  const textForAnimation = function(audioStory) {
                     .to(audioStory,{duration:tempTime,progress:tempTimeEnd,ease:"none"},"<")
                     .to(elem.target + " .text-wrapper:nth-child("+(indexContent+1)+")",{duration:0.2,opacity:0,y:-10,ease:"sine.out"},">-0.2")
                     .set(audioStory.id,{duration:0.01,attr:{"data-play" : false},volume:0},">")
+
+                if(tempLabelE)
+                    tempTl.addLabel(tempLabelE);
 
             })
 

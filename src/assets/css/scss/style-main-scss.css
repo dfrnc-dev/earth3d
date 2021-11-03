@@ -186,7 +186,8 @@ h1 {
     font-weight: 200;
     margin-right: -50%;
     padding: 0 2em;
-    opacity: 0; }
+    opacity: 0;
+    text-align: center; }
   .story section {
     top: 45%;
     left: 50%;
@@ -247,7 +248,7 @@ h1 {
     left: 0;
     right: 0;
     margin: auto;
-    width: 0%;
+    width: 50%;
     min-height: 3.9em;
     padding: 0.75em 1em;
     opacity: 0;
@@ -289,6 +290,9 @@ h1 {
   @media (max-width: 1100px) {
     #animationContainer .subtitles-wrapper {
       font-size: 18px; } }
+  @media (max-width: 980px) {
+    #animationContainer .subtitles-wrapper {
+      width: 80%; } }
   @media (max-width: 680px) {
     #animationContainer .subtitles-wrapper {
       font-size: 14px;
@@ -308,17 +312,17 @@ h1 {
   opacity: 0;
   visibility: hidden; }
   .chatForStory .title {
-    margin: 5% 10%;
+    margin: 5vh 10%;
     text-align: center;
     color: #C8CAFF; }
     .chatForStory .title h2 {
-      font-size: 50px;
+      font-size: calc( 2vw + 2vh);
       margin: 0;
       line-height: 1.3em;
       font-weight: normal;
       opacity: 0; }
     .chatForStory .title h3 {
-      font-size: 45px;
+      font-size: calc( 1.8vw + 1.8vh);
       margin: 0;
       line-height: 1.3em;
       font-weight: normal;
@@ -445,6 +449,9 @@ h1 {
   left: initial;
   right: 10%; }
 
+@media (max-width: 980px) {
+  .chatForStory .content {
+    width: 80%; } }
 .videoHowInstall {
   position: absolute;
   top: 10%;
