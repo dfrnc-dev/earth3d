@@ -43,11 +43,15 @@ require("@assets/model/textures/Red_plastic_baseColor.jpg")
 require("@assets/model/textures/Red_plastic_metallicRoughness.png")
 require("@assets/model/textures/Red_plastic_normal.png")
 require("@assets/model/textures/ozzi.png")
+import countryTextureImg from '@assets/img/countryIconSprite(200x200).png'
+import companyTextureImg from '@assets/img/logoIconSprite(200x200).png'
+import coinTextureImg from '@assets/img/coinIconSprite(200x200).png'
 
-import googleTextureImg from '@assets/img/logoIconSprite(200x200).png'
+
 import earthTextureImg from '@assets/img/earth2.jpg'
 import earthMagmaTextureImg from '@assets/img/earthCrack.jpg'
 import earthPointTextureImg from '@assets/img/earth2(point3).jpg'
+import earthNetworkTextureImg from '@assets/img/earth2(mapNetwork).jpg'
 import earthShineTextureImg from '@assets/img/sunShine3.png'
 import earthShineBlobeTextureImg from '@assets/img/fair_clouds.jpg'
 import moonTextureImg from '@assets/img/moonText.jpg'
@@ -64,7 +68,8 @@ import {textForAnimation} from "@assets/js/text_for_animation.js"
 
 
 
-let genesisDate = "Nov 05, 2021 13:45:00"
+// let genesisDate = "Nov 05, 2021 13:45:00"
+let genesisDate = '2021-11-05T13:00:00Z';
 let timerInterval
 
 function timerEnd() {
@@ -78,7 +83,9 @@ function timerEnd() {
     const countDown = new Date(genesisDate).getTime()
     const changeTime = () => {
 
-        const now = new Date().getTime()
+
+        const now = Date.parse(new Date().toUTCString());
+        // const now = new Date().getTime()
         let distanceTemp = countDown - now;
         const distance = (distanceTemp > 0) ? countDown - now : now - countDown;
 
@@ -490,11 +497,15 @@ window.addEventListener("load",function () {
                         earthTexture:{type: "t",value: null },
                         earthMagmaTexture:{type: "t",value: null },
                         earthPointTexture:{type: "t",value: null },
+                        earthNetworkTexture:{type: "t",value: null },
                         earthMagmaPercent:{type:"f",value:0},
+                        earthNetworkPercent:{type:"f",value:0},
                         earthVirusPercent:{type:"f",value:0},
+                        earthGreenVirusPercent:{type:"f",value:0},
+                        earthGlitchPercent:{type:"f",value:0},
                         time:{type:"f",value:0},
-                        resolution:{ type:"vec2",value: new THREE.Vector2(window.innerWidth,window.innerHeight)},
-                        // resolution:{ type:"vec2",value: new THREE.Vector2(5.0,5.0)},
+                        // resolution:{ type:"vec2",value: new THREE.Vector2(window.innerWidth,window.innerHeight)},
+                        resolution:{ type:"vec2",value: new THREE.Vector2(5.0,1.0)},
                     }
 
                 ]),
@@ -505,13 +516,14 @@ window.addEventListener("load",function () {
         earth.material.uniforms.earthTexture.value = new THREE.TextureLoader().load(earthTextureImg);
         earth.material.uniforms.earthMagmaTexture.value = new THREE.TextureLoader().load(earthMagmaTextureImg);
         earth.material.uniforms.earthPointTexture.value = new THREE.TextureLoader().load(earthPointTextureImg);
-        earth.rotateZ(24*Math.PI/180)
+        earth.material.uniforms.earthNetworkTexture.value = new THREE.TextureLoader().load(earthNetworkTextureImg);
+        earth.rotateZ(14*Math.PI/180)
         earth.castShadow = true;
         // earth.receiveShadow = true;
         earthWrapper.add(earth)
 
         earthShine = new THREE.Mesh(
-            new THREE.PlaneGeometry( 12, 12 ),
+            new THREE.PlaneGeometry( 25, 25 ),
             new THREE.ShaderMaterial({
                 vertexShader: earthShineVertex,
                 fragmentShader: earthShineFragment,
@@ -531,8 +543,9 @@ window.addEventListener("load",function () {
             })
         )
         earthShine.material.uniforms.earthShineTexture.value = new THREE.TextureLoader().load(earthShineTextureImg);
-        earthShine.position.x = 0.2
-        // scene.add(earthShine)
+        earthShine.position.x = 1
+        earthShine.position.z = -5
+        scene.add(earthShine)
 
 
         earthShineBlobe = new THREE.Mesh(
@@ -887,25 +900,17 @@ window.addEventListener("load",function () {
         // );
         // scene.add( earthPathLine );
 
-
-        // const geometry = new THREE.TubeGeometry( earthPathCurve, 50, 0.02, 3, true );
-        // const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-        // const mesh = new THREE.Mesh( geometry, material );
-        // scene.add( mesh );
         let logoSpriteWraperAll = new THREE.Mesh()
         earth.add(logoSpriteWraperAll)
-        // let logoSpriteTex = new THREE.TextureLoader().load(googleTextureImg);
-        // logoSpriteTex.needsUpdate= true;
 
-
-        function logoCompanyAnim(spriteSize){
+        function logoCompanyAnim(spriteSize,countNum,targetTexture,tempDuration){
             let templogoCompanyAnimTL = gsap.timeline({paused:true})
             let randomDeg = gsap.utils.random(-180, 180, 20, true);
             let randomImg = gsap.utils.random(0, spriteSize-1, 1, true);
-            for(let i = 0; i < 100; i++){
+            for(let i = 0; i < countNum; i++){
 
                 let logoSprite = new THREE.Sprite(
-                    new THREE.SpriteMaterial( {map: new THREE.TextureLoader().load(googleTextureImg),} )
+                    new THREE.SpriteMaterial( {map: new THREE.TextureLoader().load(targetTexture),} )
                 );
                 logoSprite.material.transparent = true;
                 logoSprite.material.format = null;
@@ -923,21 +928,29 @@ window.addEventListener("load",function () {
 
                 templogoCompanyAnimTL.add(
                     gsap.timeline()
-                        .to(logoSprite.material,{duration:10,delay:"random(0,5,0.2)",opacity:1})
-                        .to(logoSprite.userData,{duration:60,curvePos:1,
-                            delay:"random(-5,5,1)",
-                            repeat:2,
+                        .to(logoSprite.material,{duration:5,delay:"random(0,0.5,0.1)",opacity:1})
+                        .to(logoSprite.userData,{
+                            duration:(tempDuration < 60 ) ? tempDuration : 60,
+                            curvePos:1,
+                            repeat:(tempDuration > 60 ) ? tempDuration/60-1 : 0,
                             ease:"none",
                             onUpdate:function () {
                                 logoSprite.position.copy(logoPathCurve.getPoint(logoSprite.userData.curvePos))
                             }
-                        },0)
-                        .to(logoSprite.material,{duration:10,opacity:0,ease:"power1.in"},">-10")
+                        },"<")
+                        .to(logoSprite.material,{duration:5,opacity:0,ease:"power1.in"},">-6")
                 ,0)
             }
             return templogoCompanyAnimTL;
         }
 
+        /**
+         * tl for earth anim
+         */
+        let earthTextAnim = arrTextAnim["subtitleEarth"]
+        // console.log(earthTextAnim.labels)
+
+        ///////////
         let earthAnimRed = gsap.timeline({paused:true})
             .to(earth.material.uniforms.earthMagmaPercent,{duration:5,value:1, ease:"sine.inOut"},">")
             .to(earth.material.uniforms.colorEarth.value,{duration:5,x:0.313,y:0.082,z:0.043, ease:"sine.inOut"},"<")
@@ -945,24 +958,73 @@ window.addEventListener("load",function () {
             .to(earthShine.material.uniforms.colorDefault.value,{duration:5,x:1,y:0.019,z:0.180, ease:"sine.inOut"},"<")
             .to(earthShineBlobe.material.uniforms.colorDefault.value,{duration:5,x:1,y:0.019,z:0.180,w:5.0, ease:"sine.inOut"},"<")
 
-        let earthAnim = gsap.timeline({paused:true})
+        ///////////
+        let earthCountryAnimTl = logoCompanyAnim(5,50,countryTextureImg,(earthTextAnim.labels["WorldWarE"]-earthTextAnim.labels["animCountryS"]))
 
-            .to(earthAnimRed,{duration:earthAnimRed.duration(),progress:1,ease:"none"})
-
-
+        ///////////
+        let earthFrameTl = gsap.timeline({paused:true})
             .to(earthFrame.material,{duration:0.1,visible: true})
             .to(earthFrame.material,{duration:0.1,repeat:5,yoyo:false,opacity:0.1,ease:"back.out(1)"})
             .to(earthFrame.material,{duration:0.1,repeat:5,yoyo:false,opacity:0.3,ease:"back.out(1)"})
             .to(earthFrame.material,{duration:0.1,repeat:5,yoyo:false,opacity:0.6,ease:"back.out(1)"})
             .to(earthFrame.material,{duration:0.1,repeat:5,yoyo:false,opacity:1,ease:"back.out(1)"})
-            .add(logoCompanyAnim(3).restart())
 
-            .to(earthFrame.material,{duration:1,opacity:0,ease:"sine.in"},">")
+        ///////////
+        let earthGlitchTl = gsap.timeline({paused:true})
+            .to(earth.material.uniforms.earthGlitchPercent,{duration:0.2,value:1,repeat:1,yoyo:true,repeatDelay:0.3, ease:"sine.inOut"},">")
+            .to(earth.material.uniforms.earthGlitchPercent,{duration:0.1,value:1,repeat:0,yoyo:true, ease:"sine.inOut"},">+0.5")
 
-            .to(earthAnimRed,{duration:earthAnimRed.duration(),progress:0,ease:"none"})
+        ///////////
+        let earthCompanyAnimTl = logoCompanyAnim(5,50,companyTextureImg,(earthTextAnim.labels["WorldWarE"] - earthTextAnim.labels["animEarthCompanyS"] - 6))
 
-            .to(earth.material.uniforms.earthVirusPercent,{duration:180,value:1, ease:"sine.inOut"},">+10")
-            .to(earth.material.uniforms.earthVirusPercent,{duration:180,value:0, ease:"sine.inOut"},">")
+        ///////////
+        let earthRedVirusTl = gsap.timeline({paused:true})
+            .to(earth.material.uniforms.earthVirusPercent,{duration:10,value:1, ease:"sine.inOut"})
+
+        ///////////
+        let earthGreenVirusTl = gsap.timeline({paused:true})
+            .to(earth.material.uniforms.earthGreenVirusPercent,{duration:10,value:1, ease:"sine.inOut"})
+
+        ///////////
+        let earthCoinAnimTl = logoCompanyAnim(6,100,coinTextureImg,(earthTextAnim.labels["goSomewhereE"] - earthTextAnim.labels["earthCoinAnimS"]))
+
+        ///////////
+        let earthNetworkTl = gsap.timeline({paused:true})
+            .to(earth.material.uniforms.earthNetworkPercent,{duration:10,value:1, ease:"sine.inOut"})
+
+        ///////////
+        earthShine.scale.set(0,0,0)
+        let earthShineTl = gsap.timeline({paused:true})
+            .to(earthShine.scale,{duration:5,x:1,y:1,z:1, ease:"sine.inOut"})
+            .to(earthShine.scale,{duration:5,x:0.8,y:0.8,z:0.8,repeat:10,yoyo:true, ease:"sine.inOut"})
+            .to(earthShineBlobe.material.uniforms.lightIntensity,{duration:5,value:2,repeat:10,yoyo:true, ease:"sine.inOut"},"<")
+            .to(earthShineBlobe.material.uniforms.colorDefault.value,{duration:5,x:0,w:5,repeat:10,yoyo:true, ease:"sine.inOut"},"<")
+            .set(earthShine.material,{visible: false})
+
+        let earthAnim = gsap.timeline({paused:true})
+
+            .add(earthTextAnim.restart())
+
+            .to(earthAnimRed,{duration:(earthTextAnim.labels["animRedMarsE"]-earthTextAnim.labels["animRedMarsS"]),progress:1,ease:"none"},earthTextAnim.labels["animRedMarsS"])
+            .add(earthCountryAnimTl.restart(),earthTextAnim.labels["animCountryS"])
+            .to(earthFrameTl,{duration:(earthTextAnim.labels["animEarthFrameE"]-earthTextAnim.labels["animEarthFrameS"]),progress:1,ease:"none"},earthTextAnim.labels["animEarthFrameS"])
+            .to(earthGlitchTl,{duration:(earthTextAnim.labels["animEarthGlitchE"]-earthTextAnim.labels["animEarthGlitchS"]),progress:1,ease:"none"},earthTextAnim.labels["animEarthGlitchS"])
+            .add(earthCompanyAnimTl.restart(),earthTextAnim.labels["animEarthCompanyS"]+6)
+            ////
+            .to(earthGlitchTl,{duration:(earthTextAnim.labels["WorldWarE"]-earthTextAnim.labels["WorldWarS"]),progress:0,ease:"none"},earthTextAnim.labels["WorldWarS"])
+            .to(earthFrameTl,{duration:(earthTextAnim.labels["WorldWarE"]-earthTextAnim.labels["WorldWarS"]),progress:0,ease:"none"},earthTextAnim.labels["WorldWarS"])
+            .to(earthAnimRed,{duration:(earthTextAnim.labels["WorldWarE"]-earthTextAnim.labels["WorldWarS"]),progress:0,ease:"none"},earthTextAnim.labels["WorldWarS"])
+            ////
+            .to(earthRedVirusTl,{duration:(earthTextAnim.labels["earthRedVirusE"]-earthTextAnim.labels["earthRedVirusS"]),progress:1,ease:"none"},earthTextAnim.labels["earthRedVirusS"])
+            .to(earthGreenVirusTl,{duration:(earthTextAnim.labels["earthGreenVirusE"]-earthTextAnim.labels["earthGreenVirusS"]),progress:1,ease:"none"},earthTextAnim.labels["earthGreenVirusS"])
+            ////
+            .add(earthCoinAnimTl.restart(),earthTextAnim.labels["earthCoinAnimS"])
+            .to(earthNetworkTl,{duration:(earthTextAnim.labels["goSomewhereE"]-earthTextAnim.labels["earthNetworkS"]),progress:1,ease:"none"},earthTextAnim.labels["earthNetworkS"])
+
+            .to(earthShineTl,{duration:(earthTextAnim.labels["manifestAnimE"]-earthTextAnim.labels["goSomewhereS"]),progress:1,ease:"none"},earthTextAnim.labels["goSomewhereS"])
+
+
+
 
 
 
@@ -1175,8 +1237,8 @@ window.addEventListener("load",function () {
         let slideChatTl = arrTextAnim["chatForPresentation"]
         let presentationTl = gsap.timeline({paused:true})
             .to(".smartapePresentation .chatForStory",{autoAlpha:1})
-            .add(typeAnim(".smartapePresentation .chatForStory .title h2","title"),"<")
-            .to(".smartapePresentation .chatForStory .title",{duration:2,autoAlpha:0,ease:"sine.out"},">+0.5")
+            // .add(typeAnim(".smartapePresentation .chatForStory .title h2","title"),"<")
+            // .to(".smartapePresentation .chatForStory .title",{duration:2,autoAlpha:0,ease:"sine.out"},">+0.5")
 
             .from(".smartapePresentation .chatForStory .content",{duration:1,width:"0%",ease:"back.out(1)"},"<")
             .from(".smartapePresentation .chatForStory .content",{duration:1,opacity:0,ease:"none"},"<+2")
@@ -1234,7 +1296,9 @@ window.addEventListener("load",function () {
             }
         }
         presentationTl
+            .to(".smartapeMonkey",{duration:2,y:"100%",ease:"back.out(1.5)"},">")
             .to(".smartapePresentation",{duration:1,autoAlpha:0})
+
 
 
 
@@ -1263,9 +1327,6 @@ window.addEventListener("load",function () {
             .to(".endTitle",{duration:5,autoAlpha:0},">-5")
 
 
-
-
-
         /**
          *
          ************ mainTl ************
@@ -1287,19 +1348,17 @@ window.addEventListener("load",function () {
             .add(starWarsTl.restart())
             .add(chatAfterStoryTl.restart(),">-2")
 
-            .to(".subtitles-wrapper",{duration:1,width:"50%",ease:"back.out(1)"},"qq-=1")
+            .to(".subtitles-wrapper",{duration:1,maxWidth:"100%",ease:"back.out(1)"},"qq-=1")
             .to(".subtitles-wrapper",{duration:1,opacity:1,ease:"none"},"<")
-
-            .add(arrTextAnim["subtitleEarth"].restart(),"<")
+        //
+        let timeRotate = arrTextAnim["subtitleEarth"].duration()
+        mainTl
+            .add(earthAnim.restart(),"<")
             .add("endManifest",">")
             .to(cameraTarget.position,{duration:2,y:0,ease:"power1.inOut"},"<")
             .to(camera.position,{duration:3,y:0,z:25,ease:"power1.inOut"},"<")
-            //
-        let timeRotate = arrTextAnim["subtitleEarth"].duration()
-        mainTl
             .to(moonWrap.rotation,{duration:timeRotate,y:"+=-"+THREE.MathUtils.degToRad(360*timeRotate/120),ease:"none"},"<")
             .to(earth.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*timeRotate/60),ease:"none"},"<")
-            .add(earthAnim.restart(),"<")
             .to(".subtitles-wrapper",{duration:1,width:"0%",ease:"back.out(1)"},"endManifest")
             .to(".subtitles-wrapper",{duration:1,opacity:0,ease:"none"},"<")
 
@@ -1363,11 +1422,12 @@ window.addEventListener("load",function () {
             .to(earth.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*timeRotate/60),ease:"none"},"<")
             .to(cameraWrapper.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*(timeRotate)/120),ease:"none"},"<")
 
-            .add(presentationTl.restart(),"<-4")
+            .add(presentationTl.restart(),"<-1")
 
             .add(endTitleTl.restart(),">")
             .to(".wrapper-animation > *",{duration:1,autoAlpha:0},">")
 
+        ////////////////////////////
 
         /**
          * function start/stop audio
@@ -1408,16 +1468,18 @@ window.addEventListener("load",function () {
 
         function firstLoadAudio(){
             if(audioStory.id.getAttribute("data-load") === "false"){
+
+                audioStory.id.src = audioStoryMP3;
                 audioStory.id.load()
                 audioStory.id.volume = 0;
                 audioStory.id.muted = false;
                 audioStory.id.pause()
                 audioStory.id.currentTime = 0
                 audioStory.id.setAttribute("data-load","true")
-                audioStory.id.src = audioStoryMP3;
 
-                videoStory.id.load()
+
                 videoStory.id.src = videoHowInstall;
+                videoStory.id.load()
                 videoStory.id.volume = 0;
                 videoStory.id.muted = false;
                 videoStory.id.pause()

@@ -37,7 +37,7 @@ void main() {
     float texColorKof = (texColor.r + texColor.g + texColor.b + texColor.a) / 4.0;
     vec4 finalColor;
     if(texColorKof < 0.4){
-        finalColor = vec4(0.0,0.0,0.0,0.0) * addedLights;
+        finalColor = vec4(0.0,0.0,0.0,0.1) * addedLights;
     }else{
         finalColor = vec4(colorDefault.r*texColorKof, colorDefault.g*texColorKof, colorDefault.b*texColorKof, colorDefault.a * 0.2) * addedLights;
     }
