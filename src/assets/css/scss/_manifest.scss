@@ -40,16 +40,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
 
     .text-wrapper {
-        position: absolute;
+        //position: absolute;
+        position: relative;
         left: 0;
         right: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0.75em 1em;
+        //padding: 0.75em 1em;
     }
 
     .text-wrapper.textRelative {
@@ -98,11 +100,11 @@
     @media(max-width: 680px) {
         .subtitles-wrapper {
             font-size: 14px;
-            min-height: 3.6em;
-            padding: 10px 20px;
+            //min-height: 3.6em;
+            //padding: 10px 20px;
         }
         .text-wrapper {
-            padding: 10px 20px;
+            //padding: 10px 20px;
         }
     }
 

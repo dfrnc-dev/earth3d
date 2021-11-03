@@ -50,52 +50,52 @@ if (containerStartScreen) {
                 <clipPath id="clip-path">
                   <rect x="-15.06" width="1726.06" height="926.63" fill="none"/>
                 </clipPath>
-                <linearGradient id="linear-gradient" x1="228.75" y1="431.05" x2="228.75" y2="327.12" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
+                <linearGradient id="linear-gradient_start-screen" x1="228.75" y1="431.05" x2="228.75" y2="327.12" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
                   <stop offset="0" stop-opacity="0"/>
                   <stop offset="1" stop-color="#36d6ae"/>
                 </linearGradient>
-                <linearGradient id="linear-gradient-2" x1="342.5" y1="431.05" x2="342.5" y2="327.12" xlink:href="#linear-gradient"/>
-                <linearGradient id="linear-gradient-3" x1="456.75" y1="431.05" x2="456.75" y2="327.12" xlink:href="#linear-gradient"/>
-                <linearGradient id="linear-gradient-4" x1="570.75" y1="449.3" x2="570.75" y2="327.12" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
+                <linearGradient id="linear-gradient_start-screen-2" x1="342.5" y1="431.05" x2="342.5" y2="327.12" xlink:href="#linear-gradient_start-screen"/>
+                <linearGradient id="linear-gradient_start-screen-3" x1="456.75" y1="431.05" x2="456.75" y2="327.12" xlink:href="#linear-gradient_start-screen"/>
+                <linearGradient id="linear-gradient_start-screen-4" x1="570.75" y1="449.3" x2="570.75" y2="327.12" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
                   <stop offset="0" stop-opacity="0"/>
                   <stop offset="1" stop-color="#fcf000"/>
                 </linearGradient>
-                <linearGradient id="linear-gradient-5" x1="684.5" y1="449.3" x2="684.5" y2="327.12" xlink:href="#linear-gradient-4"/>
-                <linearGradient id="linear-gradient-6" x1="798.75" y1="449.3" x2="798.75" y2="327.12" xlink:href="#linear-gradient-4"/>
-                <linearGradient id="linear-gradient-7" x1="912.75" y1="565.73" x2="912.75" y2="326.73" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
+                <linearGradient id="linear-gradient_start-screen-5" x1="684.5" y1="449.3" x2="684.5" y2="327.12" xlink:href="#linear-gradient_start-screen-4"/>
+                <linearGradient id="linear-gradient_start-screen-6" x1="798.75" y1="449.3" x2="798.75" y2="327.12" xlink:href="#linear-gradient_start-screen-4"/>
+                <linearGradient id="linear-gradient_start-screen-7" x1="912.75" y1="565.73" x2="912.75" y2="326.73" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
                   <stop offset="0" stop-opacity="0"/>
                   <stop offset="1" stop-color="#1fcbff"/>
                 </linearGradient>
-                <linearGradient id="linear-gradient-8" x1="1026.5" y1="565.73" x2="1026.5" y2="326.73" xlink:href="#linear-gradient-7"/>
-                <linearGradient id="linear-gradient-9" x1="1140.25" y1="565.73" x2="1140.25" y2="326.73" xlink:href="#linear-gradient-7"/>
-                <linearGradient id="linear-gradient-10" x1="1254.25" y1="651.73" x2="1254.25" y2="327.73" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
+                <linearGradient id="linear-gradient_start-screen-8" x1="1026.5" y1="565.73" x2="1026.5" y2="326.73" xlink:href="#linear-gradient_start-screen-7"/>
+                <linearGradient id="linear-gradient_start-screen-9" x1="1140.25" y1="565.73" x2="1140.25" y2="326.73" xlink:href="#linear-gradient_start-screen-7"/>
+                <linearGradient id="linear-gradient_start-screen-10" x1="1254.25" y1="651.73" x2="1254.25" y2="327.73" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
                   <stop offset="0" stop-opacity="0"/>
                   <stop offset="1" stop-color="#f62bfd"/>
                 </linearGradient>
-                <linearGradient id="linear-gradient-11" x1="1368.5" y1="651.73" x2="1368.5" y2="327.73" xlink:href="#linear-gradient-10"/>
-                <linearGradient id="linear-gradient-12" x1="1482.75" y1="651.73" x2="1482.75" y2="327.73" xlink:href="#linear-gradient-10"/>
-                <radialGradient id="radial-gradient" cx="856" cy="865.5" fx="-502.65301697817085" r="1952.53" gradientUnits="userSpaceOnUse">
+                <linearGradient id="linear-gradient_start-screen-11" x1="1368.5" y1="651.73" x2="1368.5" y2="327.73" xlink:href="#linear-gradient_start-screen-10"/>
+                <linearGradient id="linear-gradient_start-screen-12" x1="1482.75" y1="651.73" x2="1482.75" y2="327.73" xlink:href="#linear-gradient_start-screen-10"/>
+                <radialGradient id="radial-gradient_start-screen" cx="856" cy="865.5" fx="-502.65301697817085" r="1952.53" gradientUnits="userSpaceOnUse">
                   <stop offset="0" stop-color="#fedbff" stop-opacity="0"/>
                   <stop offset="1" stop-color="#fedbff" stop-opacity="0.75"/>
                 </radialGradient>
-                <linearGradient id="linear-gradient-13" x1="1539.5" y1="865" x2="1539.5" y2="159" gradientUnits="userSpaceOnUse">
+                <linearGradient id="linear-gradient_start-screen-13" x1="1539.5" y1="865" x2="1539.5" y2="159" gradientUnits="userSpaceOnUse">
                   <stop offset="0.26" stop-color="#f6f6f6"/>
                   <stop offset="0.6" stop-color="#aeaead" stop-opacity="0.67"/>
                   <stop offset="1" stop-color="#1d1d1b" stop-opacity="0"/>
                 </linearGradient>
-                <linearGradient id="linear-gradient-14" x1="1425.5" y1="865" x2="1425.5" y2="276" xlink:href="#linear-gradient-13"/>
-                <linearGradient id="linear-gradient-15" x1="1311.5" y1="865" x2="1311.5" y2="394" xlink:href="#linear-gradient-13"/>
-                <linearGradient id="linear-gradient-16" x1="1197.5" y1="865" x2="1197.5" y2="497" xlink:href="#linear-gradient-13"/>
-                <linearGradient id="linear-gradient-17" x1="1083.5" y1="865" x2="1083.5" y2="564" xlink:href="#linear-gradient-13"/>
-                <linearGradient id="linear-gradient-18" x1="969.5" y1="865" x2="969.5" y2="618" xlink:href="#linear-gradient-13"/>
-                <linearGradient id="linear-gradient-19" x1="855.5" y1="865" x2="855.5" y2="655" xlink:href="#linear-gradient-13"/>
-                <linearGradient id="linear-gradient-20" x1="741.5" y1="865" x2="741.5" y2="683" xlink:href="#linear-gradient-13"/>
-                <linearGradient id="linear-gradient-21" x1="627.5" y1="865" x2="627.5" y2="702" xlink:href="#linear-gradient-13"/>
-                <linearGradient id="linear-gradient-22" x1="513.5" y1="865" x2="513.5" y2="717" xlink:href="#linear-gradient-13"/>
-                <linearGradient id="linear-gradient-23" x1="399.5" y1="865" x2="399.5" y2="722" xlink:href="#linear-gradient-13"/>
-                <linearGradient id="linear-gradient-24" x1="285.5" y1="865" x2="285.5" y2="722" xlink:href="#linear-gradient-13"/>
-                <linearGradient id="linear-gradient-25" x1="171.5" y1="865" x2="171.5" y2="722" xlink:href="#linear-gradient-13"/>
-                <radialGradient id="radial-gradient-2" cx="495.86" cy="-313.74" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, -76.58, 813.48)" gradientUnits="userSpaceOnUse">
+                <linearGradient id="linear-gradient_start-screen-14" x1="1425.5" y1="865" x2="1425.5" y2="276" xlink:href="#linear-gradient_start-screen-13"/>
+                <linearGradient id="linear-gradient_start-screen-15" x1="1311.5" y1="865" x2="1311.5" y2="394" xlink:href="#linear-gradient_start-screen-13"/>
+                <linearGradient id="linear-gradient_start-screen-16" x1="1197.5" y1="865" x2="1197.5" y2="497" xlink:href="#linear-gradient_start-screen-13"/>
+                <linearGradient id="linear-gradient_start-screen-17" x1="1083.5" y1="865" x2="1083.5" y2="564" xlink:href="#linear-gradient_start-screen-13"/>
+                <linearGradient id="linear-gradient_start-screen-18" x1="969.5" y1="865" x2="969.5" y2="618" xlink:href="#linear-gradient_start-screen-13"/>
+                <linearGradient id="linear-gradient_start-screen-19" x1="855.5" y1="865" x2="855.5" y2="655" xlink:href="#linear-gradient_start-screen-13"/>
+                <linearGradient id="linear-gradient_start-screen-20" x1="741.5" y1="865" x2="741.5" y2="683" xlink:href="#linear-gradient_start-screen-13"/>
+                <linearGradient id="linear-gradient_start-screen-21" x1="627.5" y1="865" x2="627.5" y2="702" xlink:href="#linear-gradient_start-screen-13"/>
+                <linearGradient id="linear-gradient_start-screen-22" x1="513.5" y1="865" x2="513.5" y2="717" xlink:href="#linear-gradient_start-screen-13"/>
+                <linearGradient id="linear-gradient_start-screen-23" x1="399.5" y1="865" x2="399.5" y2="722" xlink:href="#linear-gradient_start-screen-13"/>
+                <linearGradient id="linear-gradient_start-screen-24" x1="285.5" y1="865" x2="285.5" y2="722" xlink:href="#linear-gradient_start-screen-13"/>
+                <linearGradient id="linear-gradient_start-screen-25" x1="171.5" y1="865" x2="171.5" y2="722" xlink:href="#linear-gradient_start-screen-13"/>
+                <radialGradient id="radial-gradient_start-screen-2" cx="495.86" cy="-313.74" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, -76.58, 813.48)" gradientUnits="userSpaceOnUse">
                   <stop offset="0" stop-color="#fff"/>
                   <stop offset="0.04" stop-color="#d8d8d8"/>
                   <stop offset="0.1" stop-color="#ababab"/>
@@ -108,31 +108,31 @@ if (containerStartScreen) {
                   <stop offset="0.71" stop-color="#020202"/>
                   <stop offset="1"/>
                 </radialGradient>
-                <radialGradient id="radial-gradient-3" cx="682.37" cy="-127.39" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 35.62, 699.49)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-4" cx="868.32" cy="58.36" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 147.45, 585.85)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-5" cx="1055.39" cy="245.31" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 260, 471.52)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-6" cx="1241.9" cy="431.67" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 372.2, 357.54)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-7" cx="1428.41" cy="618.02" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 484.39, 243.55)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-8" cx="1614.92" cy="804.37" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 596.59, 129.56)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-9" cx="1801.44" cy="990.73" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 708.78, 15.58)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-10" cx="1987.95" cy="1177.08" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 820.97, -98.41)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-11" cx="2174.46" cy="1363.43" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 933.17, -212.39)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-12" cx="2360.97" cy="1549.78" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1045.36, -326.38)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-13" cx="2547.48" cy="1736.14" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1157.56, -440.36)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-14" cx="2733.99" cy="1922.49" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1269.75, -554.35)" xlink:href="#radial-gradient-2"/>
-                <linearGradient id="linear-gradient-26" x1="175.7" y1="641.14" x2="1557.53" y2="644.28" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
+                <radialGradient id="radial-gradient_start-screen-3" cx="682.37" cy="-127.39" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 35.62, 699.49)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-4" cx="868.32" cy="58.36" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 147.45, 585.85)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-5" cx="1055.39" cy="245.31" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 260, 471.52)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-6" cx="1241.9" cy="431.67" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 372.2, 357.54)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-7" cx="1428.41" cy="618.02" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 484.39, 243.55)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-8" cx="1614.92" cy="804.37" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 596.59, 129.56)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-9" cx="1801.44" cy="990.73" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 708.78, 15.58)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-10" cx="1987.95" cy="1177.08" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 820.97, -98.41)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-11" cx="2174.46" cy="1363.43" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 933.17, -212.39)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-12" cx="2360.97" cy="1549.78" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1045.36, -326.38)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-13" cx="2547.48" cy="1736.14" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1157.56, -440.36)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-14" cx="2733.99" cy="1922.49" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1269.75, -554.35)" xlink:href="#radial-gradient_start-screen-2"/>
+                <linearGradient id="linear-gradient_start-screen-26" x1="175.7" y1="641.14" x2="1557.53" y2="644.28" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
                   <stop offset="0" stop-color="#ffccaf"/>
                   <stop offset="0.38" stop-color="#fcf000"/>
                   <stop offset="0.62" stop-color="#1fcbff"/>
                   <stop offset="0.88" stop-color="#f62bfd"/>
                 </linearGradient>
-                <linearGradient id="linear-gradient-27" x1="175.7" y1="641.35" x2="1556.71" y2="644.48" xlink:href="#linear-gradient-26"/>
-                <linearGradient id="linear-gradient-28" x1="175.7" y1="641.56" x2="1555.89" y2="644.69" xlink:href="#linear-gradient-26"/>
-                <linearGradient id="linear-gradient-29" x1="175.7" y1="641.77" x2="1555.07" y2="644.9" xlink:href="#linear-gradient-26"/>
-                <linearGradient id="linear-gradient-30" x1="175.7" y1="642.08" x2="1553.84" y2="645.21" xlink:href="#linear-gradient-26"/>
-                <radialGradient id="radial-gradient-15" cx="1221.34" cy="411.37" r="42.53" gradientTransform="matrix(0.71, -0.71, 0.71, 0.71, 42.76, 1437.75)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-16" cx="1221.34" cy="411.37" r="57.82" gradientTransform="matrix(0.71, -0.71, 0.71, 0.71, 42.76, 1437.75)" xlink:href="#radial-gradient-2"/>
-                <radialGradient id="radial-gradient-17" cx="1221.34" cy="411.37" r="59.39" gradientTransform="translate(28.43 1407.86) rotate(-43.5)" gradientUnits="userSpaceOnUse">
+                <linearGradient id="linear-gradient_start-screen-27" x1="175.7" y1="641.35" x2="1556.71" y2="644.48" xlink:href="#linear-gradient_start-screen-26"/>
+                <linearGradient id="linear-gradient_start-screen-28" x1="175.7" y1="641.56" x2="1555.89" y2="644.69" xlink:href="#linear-gradient_start-screen-26"/>
+                <linearGradient id="linear-gradient_start-screen-29" x1="175.7" y1="641.77" x2="1555.07" y2="644.9" xlink:href="#linear-gradient_start-screen-26"/>
+                <linearGradient id="linear-gradient_start-screen-30" x1="175.7" y1="642.08" x2="1553.84" y2="645.21" xlink:href="#linear-gradient_start-screen-26"/>
+                <radialGradient id="radial-gradient_start-screen-15" cx="1221.34" cy="411.37" r="42.53" gradientTransform="matrix(0.71, -0.71, 0.71, 0.71, 42.76, 1437.75)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-16" cx="1221.34" cy="411.37" r="57.82" gradientTransform="matrix(0.71, -0.71, 0.71, 0.71, 42.76, 1437.75)" xlink:href="#radial-gradient_start-screen-2"/>
+                <radialGradient id="radial-gradient_start-screen-17" cx="1221.34" cy="411.37" r="59.39" gradientTransform="translate(28.43 1407.86) rotate(-43.5)" gradientUnits="userSpaceOnUse">
                   <stop offset="0.77" stop-color="#010101"/>
                   <stop offset="0.78" stop-color="#070707"/>
                   <stop offset="0.8" stop-color="#171717"/>
@@ -157,37 +157,37 @@ if (containerStartScreen) {
                   <g clip-path="url(#clip-path)">
                     <g id="geG">
                       <g id="gF">
-                        <path d="M172,761.68H285.5V865.61H172Z" fill-opacity="0.25" fill="url(#linear-gradient)"/>
-                        <path d="M285.5,761.68h114V865.61h-114Z" fill-opacity="0.25" fill="url(#linear-gradient-2)"/>
-                        <path d="M399.5,761.68H514V865.61H399.5Z" fill-opacity="0.25" fill="url(#linear-gradient-3)"/>
-                        <path d="M514,743.42H627.5V865.61H514Z" fill-opacity="0.25" fill="url(#linear-gradient-4)"/>
-                        <path d="M627.5,743.42h114V865.61h-114Z" fill-opacity="0.25" fill="url(#linear-gradient-5)"/>
-                        <path d="M741.5,743.42H856V865.61H741.5Z" fill-opacity="0.25" fill="url(#linear-gradient-6)"/>
-                        <path d="M856,627H969.5V866H856Z" fill-opacity="0.25" fill="url(#linear-gradient-7)"/>
-                        <path d="M969.49,627h114V866h-114Z" fill-opacity="0.25" fill="url(#linear-gradient-8)"/>
-                        <path d="M1083.5,627H1197V866H1083.5Z" fill-opacity="0.25" fill="url(#linear-gradient-9)"/>
-                        <path d="M1197,541h114.5V865H1197Z" fill-opacity="0.25" fill="url(#linear-gradient-10)"/>
-                        <path d="M1311.5,541h114V865h-114Z" fill-opacity="0.25" fill="url(#linear-gradient-11)"/>
-                        <path d="M1425.5,541H1540V865H1425.5Z" fill-opacity="0.25" fill="url(#linear-gradient-12)"/>
+                        <path d="M172,761.68H285.5V865.61H172Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen)"/>
+                        <path d="M285.5,761.68h114V865.61h-114Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-2)"/>
+                        <path d="M399.5,761.68H514V865.61H399.5Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-3)"/>
+                        <path d="M514,743.42H627.5V865.61H514Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-4)"/>
+                        <path d="M627.5,743.42h114V865.61h-114Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-5)"/>
+                        <path d="M741.5,743.42H856V865.61H741.5Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-6)"/>
+                        <path d="M856,627H969.5V866H856Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-7)"/>
+                        <path d="M969.49,627h114V866h-114Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-8)"/>
+                        <path d="M1083.5,627H1197V866H1083.5Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-9)"/>
+                        <path d="M1197,541h114.5V865H1197Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-10)"/>
+                        <path d="M1311.5,541h114V865h-114Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-11)"/>
+                        <path d="M1425.5,541H1540V865H1425.5Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-12)"/>
                       </g>
                       <g id="gML">
-                        <path d="M1197.4,862H172v7H1539c.55,0,1-3.14,1-7Z" opacity="0.5" fill="url(#radial-gradient)"/>
+                        <path d="M1197.4,862H172v7H1539c.55,0,1-3.14,1-7Z" opacity="0.5" fill="url(#radial-gradient_start-screen)"/>
                         <path d="M1197.4,865H172v1H1539a1,1,0,0,0,1-1Z" fill="#fedbff"/>
                       </g>
                       <g id="gGL">
-                        <rect x="1539" y="159" width="1" height="706" fill-opacity="0.18" fill="url(#linear-gradient-13)"/>
-                        <rect x="1425" y="276" width="1" height="589" fill-opacity="0.18" fill="url(#linear-gradient-14)"/>
-                        <rect x="1311" y="394" width="1" height="471" fill-opacity="0.18" fill="url(#linear-gradient-15)"/>
-                        <rect x="1197" y="497" width="1" height="368" fill-opacity="0.18" fill="url(#linear-gradient-16)"/>
-                        <rect x="1083" y="564" width="1" height="301" fill-opacity="0.18" fill="url(#linear-gradient-17)"/>
-                        <rect x="969" y="618" width="1" height="247" fill-opacity="0.18" fill="url(#linear-gradient-18)"/>
-                        <rect x="855" y="655" width="1" height="210" fill-opacity="0.18" fill="url(#linear-gradient-19)"/>
-                        <rect x="741" y="683" width="1" height="182" fill-opacity="0.18" fill="url(#linear-gradient-20)"/>
-                        <rect x="627" y="702" width="1" height="163" fill-opacity="0.18" fill="url(#linear-gradient-21)"/>
-                        <rect x="513" y="717" width="1" height="148" fill-opacity="0.18" fill="url(#linear-gradient-22)"/>
-                        <rect x="399" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient-23)"/>
-                        <rect x="285" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient-24)"/>
-                        <rect x="171" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient-25)"/>
+                        <rect x="1539" y="159" width="1" height="706" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-13)"/>
+                        <rect x="1425" y="276" width="1" height="589" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-14)"/>
+                        <rect x="1311" y="394" width="1" height="471" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-15)"/>
+                        <rect x="1197" y="497" width="1" height="368" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-16)"/>
+                        <rect x="1083" y="564" width="1" height="301" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-17)"/>
+                        <rect x="969" y="618" width="1" height="247" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-18)"/>
+                        <rect x="855" y="655" width="1" height="210" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-19)"/>
+                        <rect x="741" y="683" width="1" height="182" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-20)"/>
+                        <rect x="627" y="702" width="1" height="163" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-21)"/>
+                        <rect x="513" y="717" width="1" height="148" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-22)"/>
+                        <rect x="399" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-23)"/>
+                        <rect x="285" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-24)"/>
+                        <rect x="171" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-25)"/>
                       </g>
                       <g id="gT">
                         <path d="M111.56,897.31a2.73,2.73,0,0,1,2.2-.81,6,6,0,0,1,2,.52,5.85,5.85,0,0,0,1.69.54,2.33,2.33,0,0,0,2.14-1.11v1.46a2.65,2.65,0,0,1-2.21.82,5.66,5.66,0,0,1-1.84-.54,6.13,6.13,0,0,0-1.81-.52,2.61,2.61,0,0,0-1.26.27,2.36,2.36,0,0,0-.87.83Zm14.66,3.6a2.6,2.6,0,0,1,.62-1.69,3.1,3.1,0,0,1,.64-.54,8.08,8.08,0,0,1,.85-.5q.34-.18.9-.42l1.94-.86a1.67,1.67,0,0,0,1.16-1.57v-1.6a1.13,1.13,0,0,0-.51-1.1,3.82,3.82,0,0,0-1.76-.29,21.53,21.53,0,0,0-3.42.38v-1.26a20.07,20.07,0,0,1,3.76-.34,5.16,5.16,0,0,1,2.81.59,2.19,2.19,0,0,1,.86,1.95v1.91a2.48,2.48,0,0,1-.21,1.08,2.27,2.27,0,0,1-.71.75,9,9,0,0,1-1.38.74l-2.7,1.24a1.72,1.72,0,0,0-1.19,1.59v.77h6.19V903h-7.85Zm18.5,2.27c-.53,0-1,0-1.3,0a6.48,6.48,0,0,1-1-.22,2.35,2.35,0,0,1-.95-.47,2.46,2.46,0,0,1-.58-.9,3.34,3.34,0,0,1-.23-1.35v-5.9a3.85,3.85,0,0,1,.23-1.42,2.69,2.69,0,0,1,.61-1,2.56,2.56,0,0,1,.9-.48,4.85,4.85,0,0,1,1.15-.25c.44,0,.84,0,1.21,0,.53,0,.95,0,1.28,0a6.47,6.47,0,0,1,1.06.22,2.51,2.51,0,0,1,.95.5,2.33,2.33,0,0,1,.62.92,4.14,4.14,0,0,1,.23,1.46v5.92a3.65,3.65,0,0,1-.23,1.32,2.33,2.33,0,0,1-.62.9,2.91,2.91,0,0,1-.91.5,5,5,0,0,1-1.14.22C145.63,903.16,145.21,903.18,144.72,903.18Zm0-1.06a6.25,6.25,0,0,0,1.47-.13,1.17,1.17,0,0,0,.76-.54,2.39,2.39,0,0,0,.23-1.17v-6.12a2.48,2.48,0,0,0-.25-1.26,1.15,1.15,0,0,0-.76-.57,5.41,5.41,0,0,0-1.47-.15,5.74,5.74,0,0,0-1.51.15,1.11,1.11,0,0,0-.74.57,2.6,2.6,0,0,0-.24,1.26v6.12a2.27,2.27,0,0,0,.24,1.17,1.22,1.22,0,0,0,.77.54A6.42,6.42,0,0,0,144.76,902.12Zm10.4,1.06c-.53,0-1,0-1.29,0a6.36,6.36,0,0,1-1.05-.22,2.42,2.42,0,0,1-.95-.47,2.46,2.46,0,0,1-.58-.9,3.34,3.34,0,0,1-.23-1.35v-5.9a3.85,3.85,0,0,1,.23-1.42,2.69,2.69,0,0,1,.61-1,2.56,2.56,0,0,1,.9-.48,4.82,4.82,0,0,1,1.16-.25c.43,0,.83,0,1.2,0,.53,0,1,0,1.28,0a6.47,6.47,0,0,1,1.06.22,2.64,2.64,0,0,1,1,.5,2.43,2.43,0,0,1,.61.92,4.14,4.14,0,0,1,.23,1.46v5.92a3.65,3.65,0,0,1-.23,1.32,2.42,2.42,0,0,1-.61.9,3.09,3.09,0,0,1-.92.5,5,5,0,0,1-1.14.22C156.07,903.16,155.65,903.18,155.16,903.18Zm0-1.06a6.25,6.25,0,0,0,1.47-.13,1.17,1.17,0,0,0,.76-.54,2.28,2.28,0,0,0,.23-1.17v-6.12a2.48,2.48,0,0,0-.25-1.26,1.13,1.13,0,0,0-.76-.57,5.41,5.41,0,0,0-1.47-.15,5.74,5.74,0,0,0-1.51.15,1.13,1.13,0,0,0-.74.57,2.62,2.62,0,0,0-.23,1.26v6.12a2.28,2.28,0,0,0,.23,1.17,1.22,1.22,0,0,0,.77.54A6.42,6.42,0,0,0,155.2,902.12Zm10.4,1.06c-.53,0-1,0-1.29,0a6.36,6.36,0,0,1-1.05-.22,2.42,2.42,0,0,1-.95-.47,2.46,2.46,0,0,1-.58-.9,3.52,3.52,0,0,1-.23-1.35v-5.9a4.06,4.06,0,0,1,.23-1.42,2.69,2.69,0,0,1,.61-1,2.56,2.56,0,0,1,.9-.48,4.82,4.82,0,0,1,1.16-.25c.43,0,.83,0,1.2,0,.53,0,1,0,1.28,0a6.26,6.26,0,0,1,1.06.22,2.56,2.56,0,0,1,1,.5,2.43,2.43,0,0,1,.61.92,4.14,4.14,0,0,1,.23,1.46v5.92a3.65,3.65,0,0,1-.23,1.32,2.42,2.42,0,0,1-.61.9,3,3,0,0,1-.92.5,4.89,4.89,0,0,1-1.14.22C166.51,903.16,166.09,903.18,165.6,903.18Zm0-1.06a6.2,6.2,0,0,0,1.47-.13,1.17,1.17,0,0,0,.76-.54,2.28,2.28,0,0,0,.23-1.17v-6.12a2.48,2.48,0,0,0-.25-1.26,1.13,1.13,0,0,0-.75-.57,5.54,5.54,0,0,0-1.48-.15,5.79,5.79,0,0,0-1.51.15,1.13,1.13,0,0,0-.74.57,2.62,2.62,0,0,0-.23,1.26v6.12a2.28,2.28,0,0,0,.23,1.17,1.25,1.25,0,0,0,.77.54A6.42,6.42,0,0,0,165.64,902.12Zm14.55,1.06c-.53,0-1,0-1.29,0a6.36,6.36,0,0,1-1.05-.22,2.42,2.42,0,0,1-.95-.47,2.46,2.46,0,0,1-.58-.9,3.52,3.52,0,0,1-.23-1.35v-5.9a4.06,4.06,0,0,1,.23-1.42,2.69,2.69,0,0,1,.61-1,2.56,2.56,0,0,1,.9-.48,4.82,4.82,0,0,1,1.16-.25c.43,0,.83,0,1.2,0,.53,0,1,0,1.28,0a6.26,6.26,0,0,1,1.06.22,2.56,2.56,0,0,1,1,.5,2.43,2.43,0,0,1,.61.92,4.14,4.14,0,0,1,.23,1.46v5.92a3.65,3.65,0,0,1-.23,1.32,2.42,2.42,0,0,1-.61.9,3,3,0,0,1-.92.5,4.89,4.89,0,0,1-1.14.22C181.1,903.16,180.68,903.18,180.19,903.18Zm0-1.06a6.2,6.2,0,0,0,1.47-.13,1.17,1.17,0,0,0,.76-.54,2.28,2.28,0,0,0,.23-1.17v-6.12a2.48,2.48,0,0,0-.25-1.26,1.13,1.13,0,0,0-.75-.57,5.54,5.54,0,0,0-1.48-.15,5.79,5.79,0,0,0-1.51.15,1.13,1.13,0,0,0-.74.57,2.62,2.62,0,0,0-.23,1.26v6.12a2.28,2.28,0,0,0,.23,1.17,1.25,1.25,0,0,0,.77.54A6.42,6.42,0,0,0,180.23,902.12Zm10.4,1.06c-.52,0-1,0-1.29,0a6.58,6.58,0,0,1-1.05-.22,2.42,2.42,0,0,1-.95-.47,2.46,2.46,0,0,1-.58-.9,3.52,3.52,0,0,1-.23-1.35v-5.9a4.06,4.06,0,0,1,.23-1.42,2.58,2.58,0,0,1,.62-1,2.39,2.39,0,0,1,.9-.48,4.64,4.64,0,0,1,1.15-.25c.43,0,.83,0,1.2,0,.53,0,1,0,1.28,0a6.26,6.26,0,0,1,1.06.22,2.56,2.56,0,0,1,1,.5,2.43,2.43,0,0,1,.61.92,3.93,3.93,0,0,1,.23,1.46v5.92a3.45,3.45,0,0,1-.23,1.32,2.42,2.42,0,0,1-.61.9,3,3,0,0,1-.92.5,4.91,4.91,0,0,1-1.13.22C191.54,903.16,191.13,903.18,190.63,903.18Zm0-1.06a6.29,6.29,0,0,0,1.48-.13,1.15,1.15,0,0,0,.75-.54,2.27,2.27,0,0,0,.24-1.17v-6.12a2.47,2.47,0,0,0-.26-1.26,1.11,1.11,0,0,0-.75-.57,5.54,5.54,0,0,0-1.48-.15,5.79,5.79,0,0,0-1.51.15,1.13,1.13,0,0,0-.74.57,2.74,2.74,0,0,0-.23,1.26v6.12a2.39,2.39,0,0,0,.23,1.17,1.24,1.24,0,0,0,.78.54A6.27,6.27,0,0,0,190.67,902.12Zm10.4,1.06c-.52,0-.95,0-1.29,0a6.48,6.48,0,0,1-1-.22,2.4,2.4,0,0,1-1-.47,2.33,2.33,0,0,1-.57-.9,3.33,3.33,0,0,1-.24-1.35v-5.9a3.84,3.84,0,0,1,.24-1.42,2.57,2.57,0,0,1,.61-1,2.47,2.47,0,0,1,.9-.48,4.74,4.74,0,0,1,1.15-.25c.43,0,.83,0,1.2,0,.53,0,1,0,1.28,0a6.26,6.26,0,0,1,1.06.22,2.56,2.56,0,0,1,1,.5,2.43,2.43,0,0,1,.61.92,3.93,3.93,0,0,1,.23,1.46v5.92a3.45,3.45,0,0,1-.23,1.32,2.42,2.42,0,0,1-.61.9,3,3,0,0,1-.92.5,4.91,4.91,0,0,1-1.13.22C202,903.16,201.57,903.18,201.07,903.18Zm0-1.06a6.29,6.29,0,0,0,1.48-.13,1.15,1.15,0,0,0,.75-.54,2.27,2.27,0,0,0,.24-1.17v-6.12a2.47,2.47,0,0,0-.26-1.26,1.11,1.11,0,0,0-.75-.57,5.54,5.54,0,0,0-1.48-.15,5.79,5.79,0,0,0-1.51.15,1.13,1.13,0,0,0-.74.57,2.74,2.74,0,0,0-.23,1.26v6.12a2.39,2.39,0,0,0,.23,1.17,1.24,1.24,0,0,0,.78.54A6.27,6.27,0,0,0,201.11,902.12ZM212,891.32h4.17a7.62,7.62,0,0,1,2.38.3,2.12,2.12,0,0,1,1.08.72,2.16,2.16,0,0,1,.29,1.19v1.57a1.51,1.51,0,0,1-.4,1.1,2.53,2.53,0,0,1-1.21.55v.08a3,3,0,0,1,1.53.66,1.52,1.52,0,0,1,.6,1.23v2a1.88,1.88,0,0,1-1,1.8,7,7,0,0,1-3.18.52H212Zm4.23,5.11a2.88,2.88,0,0,0,1.56-.32,1.21,1.21,0,0,0,.49-1.07v-1.36a1,1,0,0,0-.49-.94,3.53,3.53,0,0,0-1.62-.27h-2.43v4Zm.07,5.36a4.51,4.51,0,0,0,1.85-.27.94.94,0,0,0,.54-.91v-1.77a1.25,1.25,0,0,0-.2-.74,1,1,0,0,0-.57-.41,4.62,4.62,0,0,0-.7-.13c-.21,0-.52,0-.92,0h-2.56v4.26Zm11.29,1.39q-4.92,0-4.92-3.17v-5.54q0-3.35,4.92-3.35a14.53,14.53,0,0,1,3.2.34v1.3a13,13,0,0,0-3.17-.43,7.33,7.33,0,0,0-1.22.09,3.6,3.6,0,0,0-1,.27,1.73,1.73,0,0,0-1,1.76v5.47c0,1.35,1.11,2,3.35,2a13.47,13.47,0,0,0,3.16-.43v1.33A14.85,14.85,0,0,1,227.57,903.18Z" fill="#777"/>
@@ -206,55 +206,55 @@ if (containerStartScreen) {
                       </g>
                       <g id="geD">
                         <g>
-                          <circle cx="171.78" cy="865.34" r="25" transform="matrix(0.02, -1, 1, 0.02, -696.17, 1023.39)" fill="url(#radial-gradient-2)" style="mix-blend-mode: screen"/>
+                          <circle cx="171.78" cy="865.34" r="25" transform="matrix(0.02, -1, 1, 0.02, -696.17, 1023.39)" fill="url(#radial-gradient_start-screen-2)" style="mix-blend-mode: screen"/>
                           <circle cx="171.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="285.78" cy="865.34" r="25" transform="translate(-583.97 1137.37) rotate(-89.09)" fill="url(#radial-gradient-3)" style="mix-blend-mode: screen"/>
+                          <circle cx="285.78" cy="865.34" r="25" transform="translate(-583.97 1137.37) rotate(-89.09)" fill="url(#radial-gradient_start-screen-3)" style="mix-blend-mode: screen"/>
                           <circle cx="285.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="399.43" cy="865.32" r="25" transform="translate(-472.12 1250.99) rotate(-89.09)" fill="url(#radial-gradient-4)" style="mix-blend-mode: screen"/>
+                          <circle cx="399.43" cy="865.32" r="25" transform="translate(-472.12 1250.99) rotate(-89.09)" fill="url(#radial-gradient_start-screen-4)" style="mix-blend-mode: screen"/>
                           <circle cx="399.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="513.78" cy="865.34" r="25" transform="translate(-359.59 1365.34) rotate(-89.09)" fill="url(#radial-gradient-5)" style="mix-blend-mode: screen"/>
+                          <circle cx="513.78" cy="865.34" r="25" transform="translate(-359.59 1365.34) rotate(-89.09)" fill="url(#radial-gradient_start-screen-5)" style="mix-blend-mode: screen"/>
                           <circle cx="513.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="627.78" cy="865.34" r="25" transform="translate(-247.39 1479.33) rotate(-89.09)" fill="url(#radial-gradient-6)" style="mix-blend-mode: screen"/>
+                          <circle cx="627.78" cy="865.34" r="25" transform="translate(-247.39 1479.33) rotate(-89.09)" fill="url(#radial-gradient_start-screen-6)" style="mix-blend-mode: screen"/>
                           <circle cx="627.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="741.78" cy="865.34" r="25" transform="translate(-135.2 1593.31) rotate(-89.09)" fill="url(#radial-gradient-7)" style="mix-blend-mode: screen"/>
+                          <circle cx="741.78" cy="865.34" r="25" transform="translate(-135.2 1593.31) rotate(-89.09)" fill="url(#radial-gradient_start-screen-7)" style="mix-blend-mode: screen"/>
                           <circle cx="741.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="855.78" cy="865.34" r="25" transform="translate(-23 1707.3) rotate(-89.09)" fill="url(#radial-gradient-8)" style="mix-blend-mode: screen"/>
+                          <circle cx="855.78" cy="865.34" r="25" transform="translate(-23 1707.3) rotate(-89.09)" fill="url(#radial-gradient_start-screen-8)" style="mix-blend-mode: screen"/>
                           <circle cx="855.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="969.78" cy="865.34" r="25" transform="translate(89.19 1821.29) rotate(-89.09)" fill="url(#radial-gradient-9)" style="mix-blend-mode: screen"/>
+                          <circle cx="969.78" cy="865.34" r="25" transform="translate(89.19 1821.29) rotate(-89.09)" fill="url(#radial-gradient_start-screen-9)" style="mix-blend-mode: screen"/>
                           <circle cx="969.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="1083.78" cy="865.34" r="25" transform="translate(201.38 1935.27) rotate(-89.09)" fill="url(#radial-gradient-10)" style="mix-blend-mode: screen"/>
+                          <circle cx="1083.78" cy="865.34" r="25" transform="translate(201.38 1935.27) rotate(-89.09)" fill="url(#radial-gradient_start-screen-10)" style="mix-blend-mode: screen"/>
                           <circle cx="1083.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="1197.78" cy="865.34" r="25" transform="translate(313.58 2049.26) rotate(-89.09)" fill="url(#radial-gradient-11)" style="mix-blend-mode: screen"/>
+                          <circle cx="1197.78" cy="865.34" r="25" transform="translate(313.58 2049.26) rotate(-89.09)" fill="url(#radial-gradient_start-screen-11)" style="mix-blend-mode: screen"/>
                           <circle cx="1197.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="1311.78" cy="865.34" r="25" transform="translate(425.77 2163.24) rotate(-89.09)" fill="url(#radial-gradient-12)" style="mix-blend-mode: screen"/>
+                          <circle cx="1311.78" cy="865.34" r="25" transform="translate(425.77 2163.24) rotate(-89.09)" fill="url(#radial-gradient_start-screen-12)" style="mix-blend-mode: screen"/>
                           <circle cx="1311.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="1425.78" cy="865.34" r="25" transform="matrix(0.02, -1, 1, 0.02, 537.96, 2277.23)" fill="url(#radial-gradient-13)" style="mix-blend-mode: screen"/>
+                          <circle cx="1425.78" cy="865.34" r="25" transform="matrix(0.02, -1, 1, 0.02, 537.96, 2277.23)" fill="url(#radial-gradient_start-screen-13)" style="mix-blend-mode: screen"/>
                           <circle cx="1425.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                         <g>
-                          <circle cx="1539.78" cy="865.34" r="25" transform="matrix(0.02, -1, 1, 0.02, 650.16, 2391.21)" fill="url(#radial-gradient-14)" style="mix-blend-mode: screen"/>
+                          <circle cx="1539.78" cy="865.34" r="25" transform="matrix(0.02, -1, 1, 0.02, 650.16, 2391.21)" fill="url(#radial-gradient_start-screen-14)" style="mix-blend-mode: screen"/>
                           <circle cx="1539.5" cy="865.5" r="3.5" fill="#fff"/>
                         </g>
                       </g>
@@ -279,17 +279,17 @@ if (containerStartScreen) {
                         <path d="M1272,816.42h2.33v14H1282V832h-10Zm12.32-.24h2.16v2.26h-2.16Zm0,4.2h2.16V832h-2.16Zm6.94,1.42h-2.66v-1.42h2.66v-1.87a3.2,3.2,0,0,1,1.06-2.71,5.27,5.27,0,0,1,3.26-.84,18.89,18.89,0,0,1,2,.12v1.42a14.48,14.48,0,0,0-1.88-.12,2.7,2.7,0,0,0-1.72.43,2,2,0,0,0-.51,1.56v2h3.87v1.42h-3.87V832h-2.16Zm13,10.44q-5.33,0-5.32-3.55V824.1a3.56,3.56,0,0,1,1.2-3,6.52,6.52,0,0,1,3.93-.94,6.06,6.06,0,0,1,3.7.89,3.65,3.65,0,0,1,1.15,3.07v2.57h-7.8v1.75a1.89,1.89,0,0,0,.84,1.73,5,5,0,0,0,2.59.53,15.8,15.8,0,0,0,3.91-.58v1.66A19.76,19.76,0,0,1,1304.26,832.24Zm2.5-7v-1.83a1.55,1.55,0,0,0-.65-1.44,4.15,4.15,0,0,0-2.16-.41,4.36,4.36,0,0,0-2.16.41,1.52,1.52,0,0,0-.67,1.44v1.83Zm15-7.2h-5.28v-1.64h12.89v1.64h-5.26V832h-2.35Zm10,2.32h2v1.9a1.44,1.44,0,0,1,.48-1,3.23,3.23,0,0,1,1.23-.79,3.7,3.7,0,0,1,1.46-.32h1.06V822h-1.2a4.66,4.66,0,0,0-2.24.41,1.51,1.51,0,0,0-.67,1.42V832h-2.16Zm12,11.86a8.26,8.26,0,0,1-2.57-.31,2.22,2.22,0,0,1-1.29-1.11,5.25,5.25,0,0,1-.39-2.28,4.66,4.66,0,0,1,.36-2,2.19,2.19,0,0,1,1.28-1,8.15,8.15,0,0,1,2.56-.31h3.48v-1.85a1.58,1.58,0,0,0-.26-1,1.34,1.34,0,0,0-.84-.5,7.3,7.3,0,0,0-1.7-.14,31.08,31.08,0,0,0-4,.28v-1.58c1.59-.14,3-.22,4.3-.22a10.24,10.24,0,0,1,3,.32,2,2,0,0,1,1.32,1,5.52,5.52,0,0,1,.36,2.3V832h-2.08v-1.1C1347.1,831.79,1345.93,832.24,1343.77,832.24Zm.36-1.42a10.19,10.19,0,0,0,2-.16c.72-.15,1.08-.48,1.08-1v-3.17h-3.33a4.74,4.74,0,0,0-1.49.17.88.88,0,0,0-.6.57,4.78,4.78,0,0,0-.14,1.4,4.32,4.32,0,0,0,.16,1.34,1.24,1.24,0,0,0,.6.67,3.33,3.33,0,0,0,1.3.19Zm9-10.44h2.16v1.42c.22-1.1,1.5-1.66,3.82-1.66a4.67,4.67,0,0,1,3.12.82,3.2,3.2,0,0,1,.91,2.52V832H1361v-8.4a3.64,3.64,0,0,0-.07-.74,1.66,1.66,0,0,0-.29-.58c-.32-.4-1-.6-2.14-.6a7.75,7.75,0,0,0-2,.19,1.65,1.65,0,0,0-1,.58,2.15,2.15,0,0,0-.26,1.15V832h-2.16Zm17.31,11.86a30.2,30.2,0,0,1-4-.29V830.3a29,29,0,0,0,4,.45,5.93,5.93,0,0,0,2.21-.29,1.13,1.13,0,0,0,.67-1.12v-1.18a1.14,1.14,0,0,0-.51-1.06,3.3,3.3,0,0,0-1.63-.31h-1.32a4.47,4.47,0,0,1-2.76-.74,2.53,2.53,0,0,1-.93-2.09v-1.08c0-1.82,1.72-2.74,5.18-2.74.26,0,1.43.07,3.53.2v1.56a23.29,23.29,0,0,0-3.63-.34,5.33,5.33,0,0,0-2.32.34,1.17,1.17,0,0,0-.63,1.12v1c0,.78.71,1.17,2.14,1.17h1.34c2.45,0,3.67.92,3.67,2.74v1a2.79,2.79,0,0,1-1.24,2.57A7.76,7.76,0,0,1,1370.42,832.24Zm9.08-10.44h-2.66v-1.42h2.66v-1.87a3.2,3.2,0,0,1,1.06-2.71,5.27,5.27,0,0,1,3.26-.84,18.89,18.89,0,0,1,2,.12v1.42a14.48,14.48,0,0,0-1.88-.12,2.7,2.7,0,0,0-1.72.43,2,2,0,0,0-.51,1.56v2h3.87v1.42h-3.87V832h-2.16Zm13,10.44a16.24,16.24,0,0,1-2.31-.12,5,5,0,0,1-1.53-.46,2.25,2.25,0,0,1-1.16-1.15,5.47,5.47,0,0,1-.36-2.18v-4a6,6,0,0,1,.27-1.9,3.31,3.31,0,0,1,.69-1.27,2.35,2.35,0,0,1,1.08-.63,7.2,7.2,0,0,1,1.52-.31c.57,0,1.17-.05,1.8-.05a16.86,16.86,0,0,1,1.87.08,7.18,7.18,0,0,1,1.37.24,2.55,2.55,0,0,1,1.15.64,3.57,3.57,0,0,1,.69,1.25,6.38,6.38,0,0,1,.27,1.95v4a4,4,0,0,1-.94,3,2.45,2.45,0,0,1-1.1.6,7.41,7.41,0,0,1-1.49.29C1393.72,832.22,1393.11,832.24,1392.51,832.24Zm0-1.42c.67,0,1.16,0,1.46,0a2.69,2.69,0,0,0,.89-.27,1.08,1.08,0,0,0,.6-.62,3.28,3.28,0,0,0,.19-1.25v-4.7a3.51,3.51,0,0,0-.26-1.56,1.26,1.26,0,0,0-.92-.65,8.3,8.3,0,0,0-2-.17,8.81,8.81,0,0,0-2,.17,1.22,1.22,0,0,0-.88.65,3.35,3.35,0,0,0-.27,1.56v4.7a3.8,3.8,0,0,0,.17,1.25,1.21,1.21,0,0,0,.62.62,2.69,2.69,0,0,0,.89.27C1391.35,830.81,1391.83,830.82,1392.51,830.82Zm8.72-10.44h2v1.9a1.44,1.44,0,0,1,.48-1,3.26,3.26,0,0,1,1.22-.79,3.79,3.79,0,0,1,1.47-.32h1V822h-1.2a4.62,4.62,0,0,0-2.23.41,1.49,1.49,0,0,0-.67,1.42V832h-2.16Zm8.41,0h2.16v1.42c.23-1.1,1.53-1.66,3.91-1.66q2.91,0,3.63,1.59a1.88,1.88,0,0,1,1.29-1.18,7.89,7.89,0,0,1,2.69-.41,4.51,4.51,0,0,1,3,.82,3.23,3.23,0,0,1,.89,2.52V832h-2.16v-8.38a3.64,3.64,0,0,0-.07-.74,1.85,1.85,0,0,0-.29-.58c-.32-.4-1-.6-2.14-.6a7.86,7.86,0,0,0-1.89.17,1.36,1.36,0,0,0-.87.58,2.6,2.6,0,0,0-.21,1.17V832h-2.16v-8.38a3,3,0,0,0-.08-.74,1.62,1.62,0,0,0-.28-.58,2.72,2.72,0,0,0-2.12-.6,8.9,8.9,0,0,0-2,.17,1.45,1.45,0,0,0-.93.58,2,2,0,0,0-.27,1.17V832h-2.16Zm24.93,11.86a8.26,8.26,0,0,1-2.57-.31,2.22,2.22,0,0,1-1.29-1.11,5.25,5.25,0,0,1-.39-2.28,4.66,4.66,0,0,1,.36-2,2.2,2.2,0,0,1,1.27-1,8.26,8.26,0,0,1,2.57-.31H1438v-1.85a1.64,1.64,0,0,0-.26-1,1.34,1.34,0,0,0-.84-.5,7.39,7.39,0,0,0-1.71-.14,30.93,30.93,0,0,0-4,.28v-1.58c1.58-.14,3-.22,4.3-.22a10.24,10.24,0,0,1,3,.32,2,2,0,0,1,1.32,1,5.52,5.52,0,0,1,.36,2.3V832h-2.09v-1.1C1437.9,831.79,1436.73,832.24,1434.57,832.24Zm.36-1.42a10.26,10.26,0,0,0,2-.16c.72-.15,1.08-.48,1.08-1v-3.17h-3.33a4.74,4.74,0,0,0-1.49.17.84.84,0,0,0-.6.57,4.7,4.7,0,0,0-.15,1.4,4.28,4.28,0,0,0,.17,1.34,1.16,1.16,0,0,0,.6.67,3.33,3.33,0,0,0,1.3.19Zm13.85,1.42a6.89,6.89,0,0,1-2.33-.31,2.22,2.22,0,0,1-1.22-1.11,5.41,5.41,0,0,1-.36-2.2V821.8h-2.59v-1.42h2.59v-3.6h2.18v3.6h4.15v1.42h-4.15v6.94a3.5,3.5,0,0,0,.19,1.29,1.32,1.32,0,0,0,.72.63,5.45,5.45,0,0,0,1.52.16c.2,0,.78-.06,1.72-.19v1.42A15.27,15.27,0,0,1,1448.78,832.24Zm4.78-16.06h2.16v2.26h-2.16Zm0,4.2h2.16V832h-2.16Zm10.83,11.86a16.18,16.18,0,0,1-2.3-.12,4.94,4.94,0,0,1-1.54-.46,2.23,2.23,0,0,1-1.15-1.15,5.47,5.47,0,0,1-.36-2.18v-4a6.37,6.37,0,0,1,.26-1.9,3.32,3.32,0,0,1,.7-1.27,2.35,2.35,0,0,1,1.08-.63,7.11,7.11,0,0,1,1.51-.31c.58,0,1.18-.05,1.8-.05a16.73,16.73,0,0,1,1.87.08,7.18,7.18,0,0,1,1.37.24,2.5,2.5,0,0,1,1.15.64,3.57,3.57,0,0,1,.7,1.25,6.72,6.72,0,0,1,.26,1.95v4a4.07,4.07,0,0,1-.93,3,2.55,2.55,0,0,1-1.11.6,7.28,7.28,0,0,1-1.49.29C1465.61,832.22,1465,832.24,1464.39,832.24Zm0-1.42c.67,0,1.16,0,1.46,0a2.62,2.62,0,0,0,.89-.27,1.08,1.08,0,0,0,.6-.62,3.28,3.28,0,0,0,.19-1.25v-4.7a3.37,3.37,0,0,0-.26-1.56,1.26,1.26,0,0,0-.91-.65,8.4,8.4,0,0,0-2-.17,8.65,8.65,0,0,0-2,.17,1.24,1.24,0,0,0-.89.65,3.37,3.37,0,0,0-.26,1.56v4.7a3.83,3.83,0,0,0,.16,1.25,1.19,1.19,0,0,0,.63.62,2.62,2.62,0,0,0,.89.27C1463.23,830.81,1463.72,830.82,1464.39,830.82Zm8.72-10.44h2.16v1.42c.22-1.1,1.5-1.66,3.82-1.66a4.67,4.67,0,0,1,3.12.82,3.2,3.2,0,0,1,.91,2.52V832H1481v-8.4a3.64,3.64,0,0,0-.07-.74,1.66,1.66,0,0,0-.29-.58c-.32-.4-1-.6-2.14-.6a7.75,7.75,0,0,0-2,.19,1.65,1.65,0,0,0-1,.58,2.15,2.15,0,0,0-.26,1.15V832h-2.16Z" fill="#fff" fill-opacity="0.6"/>
                       </g>
                       <g id="gL">
-                        <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="11.5" opacity="0.05" stroke="url(#linear-gradient-26)"/>
-                        <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="9.5" opacity="0.15" stroke="url(#linear-gradient-27)"/>
-                        <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="7.5" opacity="0.25" stroke="url(#linear-gradient-28)"/>
-                        <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="5.5" opacity="0.35" stroke="url(#linear-gradient-29)"/>
-                        <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="2.5" stroke="url(#linear-gradient-30)"/>
+                        <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="11.5" opacity="0.05" stroke="url(#linear-gradient_start-screen-26)"/>
+                        <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="9.5" opacity="0.15" stroke="url(#linear-gradient_start-screen-27)"/>
+                        <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="7.5" opacity="0.25" stroke="url(#linear-gradient_start-screen-28)"/>
+                        <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="5.5" opacity="0.35" stroke="url(#linear-gradient_start-screen-29)"/>
+                        <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="2.5" stroke="url(#linear-gradient_start-screen-30)"/>
                       </g>
                       <g id="gD">
                         <g id="wgD">
-                          <path d="M1227.59,835.44a42.54,42.54,0,1,1-60.16,0A42.53,42.53,0,0,1,1227.59,835.44Z" fill="url(#radial-gradient-15)" style="mix-blend-mode: screen"/>
-                          <circle cx="1197.5" cy="865.51" r="57.82" fill="url(#radial-gradient-16)" style="mix-blend-mode: screen"/>
-                          <circle cx="1197.5" cy="865.51" r="59.39" transform="matrix(1, -0.03, 0.03, 1, -21.86, 31.08)" fill="url(#radial-gradient-17)" style="mix-blend-mode: screen"/>
+                          <path d="M1227.59,835.44a42.54,42.54,0,1,1-60.16,0A42.53,42.53,0,0,1,1227.59,835.44Z" fill="url(#radial-gradient_start-screen-15)" style="mix-blend-mode: screen"/>
+                          <circle cx="1197.5" cy="865.51" r="57.82" fill="url(#radial-gradient_start-screen-16)" style="mix-blend-mode: screen"/>
+                          <circle cx="1197.5" cy="865.51" r="59.39" transform="matrix(1, -0.03, 0.03, 1, -21.86, 31.08)" fill="url(#radial-gradient_start-screen-17)" style="mix-blend-mode: screen"/>
                         </g>
                       </g>
                     </g>
@@ -342,52 +342,52 @@ if (containerStartScreen) {
     else {
         containerStartScreen.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1711 1060">
   <defs>
-    <linearGradient id="linear-gradient" x1="228.75" y1="431.05" x2="228.75" y2="327.12" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient_start-screen" x1="228.75" y1="431.05" x2="228.75" y2="327.12" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-opacity="0"/>
       <stop offset="1" stop-color="#36d6ae"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-2" x1="342.5" y1="431.05" x2="342.5" y2="327.12" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-3" x1="456.75" y1="431.05" x2="456.75" y2="327.12" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-4" x1="570.75" y1="449.3" x2="570.75" y2="327.12" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient_start-screen-2" x1="342.5" y1="431.05" x2="342.5" y2="327.12" xlink:href="#linear-gradient_start-screen"/>
+    <linearGradient id="linear-gradient_start-screen-3" x1="456.75" y1="431.05" x2="456.75" y2="327.12" xlink:href="#linear-gradient_start-screen"/>
+    <linearGradient id="linear-gradient_start-screen-4" x1="570.75" y1="449.3" x2="570.75" y2="327.12" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-opacity="0"/>
       <stop offset="1" stop-color="#fcf000"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-5" x1="684.5" y1="449.3" x2="684.5" y2="327.12" xlink:href="#linear-gradient-4"/>
-    <linearGradient id="linear-gradient-6" x1="798.75" y1="449.3" x2="798.75" y2="327.12" xlink:href="#linear-gradient-4"/>
-    <linearGradient id="linear-gradient-7" x1="912.75" y1="565.73" x2="912.75" y2="326.73" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient_start-screen-5" x1="684.5" y1="449.3" x2="684.5" y2="327.12" xlink:href="#linear-gradient_start-screen-4"/>
+    <linearGradient id="linear-gradient_start-screen-6" x1="798.75" y1="449.3" x2="798.75" y2="327.12" xlink:href="#linear-gradient_start-screen-4"/>
+    <linearGradient id="linear-gradient_start-screen-7" x1="912.75" y1="565.73" x2="912.75" y2="326.73" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-opacity="0"/>
       <stop offset="1" stop-color="#1fcbff"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-8" x1="1026.5" y1="565.73" x2="1026.5" y2="326.73" xlink:href="#linear-gradient-7"/>
-    <linearGradient id="linear-gradient-9" x1="1140.25" y1="565.73" x2="1140.25" y2="326.73" xlink:href="#linear-gradient-7"/>
-    <linearGradient id="linear-gradient-10" x1="1254.25" y1="651.73" x2="1254.25" y2="327.73" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient_start-screen-8" x1="1026.5" y1="565.73" x2="1026.5" y2="326.73" xlink:href="#linear-gradient_start-screen-7"/>
+    <linearGradient id="linear-gradient_start-screen-9" x1="1140.25" y1="565.73" x2="1140.25" y2="326.73" xlink:href="#linear-gradient_start-screen-7"/>
+    <linearGradient id="linear-gradient_start-screen-10" x1="1254.25" y1="651.73" x2="1254.25" y2="327.73" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-opacity="0"/>
       <stop offset="1" stop-color="#f62bfd"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-11" x1="1368.5" y1="651.73" x2="1368.5" y2="327.73" xlink:href="#linear-gradient-10"/>
-    <linearGradient id="linear-gradient-12" x1="1482.75" y1="651.73" x2="1482.75" y2="327.73" xlink:href="#linear-gradient-10"/>
-    <radialGradient id="radial-gradient" cx="856" cy="865.5" fx="-502.65301697817085" r="1952.53" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient_start-screen-11" x1="1368.5" y1="651.73" x2="1368.5" y2="327.73" xlink:href="#linear-gradient_start-screen-10"/>
+    <linearGradient id="linear-gradient_start-screen-12" x1="1482.75" y1="651.73" x2="1482.75" y2="327.73" xlink:href="#linear-gradient_start-screen-10"/>
+    <radialGradient id="radial-gradient_start-screen" cx="856" cy="865.5" fx="-502.65301697817085" r="1952.53" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#fedbff" stop-opacity="0"/>
       <stop offset="1" stop-color="#fedbff" stop-opacity="0.75"/>
     </radialGradient>
-    <linearGradient id="linear-gradient-13" x1="1539.5" y1="865" x2="1539.5" y2="159" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient_start-screen-13" x1="1539.5" y1="865" x2="1539.5" y2="159" gradientUnits="userSpaceOnUse">
       <stop offset="0.26" stop-color="#f6f6f6"/>
       <stop offset="0.6" stop-color="#aeaead" stop-opacity="0.67"/>
       <stop offset="1" stop-color="#1d1d1b" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-14" x1="1425.5" y1="865" x2="1425.5" y2="276" xlink:href="#linear-gradient-13"/>
-    <linearGradient id="linear-gradient-15" x1="1311.5" y1="865" x2="1311.5" y2="394" xlink:href="#linear-gradient-13"/>
-    <linearGradient id="linear-gradient-16" x1="1197.5" y1="865" x2="1197.5" y2="497" xlink:href="#linear-gradient-13"/>
-    <linearGradient id="linear-gradient-17" x1="1083.5" y1="865" x2="1083.5" y2="564" xlink:href="#linear-gradient-13"/>
-    <linearGradient id="linear-gradient-18" x1="969.5" y1="865" x2="969.5" y2="618" xlink:href="#linear-gradient-13"/>
-    <linearGradient id="linear-gradient-19" x1="855.5" y1="865" x2="855.5" y2="655" xlink:href="#linear-gradient-13"/>
-    <linearGradient id="linear-gradient-20" x1="741.5" y1="865" x2="741.5" y2="683" xlink:href="#linear-gradient-13"/>
-    <linearGradient id="linear-gradient-21" x1="627.5" y1="865" x2="627.5" y2="702" xlink:href="#linear-gradient-13"/>
-    <linearGradient id="linear-gradient-22" x1="513.5" y1="865" x2="513.5" y2="717" xlink:href="#linear-gradient-13"/>
-    <linearGradient id="linear-gradient-23" x1="399.5" y1="865" x2="399.5" y2="722" xlink:href="#linear-gradient-13"/>
-    <linearGradient id="linear-gradient-24" x1="285.5" y1="865" x2="285.5" y2="722" xlink:href="#linear-gradient-13"/>
-    <linearGradient id="linear-gradient-25" x1="171.5" y1="865" x2="171.5" y2="722" xlink:href="#linear-gradient-13"/>
-    <radialGradient id="radial-gradient-2" cx="495.86" cy="-313.74" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, -76.58, 813.48)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient_start-screen-14" x1="1425.5" y1="865" x2="1425.5" y2="276" xlink:href="#linear-gradient_start-screen-13"/>
+    <linearGradient id="linear-gradient_start-screen-15" x1="1311.5" y1="865" x2="1311.5" y2="394" xlink:href="#linear-gradient_start-screen-13"/>
+    <linearGradient id="linear-gradient_start-screen-16" x1="1197.5" y1="865" x2="1197.5" y2="497" xlink:href="#linear-gradient_start-screen-13"/>
+    <linearGradient id="linear-gradient_start-screen-17" x1="1083.5" y1="865" x2="1083.5" y2="564" xlink:href="#linear-gradient_start-screen-13"/>
+    <linearGradient id="linear-gradient_start-screen-18" x1="969.5" y1="865" x2="969.5" y2="618" xlink:href="#linear-gradient_start-screen-13"/>
+    <linearGradient id="linear-gradient_start-screen-19" x1="855.5" y1="865" x2="855.5" y2="655" xlink:href="#linear-gradient_start-screen-13"/>
+    <linearGradient id="linear-gradient_start-screen-20" x1="741.5" y1="865" x2="741.5" y2="683" xlink:href="#linear-gradient_start-screen-13"/>
+    <linearGradient id="linear-gradient_start-screen-21" x1="627.5" y1="865" x2="627.5" y2="702" xlink:href="#linear-gradient_start-screen-13"/>
+    <linearGradient id="linear-gradient_start-screen-22" x1="513.5" y1="865" x2="513.5" y2="717" xlink:href="#linear-gradient_start-screen-13"/>
+    <linearGradient id="linear-gradient_start-screen-23" x1="399.5" y1="865" x2="399.5" y2="722" xlink:href="#linear-gradient_start-screen-13"/>
+    <linearGradient id="linear-gradient_start-screen-24" x1="285.5" y1="865" x2="285.5" y2="722" xlink:href="#linear-gradient_start-screen-13"/>
+    <linearGradient id="linear-gradient_start-screen-25" x1="171.5" y1="865" x2="171.5" y2="722" xlink:href="#linear-gradient_start-screen-13"/>
+    <radialGradient id="radial-gradient_start-screen-2" cx="495.86" cy="-313.74" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, -76.58, 813.48)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#fff"/>
       <stop offset="0.04" stop-color="#d8d8d8"/>
       <stop offset="0.1" stop-color="#ababab"/>
@@ -400,31 +400,31 @@ if (containerStartScreen) {
       <stop offset="0.71" stop-color="#020202"/>
       <stop offset="1"/>
     </radialGradient>
-    <radialGradient id="radial-gradient-3" cx="682.37" cy="-127.39" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 35.62, 699.49)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-4" cx="868.32" cy="58.36" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 147.45, 585.85)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-5" cx="1055.39" cy="245.31" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 260, 471.52)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-6" cx="1241.9" cy="431.67" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 372.2, 357.54)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-7" cx="1428.41" cy="618.02" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 484.39, 243.55)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-8" cx="1614.92" cy="804.37" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 596.59, 129.56)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-9" cx="1801.44" cy="990.73" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 708.78, 15.58)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-10" cx="1987.95" cy="1177.08" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 820.97, -98.41)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-11" cx="2174.46" cy="1363.43" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 933.17, -212.39)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-12" cx="2360.97" cy="1549.78" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1045.36, -326.38)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-13" cx="2547.48" cy="1736.14" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1157.56, -440.36)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-14" cx="2733.99" cy="1922.49" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1269.75, -554.35)" xlink:href="#radial-gradient-2"/>
-    <linearGradient id="linear-gradient-26" x1="175.7" y1="641.14" x2="1557.53" y2="644.28" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
+    <radialGradient id="radial-gradient_start-screen-3" cx="682.37" cy="-127.39" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 35.62, 699.49)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-4" cx="868.32" cy="58.36" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 147.45, 585.85)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-5" cx="1055.39" cy="245.31" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 260, 471.52)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-6" cx="1241.9" cy="431.67" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 372.2, 357.54)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-7" cx="1428.41" cy="618.02" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 484.39, 243.55)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-8" cx="1614.92" cy="804.37" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 596.59, 129.56)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-9" cx="1801.44" cy="990.73" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 708.78, 15.58)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-10" cx="1987.95" cy="1177.08" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 820.97, -98.41)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-11" cx="2174.46" cy="1363.43" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 933.17, -212.39)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-12" cx="2360.97" cy="1549.78" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1045.36, -326.38)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-13" cx="2547.48" cy="1736.14" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1157.56, -440.36)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-14" cx="2733.99" cy="1922.49" r="57.82" gradientTransform="matrix(0.31, 0.3, -0.3, 0.31, 1269.75, -554.35)" xlink:href="#radial-gradient_start-screen-2"/>
+    <linearGradient id="linear-gradient_start-screen-26" x1="175.7" y1="641.14" x2="1557.53" y2="644.28" gradientTransform="matrix(1, 0, 0, -1, 0, 1192.73)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#ffccaf"/>
       <stop offset="0.38" stop-color="#fcf000"/>
       <stop offset="0.62" stop-color="#1fcbff"/>
       <stop offset="0.88" stop-color="#f62bfd"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-27" x1="175.7" y1="641.35" x2="1556.71" y2="644.48" xlink:href="#linear-gradient-26"/>
-    <linearGradient id="linear-gradient-28" x1="175.7" y1="641.56" x2="1555.89" y2="644.69" xlink:href="#linear-gradient-26"/>
-    <linearGradient id="linear-gradient-29" x1="175.7" y1="641.77" x2="1555.07" y2="644.9" xlink:href="#linear-gradient-26"/>
-    <linearGradient id="linear-gradient-30" x1="175.7" y1="642.08" x2="1553.84" y2="645.21" xlink:href="#linear-gradient-26"/>
-    <radialGradient id="radial-gradient-15" cx="495.54" cy="-313.82" r="42.53" gradientTransform="matrix(0.71, -0.71, 0.71, 0.71, 42.76, 1437.75)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-16" cx="495.54" cy="-313.82" r="57.82" gradientTransform="matrix(0.71, -0.71, 0.71, 0.71, 42.76, 1437.75)" xlink:href="#radial-gradient-2"/>
-    <radialGradient id="radial-gradient-17" cx="495.54" cy="-313.82" r="59.39" gradientTransform="translate(28.09 1434.25) rotate(-43.5)" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient_start-screen-27" x1="175.7" y1="641.35" x2="1556.71" y2="644.48" xlink:href="#linear-gradient_start-screen-26"/>
+    <linearGradient id="linear-gradient_start-screen-28" x1="175.7" y1="641.56" x2="1555.89" y2="644.69" xlink:href="#linear-gradient_start-screen-26"/>
+    <linearGradient id="linear-gradient_start-screen-29" x1="175.7" y1="641.77" x2="1555.07" y2="644.9" xlink:href="#linear-gradient_start-screen-26"/>
+    <linearGradient id="linear-gradient_start-screen-30" x1="175.7" y1="642.08" x2="1553.84" y2="645.21" xlink:href="#linear-gradient_start-screen-26"/>
+    <radialGradient id="radial-gradient_start-screen-15" cx="495.54" cy="-313.82" r="42.53" gradientTransform="matrix(0.71, -0.71, 0.71, 0.71, 42.76, 1437.75)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-16" cx="495.54" cy="-313.82" r="57.82" gradientTransform="matrix(0.71, -0.71, 0.71, 0.71, 42.76, 1437.75)" xlink:href="#radial-gradient_start-screen-2"/>
+    <radialGradient id="radial-gradient_start-screen-17" cx="495.54" cy="-313.82" r="59.39" gradientTransform="translate(28.09 1434.25) rotate(-43.5)" gradientUnits="userSpaceOnUse">
       <stop offset="0.77" stop-color="#010101"/>
       <stop offset="0.78" stop-color="#070707"/>
       <stop offset="0.8" stop-color="#171717"/>
@@ -446,37 +446,37 @@ if (containerStartScreen) {
         <path id="gAf" d="M1310.37,946.34h4.26l9.58,24.66h-3.84l-2.81-7.49H1307l-2.77,7.49h-3.65Zm6.27,14.63-4.18-11.14h-.34L1307.94,961Zm12.75-6.12h-4.22v-2.24h4.22v-3c0-2,.55-3.43,1.67-4.29a8.32,8.32,0,0,1,5.17-1.33,29,29,0,0,1,3.08.19v2.24a24.16,24.16,0,0,0-3-.19,4.27,4.27,0,0,0-2.73.69,3.09,3.09,0,0,0-.8,2.47v3.19h6.12v2.24h-6.12V971h-3.42Zm20.51,16.53a10.88,10.88,0,0,1-3.68-.49,3.56,3.56,0,0,1-1.94-1.75,8.67,8.67,0,0,1-.57-3.5V954.85h-4.11v-2.24h4.11v-5.7h3.46v5.7h6.57v2.24h-6.57v11a5.33,5.33,0,0,0,.3,2,2,2,0,0,0,1.14,1,8.21,8.21,0,0,0,2.39.27c.33,0,1.25-.1,2.74-.31v2.25A25,25,0,0,1,1349.9,971.38Zm15.33,0q-8.43,0-8.44-5.62V958.5c0-2.23.64-3.83,1.9-4.79s3.37-1.48,6.24-1.48q4.07,0,5.85,1.4t1.82,4.87v4.06h-12.35v2.78a3,3,0,0,0,1.33,2.73,7.89,7.89,0,0,0,4.11.84,25.47,25.47,0,0,0,6.19-.91v2.62A31.13,31.13,0,0,1,1365.23,971.38Zm4-11.06v-2.89a2.44,2.44,0,0,0-1-2.28,6.62,6.62,0,0,0-3.42-.64,6.87,6.87,0,0,0-3.42.64,2.41,2.41,0,0,0-1.07,2.28v2.89Zm8.63-7.71H1381v3a2.3,2.3,0,0,1,.76-1.63,5.31,5.31,0,0,1,1.94-1.26,6,6,0,0,1,2.32-.49h1.67v2.92h-1.9a7.26,7.26,0,0,0-3.53.65,2.36,2.36,0,0,0-1.07,2.24v13h-3.42Zm31.93,18.77q-10.38,0-10.38-6.69V953q0-7.07,10.38-7.07a31,31,0,0,1,6.76.72v2.74a27.63,27.63,0,0,0-6.69-.91,15,15,0,0,0-2.58.19,8.59,8.59,0,0,0-2.13.57,3.65,3.65,0,0,0-2.2,3.72V964.5q0,4.26,7.06,4.26a28.13,28.13,0,0,0,6.69-.91v2.81A31.71,31.71,0,0,1,1409.74,971.38Zm16-.11-7.1-18.66h3.72l5.13,15h.08l4.63-15h3.46l-9.23,26.29h-3.58Zm21.32.11a19.45,19.45,0,0,1-3.31-.23,8.75,8.75,0,0,1-2.43-.76q-2.47-1.17-2.47-5.39V944.4h3.42v7.68c0,.65,0,1.39,0,2.2.13-.58.66-1.08,1.6-1.48a11.89,11.89,0,0,1,4.18-.57q7.61,0,7.6,5.2V965a7.76,7.76,0,0,1-.49,2.85,4.4,4.4,0,0,1-3.12,2.92,11,11,0,0,1-2.36.5C1448.9,971.34,1448,971.38,1447,971.38Zm.08-2.24a12.63,12.63,0,0,0,3-.27,2.45,2.45,0,0,0,1.52-1.06,4.68,4.68,0,0,0,.45-2.32v-7.22a4.68,4.68,0,0,0-.45-2.32,2.17,2.17,0,0,0-1.52-1,12.84,12.84,0,0,0-3-.27,10.8,10.8,0,0,0-2.89.3,2.41,2.41,0,0,0-1.48,1.11,4.24,4.24,0,0,0-.46,2.2v7.22a5,5,0,0,0,.42,2.32,2.42,2.42,0,0,0,1.48,1.06A12.41,12.41,0,0,0,1447.11,969.14Zm21.47,2.24q-8.43,0-8.44-5.62V958.5c0-2.23.64-3.83,1.9-4.79s3.37-1.48,6.24-1.48q4.07,0,5.85,1.4t1.82,4.87v4.06H1463.6v2.78a3,3,0,0,0,1.33,2.73,7.89,7.89,0,0,0,4.11.84,25.47,25.47,0,0,0,6.19-.91v2.62A31.13,31.13,0,0,1,1468.58,971.38Zm4-11.06v-2.89a2.44,2.44,0,0,0-1-2.28,6.62,6.62,0,0,0-3.42-.64,6.82,6.82,0,0,0-3.42.64,2.41,2.41,0,0,0-1.07,2.28v2.89Zm8.63-7.71h3.23v3a2.3,2.3,0,0,1,.76-1.63,5.31,5.31,0,0,1,1.94-1.26,6,6,0,0,1,2.32-.49h1.67v2.92h-1.9a7.26,7.26,0,0,0-3.53.65,2.36,2.36,0,0,0-1.07,2.24v13h-3.42Z" fill="#fff"/>
         <g id="geG-2" data-name="geG">
           <g id="gF">
-            <path d="M172,761.68H285.5V865.61H172Z" fill-opacity="0.25" fill="url(#linear-gradient)"/>
-            <path d="M285.5,761.68h114V865.61h-114Z" fill-opacity="0.25" fill="url(#linear-gradient-2)"/>
-            <path d="M399.5,761.68H514V865.61H399.5Z" fill-opacity="0.25" fill="url(#linear-gradient-3)"/>
-            <path d="M514,743.42H627.5V865.61H514Z" fill-opacity="0.25" fill="url(#linear-gradient-4)"/>
-            <path d="M627.5,743.42h114V865.61h-114Z" fill-opacity="0.25" fill="url(#linear-gradient-5)"/>
-            <path d="M741.5,743.42H856V865.61H741.5Z" fill-opacity="0.25" fill="url(#linear-gradient-6)"/>
-            <path d="M856,627H969.5V866H856Z" fill-opacity="0.25" fill="url(#linear-gradient-7)"/>
-            <path d="M969.49,627h114V866h-114Z" fill-opacity="0.25" fill="url(#linear-gradient-8)"/>
-            <path d="M1083.5,627H1197V866H1083.5Z" fill-opacity="0.25" fill="url(#linear-gradient-9)"/>
-            <path d="M1197,541h114.5V865H1197Z" fill-opacity="0.25" fill="url(#linear-gradient-10)"/>
-            <path d="M1311.5,541h114V865h-114Z" fill-opacity="0.25" fill="url(#linear-gradient-11)"/>
-            <path d="M1425.5,541H1540V865H1425.5Z" fill-opacity="0.25" fill="url(#linear-gradient-12)"/>
+            <path d="M172,761.68H285.5V865.61H172Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen)"/>
+            <path d="M285.5,761.68h114V865.61h-114Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-2)"/>
+            <path d="M399.5,761.68H514V865.61H399.5Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-3)"/>
+            <path d="M514,743.42H627.5V865.61H514Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-4)"/>
+            <path d="M627.5,743.42h114V865.61h-114Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-5)"/>
+            <path d="M741.5,743.42H856V865.61H741.5Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-6)"/>
+            <path d="M856,627H969.5V866H856Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-7)"/>
+            <path d="M969.49,627h114V866h-114Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-8)"/>
+            <path d="M1083.5,627H1197V866H1083.5Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-9)"/>
+            <path d="M1197,541h114.5V865H1197Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-10)"/>
+            <path d="M1311.5,541h114V865h-114Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-11)"/>
+            <path d="M1425.5,541H1540V865H1425.5Z" fill-opacity="0.25" fill="url(#linear-gradient_start-screen-12)"/>
           </g>
           <g id="gML">
-            <path d="M1197.4,862H172v7H1539c.55,0,1-3.14,1-7Z" opacity="0.5" fill="url(#radial-gradient)"/>
+            <path d="M1197.4,862H172v7H1539c.55,0,1-3.14,1-7Z" opacity="0.5" fill="url(#radial-gradient_start-screen)"/>
             <path d="M1197.4,865H172v1H1539a1,1,0,0,0,1-1Z" fill="#fedbff"/>
           </g>
           <g id="gGL">
-            <rect x="1539" y="159" width="1" height="706" fill-opacity="0.18" fill="url(#linear-gradient-13)"/>
-            <rect x="1425" y="276" width="1" height="589" fill-opacity="0.18" fill="url(#linear-gradient-14)"/>
-            <rect x="1311" y="394" width="1" height="471" fill-opacity="0.18" fill="url(#linear-gradient-15)"/>
-            <rect x="1197" y="497" width="1" height="368" fill-opacity="0.18" fill="url(#linear-gradient-16)"/>
-            <rect x="1083" y="564" width="1" height="301" fill-opacity="0.18" fill="url(#linear-gradient-17)"/>
-            <rect x="969" y="618" width="1" height="247" fill-opacity="0.18" fill="url(#linear-gradient-18)"/>
-            <rect x="855" y="655" width="1" height="210" fill-opacity="0.18" fill="url(#linear-gradient-19)"/>
-            <rect x="741" y="683" width="1" height="182" fill-opacity="0.18" fill="url(#linear-gradient-20)"/>
-            <rect x="627" y="702" width="1" height="163" fill-opacity="0.18" fill="url(#linear-gradient-21)"/>
-            <rect x="513" y="717" width="1" height="148" fill-opacity="0.18" fill="url(#linear-gradient-22)"/>
-            <rect x="399" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient-23)"/>
-            <rect x="285" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient-24)"/>
-            <rect x="171" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient-25)"/>
+            <rect x="1539" y="159" width="1" height="706" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-13)"/>
+            <rect x="1425" y="276" width="1" height="589" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-14)"/>
+            <rect x="1311" y="394" width="1" height="471" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-15)"/>
+            <rect x="1197" y="497" width="1" height="368" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-16)"/>
+            <rect x="1083" y="564" width="1" height="301" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-17)"/>
+            <rect x="969" y="618" width="1" height="247" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-18)"/>
+            <rect x="855" y="655" width="1" height="210" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-19)"/>
+            <rect x="741" y="683" width="1" height="182" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-20)"/>
+            <rect x="627" y="702" width="1" height="163" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-21)"/>
+            <rect x="513" y="717" width="1" height="148" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-22)"/>
+            <rect x="399" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-23)"/>
+            <rect x="285" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-24)"/>
+            <rect x="171" y="722" width="1" height="143" fill-opacity="0.18" fill="url(#linear-gradient_start-screen-25)"/>
           </g>
           <g id="gT">
             <path d="M111.56,897.31a2.73,2.73,0,0,1,2.2-.81,6,6,0,0,1,2,.52,5.85,5.85,0,0,0,1.69.54,2.33,2.33,0,0,0,2.14-1.11v1.46a2.65,2.65,0,0,1-2.21.82,5.66,5.66,0,0,1-1.84-.54,6.13,6.13,0,0,0-1.81-.52,2.61,2.61,0,0,0-1.26.27,2.36,2.36,0,0,0-.87.83Zm14.66,3.6a2.6,2.6,0,0,1,.62-1.69,3.1,3.1,0,0,1,.64-.54,8.08,8.08,0,0,1,.85-.5q.34-.18.9-.42l1.94-.86a1.67,1.67,0,0,0,1.16-1.57v-1.6a1.13,1.13,0,0,0-.51-1.1,3.82,3.82,0,0,0-1.76-.29,21.53,21.53,0,0,0-3.42.38v-1.26a20.07,20.07,0,0,1,3.76-.34,5.16,5.16,0,0,1,2.81.59,2.19,2.19,0,0,1,.86,1.95v1.91a2.48,2.48,0,0,1-.21,1.08,2.27,2.27,0,0,1-.71.75,9,9,0,0,1-1.38.74l-2.7,1.24a1.72,1.72,0,0,0-1.19,1.59v.77h6.19V903h-7.85Zm18.5,2.27c-.53,0-1,0-1.3,0a6.48,6.48,0,0,1-1-.22,2.35,2.35,0,0,1-.95-.47,2.46,2.46,0,0,1-.58-.9,3.34,3.34,0,0,1-.23-1.35v-5.9a3.85,3.85,0,0,1,.23-1.42,2.69,2.69,0,0,1,.61-1,2.56,2.56,0,0,1,.9-.48,4.85,4.85,0,0,1,1.15-.25c.44,0,.84,0,1.21,0,.53,0,.95,0,1.28,0a6.47,6.47,0,0,1,1.06.22,2.51,2.51,0,0,1,.95.5,2.33,2.33,0,0,1,.62.92,4.14,4.14,0,0,1,.23,1.46v5.92a3.65,3.65,0,0,1-.23,1.32,2.33,2.33,0,0,1-.62.9,2.91,2.91,0,0,1-.91.5,5,5,0,0,1-1.14.22C145.63,903.16,145.21,903.18,144.72,903.18Zm0-1.06a6.25,6.25,0,0,0,1.47-.13,1.17,1.17,0,0,0,.76-.54,2.39,2.39,0,0,0,.23-1.17v-6.12a2.48,2.48,0,0,0-.25-1.26,1.15,1.15,0,0,0-.76-.57,5.41,5.41,0,0,0-1.47-.15,5.74,5.74,0,0,0-1.51.15,1.11,1.11,0,0,0-.74.57,2.6,2.6,0,0,0-.24,1.26v6.12a2.27,2.27,0,0,0,.24,1.17,1.22,1.22,0,0,0,.77.54A6.42,6.42,0,0,0,144.76,902.12Zm10.4,1.06c-.53,0-1,0-1.29,0a6.36,6.36,0,0,1-1.05-.22,2.42,2.42,0,0,1-.95-.47,2.46,2.46,0,0,1-.58-.9,3.34,3.34,0,0,1-.23-1.35v-5.9a3.85,3.85,0,0,1,.23-1.42,2.69,2.69,0,0,1,.61-1,2.56,2.56,0,0,1,.9-.48,4.82,4.82,0,0,1,1.16-.25c.43,0,.83,0,1.2,0,.53,0,1,0,1.28,0a6.47,6.47,0,0,1,1.06.22,2.64,2.64,0,0,1,1,.5,2.43,2.43,0,0,1,.61.92,4.14,4.14,0,0,1,.23,1.46v5.92a3.65,3.65,0,0,1-.23,1.32,2.42,2.42,0,0,1-.61.9,3.09,3.09,0,0,1-.92.5,5,5,0,0,1-1.14.22C156.07,903.16,155.65,903.18,155.16,903.18Zm0-1.06a6.25,6.25,0,0,0,1.47-.13,1.17,1.17,0,0,0,.76-.54,2.28,2.28,0,0,0,.23-1.17v-6.12a2.48,2.48,0,0,0-.25-1.26,1.13,1.13,0,0,0-.76-.57,5.41,5.41,0,0,0-1.47-.15,5.74,5.74,0,0,0-1.51.15,1.13,1.13,0,0,0-.74.57,2.62,2.62,0,0,0-.23,1.26v6.12a2.28,2.28,0,0,0,.23,1.17,1.22,1.22,0,0,0,.77.54A6.42,6.42,0,0,0,155.2,902.12Zm10.4,1.06c-.53,0-1,0-1.29,0a6.36,6.36,0,0,1-1.05-.22,2.42,2.42,0,0,1-.95-.47,2.46,2.46,0,0,1-.58-.9,3.52,3.52,0,0,1-.23-1.35v-5.9a4.06,4.06,0,0,1,.23-1.42,2.69,2.69,0,0,1,.61-1,2.56,2.56,0,0,1,.9-.48,4.82,4.82,0,0,1,1.16-.25c.43,0,.83,0,1.2,0,.53,0,1,0,1.28,0a6.26,6.26,0,0,1,1.06.22,2.56,2.56,0,0,1,1,.5,2.43,2.43,0,0,1,.61.92,4.14,4.14,0,0,1,.23,1.46v5.92a3.65,3.65,0,0,1-.23,1.32,2.42,2.42,0,0,1-.61.9,3,3,0,0,1-.92.5,4.89,4.89,0,0,1-1.14.22C166.51,903.16,166.09,903.18,165.6,903.18Zm0-1.06a6.2,6.2,0,0,0,1.47-.13,1.17,1.17,0,0,0,.76-.54,2.28,2.28,0,0,0,.23-1.17v-6.12a2.48,2.48,0,0,0-.25-1.26,1.13,1.13,0,0,0-.75-.57,5.54,5.54,0,0,0-1.48-.15,5.79,5.79,0,0,0-1.51.15,1.13,1.13,0,0,0-.74.57,2.62,2.62,0,0,0-.23,1.26v6.12a2.28,2.28,0,0,0,.23,1.17,1.25,1.25,0,0,0,.77.54A6.42,6.42,0,0,0,165.64,902.12Zm14.55,1.06c-.53,0-1,0-1.29,0a6.36,6.36,0,0,1-1.05-.22,2.42,2.42,0,0,1-.95-.47,2.46,2.46,0,0,1-.58-.9,3.52,3.52,0,0,1-.23-1.35v-5.9a4.06,4.06,0,0,1,.23-1.42,2.69,2.69,0,0,1,.61-1,2.56,2.56,0,0,1,.9-.48,4.82,4.82,0,0,1,1.16-.25c.43,0,.83,0,1.2,0,.53,0,1,0,1.28,0a6.26,6.26,0,0,1,1.06.22,2.56,2.56,0,0,1,1,.5,2.43,2.43,0,0,1,.61.92,4.14,4.14,0,0,1,.23,1.46v5.92a3.65,3.65,0,0,1-.23,1.32,2.42,2.42,0,0,1-.61.9,3,3,0,0,1-.92.5,4.89,4.89,0,0,1-1.14.22C181.1,903.16,180.68,903.18,180.19,903.18Zm0-1.06a6.2,6.2,0,0,0,1.47-.13,1.17,1.17,0,0,0,.76-.54,2.28,2.28,0,0,0,.23-1.17v-6.12a2.48,2.48,0,0,0-.25-1.26,1.13,1.13,0,0,0-.75-.57,5.54,5.54,0,0,0-1.48-.15,5.79,5.79,0,0,0-1.51.15,1.13,1.13,0,0,0-.74.57,2.62,2.62,0,0,0-.23,1.26v6.12a2.28,2.28,0,0,0,.23,1.17,1.25,1.25,0,0,0,.77.54A6.42,6.42,0,0,0,180.23,902.12Zm10.4,1.06c-.52,0-1,0-1.29,0a6.58,6.58,0,0,1-1.05-.22,2.42,2.42,0,0,1-.95-.47,2.46,2.46,0,0,1-.58-.9,3.52,3.52,0,0,1-.23-1.35v-5.9a4.06,4.06,0,0,1,.23-1.42,2.58,2.58,0,0,1,.62-1,2.39,2.39,0,0,1,.9-.48,4.64,4.64,0,0,1,1.15-.25c.43,0,.83,0,1.2,0,.53,0,1,0,1.28,0a6.26,6.26,0,0,1,1.06.22,2.56,2.56,0,0,1,1,.5,2.43,2.43,0,0,1,.61.92,3.93,3.93,0,0,1,.23,1.46v5.92a3.45,3.45,0,0,1-.23,1.32,2.42,2.42,0,0,1-.61.9,3,3,0,0,1-.92.5,4.91,4.91,0,0,1-1.13.22C191.54,903.16,191.13,903.18,190.63,903.18Zm0-1.06a6.29,6.29,0,0,0,1.48-.13,1.15,1.15,0,0,0,.75-.54,2.27,2.27,0,0,0,.24-1.17v-6.12a2.47,2.47,0,0,0-.26-1.26,1.11,1.11,0,0,0-.75-.57,5.54,5.54,0,0,0-1.48-.15,5.79,5.79,0,0,0-1.51.15,1.13,1.13,0,0,0-.74.57,2.74,2.74,0,0,0-.23,1.26v6.12a2.39,2.39,0,0,0,.23,1.17,1.24,1.24,0,0,0,.78.54A6.27,6.27,0,0,0,190.67,902.12Zm10.4,1.06c-.52,0-.95,0-1.29,0a6.48,6.48,0,0,1-1-.22,2.4,2.4,0,0,1-1-.47,2.33,2.33,0,0,1-.57-.9,3.33,3.33,0,0,1-.24-1.35v-5.9a3.84,3.84,0,0,1,.24-1.42,2.57,2.57,0,0,1,.61-1,2.47,2.47,0,0,1,.9-.48,4.74,4.74,0,0,1,1.15-.25c.43,0,.83,0,1.2,0,.53,0,1,0,1.28,0a6.26,6.26,0,0,1,1.06.22,2.56,2.56,0,0,1,1,.5,2.43,2.43,0,0,1,.61.92,3.93,3.93,0,0,1,.23,1.46v5.92a3.45,3.45,0,0,1-.23,1.32,2.42,2.42,0,0,1-.61.9,3,3,0,0,1-.92.5,4.91,4.91,0,0,1-1.13.22C202,903.16,201.57,903.18,201.07,903.18Zm0-1.06a6.29,6.29,0,0,0,1.48-.13,1.15,1.15,0,0,0,.75-.54,2.27,2.27,0,0,0,.24-1.17v-6.12a2.47,2.47,0,0,0-.26-1.26,1.11,1.11,0,0,0-.75-.57,5.54,5.54,0,0,0-1.48-.15,5.79,5.79,0,0,0-1.51.15,1.13,1.13,0,0,0-.74.57,2.74,2.74,0,0,0-.23,1.26v6.12a2.39,2.39,0,0,0,.23,1.17,1.24,1.24,0,0,0,.78.54A6.27,6.27,0,0,0,201.11,902.12ZM212,891.32h4.17a7.62,7.62,0,0,1,2.38.3,2.12,2.12,0,0,1,1.08.72,2.16,2.16,0,0,1,.29,1.19v1.57a1.51,1.51,0,0,1-.4,1.1,2.53,2.53,0,0,1-1.21.55v.08a3,3,0,0,1,1.53.66,1.52,1.52,0,0,1,.6,1.23v2a1.88,1.88,0,0,1-1,1.8,7,7,0,0,1-3.18.52H212Zm4.23,5.11a2.88,2.88,0,0,0,1.56-.32,1.21,1.21,0,0,0,.49-1.07v-1.36a1,1,0,0,0-.49-.94,3.53,3.53,0,0,0-1.62-.27h-2.43v4Zm.07,5.36a4.51,4.51,0,0,0,1.85-.27.94.94,0,0,0,.54-.91v-1.77a1.25,1.25,0,0,0-.2-.74,1,1,0,0,0-.57-.41,4.62,4.62,0,0,0-.7-.13c-.21,0-.52,0-.92,0h-2.56v4.26Zm11.29,1.39q-4.92,0-4.92-3.17v-5.54q0-3.35,4.92-3.35a14.53,14.53,0,0,1,3.2.34v1.3a13,13,0,0,0-3.17-.43,7.33,7.33,0,0,0-1.22.09,3.6,3.6,0,0,0-1,.27,1.73,1.73,0,0,0-1,1.76v5.47c0,1.35,1.11,2,3.35,2a13.47,13.47,0,0,0,3.16-.43v1.33A14.85,14.85,0,0,1,227.57,903.18Z" fill="#777"/>
@@ -495,55 +495,55 @@ if (containerStartScreen) {
           </g>
           <g id="geD">
             <g>
-              <circle cx="171.78" cy="865.34" r="25" transform="translate(-696.17 1023.39) rotate(-89.09)" fill="url(#radial-gradient-2)" style="mix-blend-mode: screen"/>
+              <circle cx="171.78" cy="865.34" r="25" transform="translate(-696.17 1023.39) rotate(-89.09)" fill="url(#radial-gradient_start-screen-2)" style="mix-blend-mode: screen"/>
               <circle cx="171.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="285.78" cy="865.34" r="25" transform="translate(-583.97 1137.37) rotate(-89.09)" fill="url(#radial-gradient-3)" style="mix-blend-mode: screen"/>
+              <circle cx="285.78" cy="865.34" r="25" transform="translate(-583.97 1137.37) rotate(-89.09)" fill="url(#radial-gradient_start-screen-3)" style="mix-blend-mode: screen"/>
               <circle cx="285.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="399.43" cy="865.32" r="25" transform="translate(-472.12 1250.99) rotate(-89.09)" fill="url(#radial-gradient-4)" style="mix-blend-mode: screen"/>
+              <circle cx="399.43" cy="865.32" r="25" transform="translate(-472.12 1250.99) rotate(-89.09)" fill="url(#radial-gradient_start-screen-4)" style="mix-blend-mode: screen"/>
               <circle cx="399.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="513.78" cy="865.34" r="25" transform="matrix(0.02, -1, 1, 0.02, -359.59, 1365.34)" fill="url(#radial-gradient-5)" style="mix-blend-mode: screen"/>
+              <circle cx="513.78" cy="865.34" r="25" transform="matrix(0.02, -1, 1, 0.02, -359.59, 1365.34)" fill="url(#radial-gradient_start-screen-5)" style="mix-blend-mode: screen"/>
               <circle cx="513.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="627.78" cy="865.34" r="25" transform="translate(-247.39 1479.33) rotate(-89.09)" fill="url(#radial-gradient-6)" style="mix-blend-mode: screen"/>
+              <circle cx="627.78" cy="865.34" r="25" transform="translate(-247.39 1479.33) rotate(-89.09)" fill="url(#radial-gradient_start-screen-6)" style="mix-blend-mode: screen"/>
               <circle cx="627.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="741.78" cy="865.34" r="25" transform="translate(-135.2 1593.31) rotate(-89.09)" fill="url(#radial-gradient-7)" style="mix-blend-mode: screen"/>
+              <circle cx="741.78" cy="865.34" r="25" transform="translate(-135.2 1593.31) rotate(-89.09)" fill="url(#radial-gradient_start-screen-7)" style="mix-blend-mode: screen"/>
               <circle cx="741.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="855.78" cy="865.34" r="25" transform="translate(-23 1707.3) rotate(-89.09)" fill="url(#radial-gradient-8)" style="mix-blend-mode: screen"/>
+              <circle cx="855.78" cy="865.34" r="25" transform="translate(-23 1707.3) rotate(-89.09)" fill="url(#radial-gradient_start-screen-8)" style="mix-blend-mode: screen"/>
               <circle cx="855.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="969.78" cy="865.34" r="25" transform="translate(89.19 1821.29) rotate(-89.09)" fill="url(#radial-gradient-9)" style="mix-blend-mode: screen"/>
+              <circle cx="969.78" cy="865.34" r="25" transform="translate(89.19 1821.29) rotate(-89.09)" fill="url(#radial-gradient_start-screen-9)" style="mix-blend-mode: screen"/>
               <circle cx="969.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="1083.78" cy="865.34" r="25" transform="translate(201.38 1935.27) rotate(-89.09)" fill="url(#radial-gradient-10)" style="mix-blend-mode: screen"/>
+              <circle cx="1083.78" cy="865.34" r="25" transform="translate(201.38 1935.27) rotate(-89.09)" fill="url(#radial-gradient_start-screen-10)" style="mix-blend-mode: screen"/>
               <circle cx="1083.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="1197.78" cy="865.34" r="25" transform="translate(313.58 2049.26) rotate(-89.09)" fill="url(#radial-gradient-11)" style="mix-blend-mode: screen"/>
+              <circle cx="1197.78" cy="865.34" r="25" transform="translate(313.58 2049.26) rotate(-89.09)" fill="url(#radial-gradient_start-screen-11)" style="mix-blend-mode: screen"/>
               <circle cx="1197.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="1311.78" cy="865.34" r="25" transform="translate(425.77 2163.24) rotate(-89.09)" fill="url(#radial-gradient-12)" style="mix-blend-mode: screen"/>
+              <circle cx="1311.78" cy="865.34" r="25" transform="translate(425.77 2163.24) rotate(-89.09)" fill="url(#radial-gradient_start-screen-12)" style="mix-blend-mode: screen"/>
               <circle cx="1311.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="1425.78" cy="865.34" r="25" transform="translate(537.96 2277.23) rotate(-89.09)" fill="url(#radial-gradient-13)" style="mix-blend-mode: screen"/>
+              <circle cx="1425.78" cy="865.34" r="25" transform="translate(537.96 2277.23) rotate(-89.09)" fill="url(#radial-gradient_start-screen-13)" style="mix-blend-mode: screen"/>
               <circle cx="1425.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
             <g>
-              <circle cx="1539.78" cy="865.34" r="25" transform="translate(650.16 2391.21) rotate(-89.09)" fill="url(#radial-gradient-14)" style="mix-blend-mode: screen"/>
+              <circle cx="1539.78" cy="865.34" r="25" transform="translate(650.16 2391.21) rotate(-89.09)" fill="url(#radial-gradient_start-screen-14)" style="mix-blend-mode: screen"/>
               <circle cx="1539.5" cy="865.5" r="3.5" fill="#fff"/>
             </g>
           </g>
@@ -568,17 +568,17 @@ if (containerStartScreen) {
             <path d="M1272,816.42h2.33v14H1282V832h-10Zm12.32-.24h2.16v2.26h-2.16Zm0,4.2h2.16V832h-2.16Zm6.94,1.42h-2.66v-1.42h2.66v-1.87a3.2,3.2,0,0,1,1.06-2.71,5.27,5.27,0,0,1,3.26-.84,18.89,18.89,0,0,1,2,.12v1.42a14.48,14.48,0,0,0-1.88-.12,2.7,2.7,0,0,0-1.72.43,2,2,0,0,0-.51,1.56v2h3.87v1.42h-3.87V832h-2.16Zm13,10.44q-5.33,0-5.32-3.55V824.1a3.56,3.56,0,0,1,1.2-3,6.52,6.52,0,0,1,3.93-.94,6.06,6.06,0,0,1,3.7.89,3.65,3.65,0,0,1,1.15,3.07v2.57h-7.8v1.75a1.89,1.89,0,0,0,.84,1.73,5,5,0,0,0,2.59.53,15.8,15.8,0,0,0,3.91-.58v1.66A19.76,19.76,0,0,1,1304.26,832.24Zm2.5-7v-1.83a1.55,1.55,0,0,0-.65-1.44,4.15,4.15,0,0,0-2.16-.41,4.36,4.36,0,0,0-2.16.41,1.52,1.52,0,0,0-.67,1.44v1.83Zm15-7.2h-5.28v-1.64h12.89v1.64h-5.26V832h-2.35Zm10,2.32h2v1.9a1.44,1.44,0,0,1,.48-1,3.23,3.23,0,0,1,1.23-.79,3.7,3.7,0,0,1,1.46-.32h1.06V822h-1.2a4.66,4.66,0,0,0-2.24.41,1.51,1.51,0,0,0-.67,1.42V832h-2.16Zm12,11.86a8.26,8.26,0,0,1-2.57-.31,2.22,2.22,0,0,1-1.29-1.11,5.25,5.25,0,0,1-.39-2.28,4.66,4.66,0,0,1,.36-2,2.19,2.19,0,0,1,1.28-1,8.15,8.15,0,0,1,2.56-.31h3.48v-1.85a1.58,1.58,0,0,0-.26-1,1.34,1.34,0,0,0-.84-.5,7.3,7.3,0,0,0-1.7-.14,31.08,31.08,0,0,0-4,.28v-1.58c1.59-.14,3-.22,4.3-.22a10.24,10.24,0,0,1,3,.32,2,2,0,0,1,1.32,1,5.52,5.52,0,0,1,.36,2.3V832h-2.08v-1.1C1347.1,831.79,1345.93,832.24,1343.77,832.24Zm.36-1.42a10.19,10.19,0,0,0,2-.16c.72-.15,1.08-.48,1.08-1v-3.17h-3.33a4.74,4.74,0,0,0-1.49.17.88.88,0,0,0-.6.57,4.78,4.78,0,0,0-.14,1.4,4.32,4.32,0,0,0,.16,1.34,1.24,1.24,0,0,0,.6.67,3.33,3.33,0,0,0,1.3.19Zm9-10.44h2.16v1.42c.22-1.1,1.5-1.66,3.82-1.66a4.67,4.67,0,0,1,3.12.82,3.2,3.2,0,0,1,.91,2.52V832H1361v-8.4a3.64,3.64,0,0,0-.07-.74,1.66,1.66,0,0,0-.29-.58c-.32-.4-1-.6-2.14-.6a7.75,7.75,0,0,0-2,.19,1.65,1.65,0,0,0-1,.58,2.15,2.15,0,0,0-.26,1.15V832h-2.16Zm17.31,11.86a30.2,30.2,0,0,1-4-.29V830.3a29,29,0,0,0,4,.45,5.93,5.93,0,0,0,2.21-.29,1.13,1.13,0,0,0,.67-1.12v-1.18a1.14,1.14,0,0,0-.51-1.06,3.3,3.3,0,0,0-1.63-.31h-1.32a4.47,4.47,0,0,1-2.76-.74,2.53,2.53,0,0,1-.93-2.09v-1.08c0-1.82,1.72-2.74,5.18-2.74.26,0,1.43.07,3.53.2v1.56a23.29,23.29,0,0,0-3.63-.34,5.33,5.33,0,0,0-2.32.34,1.17,1.17,0,0,0-.63,1.12v1c0,.78.71,1.17,2.14,1.17h1.34c2.45,0,3.67.92,3.67,2.74v1a2.79,2.79,0,0,1-1.24,2.57A7.76,7.76,0,0,1,1370.42,832.24Zm9.08-10.44h-2.66v-1.42h2.66v-1.87a3.2,3.2,0,0,1,1.06-2.71,5.27,5.27,0,0,1,3.26-.84,18.89,18.89,0,0,1,2,.12v1.42a14.48,14.48,0,0,0-1.88-.12,2.7,2.7,0,0,0-1.72.43,2,2,0,0,0-.51,1.56v2h3.87v1.42h-3.87V832h-2.16Zm13,10.44a16.24,16.24,0,0,1-2.31-.12,5,5,0,0,1-1.53-.46,2.25,2.25,0,0,1-1.16-1.15,5.47,5.47,0,0,1-.36-2.18v-4a6,6,0,0,1,.27-1.9,3.31,3.31,0,0,1,.69-1.27,2.35,2.35,0,0,1,1.08-.63,7.2,7.2,0,0,1,1.52-.31c.57,0,1.17-.05,1.8-.05a16.86,16.86,0,0,1,1.87.08,7.18,7.18,0,0,1,1.37.24,2.55,2.55,0,0,1,1.15.64,3.57,3.57,0,0,1,.69,1.25,6.38,6.38,0,0,1,.27,1.95v4a4,4,0,0,1-.94,3,2.45,2.45,0,0,1-1.1.6,7.41,7.41,0,0,1-1.49.29C1393.72,832.22,1393.11,832.24,1392.51,832.24Zm0-1.42c.67,0,1.16,0,1.46,0a2.69,2.69,0,0,0,.89-.27,1.08,1.08,0,0,0,.6-.62,3.28,3.28,0,0,0,.19-1.25v-4.7a3.51,3.51,0,0,0-.26-1.56,1.26,1.26,0,0,0-.92-.65,8.3,8.3,0,0,0-2-.17,8.81,8.81,0,0,0-2,.17,1.22,1.22,0,0,0-.88.65,3.35,3.35,0,0,0-.27,1.56v4.7a3.8,3.8,0,0,0,.17,1.25,1.21,1.21,0,0,0,.62.62,2.69,2.69,0,0,0,.89.27C1391.35,830.81,1391.83,830.82,1392.51,830.82Zm8.72-10.44h2v1.9a1.44,1.44,0,0,1,.48-1,3.26,3.26,0,0,1,1.22-.79,3.79,3.79,0,0,1,1.47-.32h1V822h-1.2a4.62,4.62,0,0,0-2.23.41,1.49,1.49,0,0,0-.67,1.42V832h-2.16Zm8.41,0h2.16v1.42c.23-1.1,1.53-1.66,3.91-1.66q2.91,0,3.63,1.59a1.88,1.88,0,0,1,1.29-1.18,7.89,7.89,0,0,1,2.69-.41,4.51,4.51,0,0,1,3,.82,3.23,3.23,0,0,1,.89,2.52V832h-2.16v-8.38a3.64,3.64,0,0,0-.07-.74,1.85,1.85,0,0,0-.29-.58c-.32-.4-1-.6-2.14-.6a7.86,7.86,0,0,0-1.89.17,1.36,1.36,0,0,0-.87.58,2.6,2.6,0,0,0-.21,1.17V832h-2.16v-8.38a3,3,0,0,0-.08-.74,1.62,1.62,0,0,0-.28-.58,2.72,2.72,0,0,0-2.12-.6,8.9,8.9,0,0,0-2,.17,1.45,1.45,0,0,0-.93.58,2,2,0,0,0-.27,1.17V832h-2.16Zm24.93,11.86a8.26,8.26,0,0,1-2.57-.31,2.22,2.22,0,0,1-1.29-1.11,5.25,5.25,0,0,1-.39-2.28,4.66,4.66,0,0,1,.36-2,2.2,2.2,0,0,1,1.27-1,8.26,8.26,0,0,1,2.57-.31H1438v-1.85a1.64,1.64,0,0,0-.26-1,1.34,1.34,0,0,0-.84-.5,7.39,7.39,0,0,0-1.71-.14,30.93,30.93,0,0,0-4,.28v-1.58c1.58-.14,3-.22,4.3-.22a10.24,10.24,0,0,1,3,.32,2,2,0,0,1,1.32,1,5.52,5.52,0,0,1,.36,2.3V832h-2.09v-1.1C1437.9,831.79,1436.73,832.24,1434.57,832.24Zm.36-1.42a10.26,10.26,0,0,0,2-.16c.72-.15,1.08-.48,1.08-1v-3.17h-3.33a4.74,4.74,0,0,0-1.49.17.84.84,0,0,0-.6.57,4.7,4.7,0,0,0-.15,1.4,4.28,4.28,0,0,0,.17,1.34,1.16,1.16,0,0,0,.6.67,3.33,3.33,0,0,0,1.3.19Zm13.85,1.42a6.89,6.89,0,0,1-2.33-.31,2.22,2.22,0,0,1-1.22-1.11,5.41,5.41,0,0,1-.36-2.2V821.8h-2.59v-1.42h2.59v-3.6h2.18v3.6h4.15v1.42h-4.15v6.94a3.5,3.5,0,0,0,.19,1.29,1.32,1.32,0,0,0,.72.63,5.45,5.45,0,0,0,1.52.16c.2,0,.78-.06,1.72-.19v1.42A15.27,15.27,0,0,1,1448.78,832.24Zm4.78-16.06h2.16v2.26h-2.16Zm0,4.2h2.16V832h-2.16Zm10.83,11.86a16.18,16.18,0,0,1-2.3-.12,4.94,4.94,0,0,1-1.54-.46,2.23,2.23,0,0,1-1.15-1.15,5.47,5.47,0,0,1-.36-2.18v-4a6.37,6.37,0,0,1,.26-1.9,3.32,3.32,0,0,1,.7-1.27,2.35,2.35,0,0,1,1.08-.63,7.11,7.11,0,0,1,1.51-.31c.58,0,1.18-.05,1.8-.05a16.73,16.73,0,0,1,1.87.08,7.18,7.18,0,0,1,1.37.24,2.5,2.5,0,0,1,1.15.64,3.57,3.57,0,0,1,.7,1.25,6.72,6.72,0,0,1,.26,1.95v4a4.07,4.07,0,0,1-.93,3,2.55,2.55,0,0,1-1.11.6,7.28,7.28,0,0,1-1.49.29C1465.61,832.22,1465,832.24,1464.39,832.24Zm0-1.42c.67,0,1.16,0,1.46,0a2.62,2.62,0,0,0,.89-.27,1.08,1.08,0,0,0,.6-.62,3.28,3.28,0,0,0,.19-1.25v-4.7a3.37,3.37,0,0,0-.26-1.56,1.26,1.26,0,0,0-.91-.65,8.4,8.4,0,0,0-2-.17,8.65,8.65,0,0,0-2,.17,1.24,1.24,0,0,0-.89.65,3.37,3.37,0,0,0-.26,1.56v4.7a3.83,3.83,0,0,0,.16,1.25,1.19,1.19,0,0,0,.63.62,2.62,2.62,0,0,0,.89.27C1463.23,830.81,1463.72,830.82,1464.39,830.82Zm8.72-10.44h2.16v1.42c.22-1.1,1.5-1.66,3.82-1.66a4.67,4.67,0,0,1,3.12.82,3.2,3.2,0,0,1,.91,2.52V832H1481v-8.4a3.64,3.64,0,0,0-.07-.74,1.66,1.66,0,0,0-.29-.58c-.32-.4-1-.6-2.14-.6a7.75,7.75,0,0,0-2,.19,1.65,1.65,0,0,0-1,.58,2.15,2.15,0,0,0-.26,1.15V832h-2.16Z" fill="#fff" fill-opacity="0.6"/>
           </g>
           <g id="gL">
-            <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="11.5" opacity="0.05" stroke="url(#linear-gradient-26)"/>
-            <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="9.5" opacity="0.15" stroke="url(#linear-gradient-27)"/>
-            <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="7.5" opacity="0.25" stroke="url(#linear-gradient-28)"/>
-            <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="5.5" opacity="0.35" stroke="url(#linear-gradient-29)"/>
-            <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="2.5" stroke="url(#linear-gradient-30)"/>
+            <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="11.5" opacity="0.05" stroke="url(#linear-gradient_start-screen-26)"/>
+            <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="9.5" opacity="0.15" stroke="url(#linear-gradient_start-screen-27)"/>
+            <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="7.5" opacity="0.25" stroke="url(#linear-gradient_start-screen-28)"/>
+            <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="5.5" opacity="0.35" stroke="url(#linear-gradient_start-screen-29)"/>
+            <path d="M172,768.5c403.79,0,1049.5,6.86,1367.5-439.5" fill="none" stroke-width="2.5" stroke="url(#linear-gradient_start-screen-30)"/>
           </g>
           <g id="gD">
             <g id="wgD">
-              <path d="M201.59,835.44a42.54,42.54,0,1,1-60.16,0A42.53,42.53,0,0,1,201.59,835.44Z" fill="url(#radial-gradient-15)" style="mix-blend-mode: screen"/>
-              <circle cx="171.5" cy="865.51" r="57.82" fill="url(#radial-gradient-16)" style="mix-blend-mode: screen"/>
-              <circle cx="171.5" cy="865.51" r="59.39" transform="translate(-22.2 4.7) rotate(-1.47)" fill="url(#radial-gradient-17)" style="mix-blend-mode: screen"/>
+              <path d="M201.59,835.44a42.54,42.54,0,1,1-60.16,0A42.53,42.53,0,0,1,201.59,835.44Z" fill="url(#radial-gradient_start-screen-15)" style="mix-blend-mode: screen"/>
+              <circle cx="171.5" cy="865.51" r="57.82" fill="url(#radial-gradient_start-screen-16)" style="mix-blend-mode: screen"/>
+              <circle cx="171.5" cy="865.51" r="59.39" transform="translate(-22.2 4.7) rotate(-1.47)" fill="url(#radial-gradient_start-screen-17)" style="mix-blend-mode: screen"/>
             </g>
           </g>
         </g>
@@ -626,10 +626,9 @@ if (containerStartScreen) {
 `
 
         gsap.set('#gE > *, #gA > *, #gT > *, #gMT, #gGD > *, #gTC', {opacity: 0})
-        gsap.set('#genesis', {scale: 3, x: '480%', y: '30%', transformOrigin: '25% 50%', pointerEvents: 'all'})
-        gsap.set('#gMT', {x: "17%"})
+        gsap.set('#genesis', {scale: 3, x: '55%', y: 0, transformOrigin: '25% 50%', pointerEvents: 'all'})
+        // gsap.set('#gMT', {x: "17%"})
         gsap.set('.genesis-text-opacity', {opacity: 0})
-
         const {glitch, gF, geD, gT, gE, gA, gGL} = genesisAnim()
 
         genesisTl = gsap.timeline({defaults: {ease: 'power1.in'}, onComplete: () => {
@@ -646,9 +645,10 @@ if (containerStartScreen) {
             .to('#gML', {scaleX: 1, duration: durationStartScreen}, '<')
             .to([gF, gT, gA, gGL, geD, gE], {progress: 1, duration: durationStartScreen}, '<')
             .to('#gMT', {opacity: 1, duration: 1}, `>`)
-            .set('#gTC', {opacity: 1}, '<+.5')
+            .set('#gTC', {opacity: 1}, '>+.5')
 
-        // document.querySelector('.timer_container').style.fontSize = '200px'
+        document.querySelector('.startScreen .timer_container').style.fontSize = '160px'
+        document.querySelector('.startScreen .timer_container').style.paddingTop = '35px'
 
     }
 }
@@ -659,29 +659,29 @@ gsap.set('.startScreen svg', {opacity: 1})
 gsap.set('#gH1 > *, #gH2 > *', {pointerEvents: 'all', cursor: 'pointer'})
 gsap.set('#gF > *', {opacity: .4})
 
-// document.querySelectorAll('#gH1 > *').forEach(item => {
-//     const id = item.id.replace(/\D/g,'')
-//     item.addEventListener('mouseenter', () => {
-//         gsap.to(`#gA > path:nth-of-type(${id})`, {scale: 1.3, transformOrigin: 'center'})
-//     })
-//     item.addEventListener('mouseleave', () => {
-//         gsap.to(`#gA > path:nth-of-type(${id})`, {scale: 1, transformOrigin: 'center'})
-//     })
-// })
-//
-// document.querySelectorAll('#gH2 > *').forEach(item => {
-//     const id = item.id.replace(/\D/g,'')
-//     item.addEventListener('mouseenter', () => {
-//         groupsStartScreen[+id - 1].forEach(grad => {
-//             gsap.to(`#gF > path:nth-of-type(${grad})`, {opacity: 1})
-//         })
-//     })
-//     item.addEventListener('mouseleave', () => {
-//         groupsStartScreen[+id - 1].forEach(grad => {
-//             gsap.to(`#gF > path:nth-of-type(${grad})`, {opacity: .4})
-//         })
-//     })
-// })
+document.querySelectorAll('#gH1 > *').forEach(item => {
+    const id = item.id.replace(/\D/g,'')
+    item.addEventListener('mouseenter', () => {
+        gsap.to(`#gA > path:nth-of-type(${id})`, {scale: 1.3, transformOrigin: 'center'})
+    })
+    item.addEventListener('mouseleave', () => {
+        gsap.to(`#gA > path:nth-of-type(${id})`, {scale: 1, transformOrigin: 'center'})
+    })
+})
+
+document.querySelectorAll('#gH2 > *').forEach(item => {
+    const id = item.id.replace(/\D/g,'')
+    item.addEventListener('mouseenter', () => {
+        groupsStartScreen[+id - 1].forEach(grad => {
+            gsap.to(`#gF > path:nth-of-type(${grad})`, {opacity: 1})
+        })
+    })
+    item.addEventListener('mouseleave', () => {
+        groupsStartScreen[+id - 1].forEach(grad => {
+            gsap.to(`#gF > path:nth-of-type(${grad})`, {opacity: .4})
+        })
+    })
+})
 
 
 function onCompleteStartScreen(){

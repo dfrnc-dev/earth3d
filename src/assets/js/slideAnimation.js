@@ -2,12 +2,30 @@ import { gsap } from "gsap/all";
 
 export const slideAnimation = function(tlname) {
 
-
     const slide2MouseClick = gsap.timeline({paused: true})
         .to('#sl2Mou', {scale: .8, rotate: -10, duration: .15, transformOrigin: 'center', repeat: 1, yoyo: true})
 
     const slide5MouseClick = gsap.timeline({paused: true})
         .to('#sl5Mou', {scale: .8, rotate: -10, duration: .15, transformOrigin: 'center', repeat: 1, yoyo: true})
+
+    const slide13Anim1 = gsap.timeline({paused: true})
+        .to('#sl131g1', {opacity: 1, duration: 1})
+        .to('#sl131g2', {scale: 1, duration: 1})
+        .to('#sl131g3', {opacity: .5, duration: .25, repeat: 3, yoyo: true, ease: 'sine.inOut'}, '<')
+
+    const slide13Anim2 = gsap.timeline({paused: true})
+        .to('#gsl13g3', {scale: 1, duration: 1})
+        .to('#gsl13g1', {opacity: .5, duration: .25, repeat: 3, yoyo: true, ease: 'sine.inOut'}, '<')
+        .to('#gsl13g4', {opacity: 1})
+
+        .to('#gsl13g2', {opacity: .5, duration: .25, repeat: 3, yoyo: true, ease: 'sine.inOut'}, '<')
+        .to('#sl13g3', {scale: 1.3, transformOrigin: 'center', fill: '#FCF000', duration: 1}, '<')
+        .to('#sl131g5', {opacity: 1, duration: 1}, '<')
+
+    const slide8Anim = gsap.timeline({paused: true, defaults: {duration: 40, ease: 'none'}})
+        .to('#gsl8g1', {x: -400, y: 50})
+        .to('#gsl8g2', {x: 400}, '<')
+        .to('#gsl8g3', {x: 400, y: 50}, '<')
 
     const slide1 = gsap.timeline({paused: true, defaults: {duration: 1}})
         .to('#sl1', {opacity: 1})
@@ -72,11 +90,12 @@ export const slideAnimation = function(tlname) {
         .to('#sl8', {opacity: 1}, '<')
         .to('#gsl81', {opacity: 0}, '>+9')
         .to('#gsl82', {opacity: 1}, '<')
-        .to('#sl8', {opacity: 0}, '>+17')
+        .to(slide8Anim, {progress: 1, duration: 40, ease: 'none'}, '<')
+        .to('#sl8', {opacity: 0}, '<+17')
 
     // const slide9 = gsap.timeline({paused: true, defaults: {duration: 1}})
-        // .to('.header', {y: 100}, '<')
-        // .to('.header', {x: 0, y: 0}, '>+38')
+    // .to('.header', {y: 100}, '<')
+    // .to('.header', {x: 0, y: 0}, '>+38')
 
 
     const slide10 = gsap.timeline({paused: true, defaults: {duration: 1}})
@@ -96,11 +115,13 @@ export const slideAnimation = function(tlname) {
 
     const slide13 = gsap.timeline({paused: true, defaults: {duration: 1}})
         .to('#sl13', {opacity: 1}, '<')
-        .to('#gsl131', {opacity: 0}, '>+7')
+        .to(slide13Anim1, {progress: 1, duration: 1.5, ease: 'none'})
+        .to('#gsl131', {opacity: 0}, '>+5')
         .to('#gsl132', {opacity: 1}, '<')
-        .to('#gsl132', {opacity: 0}, '>+7')
+        .to(slide13Anim2, {progress: 1, duration: 1.5, ease: 'none'})
+        .to('#gsl132', {opacity: 0}, '>+5')
         .to('#gsl133', {opacity: 1}, '<')
-        .to('#sl13', {opacity: 0}, '>+7')
+        .to('#sl13', {opacity: 0}, '>+5')
 
     const slide14 = gsap.timeline({paused: true, defaults: {duration: 1}})
         .to('#sl14', {opacity: 1}, '<')
@@ -147,10 +168,6 @@ export const slideAnimation = function(tlname) {
     const slide22 = gsap.timeline({paused: true, defaults: {duration: 1}})
         .to('#sl22', {opacity: 1}, '<')
 
-    gsap.to('#sl11Cl > g:nth-of-type(1), #gsl154 > g:nth-of-type(1)', {rotate: 360, transformOrigin: 'center', duration: 5, repeat: -1, ease: 'none'})
-
-    gsap.to('#sl11Cl > g:nth-of-type(2), #gsl154 > g:nth-of-type(2)', {rotate: 360, transformOrigin: 'center', duration: 10, repeat: -1, ease: 'none'})
-
     let tempSelectTl
     switch (tlname) {
         case "slide1" : tempSelectTl = slide1; break;
@@ -162,7 +179,7 @@ export const slideAnimation = function(tlname) {
         case "slide6" : tempSelectTl = slide6; break;
         case "slide7" : tempSelectTl = slide7; break;
         case "slide8" : tempSelectTl = slide8; break;
-        case "slide9" : tempSelectTl = slide9; break;
+        // case "slide9" : tempSelectTl = slide9; break;
         case "slide10" : tempSelectTl = slide10; break;
         case "slide11" : tempSelectTl = slide11; break;
         case "slide12" : tempSelectTl = slide12; break;

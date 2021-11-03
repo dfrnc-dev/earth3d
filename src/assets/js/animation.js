@@ -532,7 +532,7 @@ window.addEventListener("load",function () {
                     {
                         lightIntensity: {type: 'f', value: 1.0  },
                         earthShineTexture:{type: "t",value: null },
-                        colorDefault: {type:"vec4", value: new THREE.Vector4(0.019,1.0,1.0)},
+                        colorDefault: {type:"vec4", value: new THREE.Vector4(0.0,1.0,0.0, 1.0)},
                         time: {type: "f",value: 0 },
                     }
                 ]),
@@ -979,11 +979,11 @@ window.addEventListener("load",function () {
 
         ///////////
         let earthRedVirusTl = gsap.timeline({paused:true})
-            .to(earth.material.uniforms.earthVirusPercent,{duration:10,value:1, ease:"sine.inOut"})
+            .to(earth.material.uniforms.earthVirusPercent,{duration:10,value:1, ease:"none"})
 
         ///////////
         let earthGreenVirusTl = gsap.timeline({paused:true})
-            .to(earth.material.uniforms.earthGreenVirusPercent,{duration:10,value:1, ease:"sine.inOut"})
+            .to(earth.material.uniforms.earthGreenVirusPercent,{duration:10,value:1, ease:"none"})
 
         ///////////
         let earthCoinAnimTl = logoCompanyAnim(6,100,coinTextureImg,(earthTextAnim.labels["goSomewhereE"] - earthTextAnim.labels["earthCoinAnimS"]))
@@ -1005,7 +1005,7 @@ window.addEventListener("load",function () {
 
             .add(earthTextAnim.restart())
 
-            .to(earthAnimRed,{duration:(earthTextAnim.labels["animRedMarsE"]-earthTextAnim.labels["animRedMarsS"]),progress:1,ease:"none"},earthTextAnim.labels["animRedMarsS"])
+            // .to(earthAnimRed,{duration:(earthTextAnim.labels["animRedMarsE"]-earthTextAnim.labels["animRedMarsS"]),progress:1,ease:"none"},earthTextAnim.labels["animRedMarsS"])
             .add(earthCountryAnimTl.restart(),earthTextAnim.labels["animCountryS"])
             .to(earthFrameTl,{duration:(earthTextAnim.labels["animEarthFrameE"]-earthTextAnim.labels["animEarthFrameS"]),progress:1,ease:"none"},earthTextAnim.labels["animEarthFrameS"])
             .to(earthGlitchTl,{duration:(earthTextAnim.labels["animEarthGlitchE"]-earthTextAnim.labels["animEarthGlitchS"]),progress:1,ease:"none"},earthTextAnim.labels["animEarthGlitchS"])
@@ -1016,10 +1016,10 @@ window.addEventListener("load",function () {
             .to(earthAnimRed,{duration:(earthTextAnim.labels["WorldWarE"]-earthTextAnim.labels["WorldWarS"]),progress:0,ease:"none"},earthTextAnim.labels["WorldWarS"])
             ////
             .to(earthRedVirusTl,{duration:(earthTextAnim.labels["earthRedVirusE"]-earthTextAnim.labels["earthRedVirusS"]),progress:1,ease:"none"},earthTextAnim.labels["earthRedVirusS"])
-            .to(earthGreenVirusTl,{duration:(earthTextAnim.labels["earthGreenVirusE"]-earthTextAnim.labels["earthGreenVirusS"]),progress:1,ease:"none"},earthTextAnim.labels["earthGreenVirusS"])
+            .to(earthGreenVirusTl,{duration:(earthTextAnim.labels["earthGreenVirusE"]+30-earthTextAnim.labels["WorldWarS"]),progress:1,ease:"none"},earthTextAnim.labels["WorldWarS"])
             ////
             .add(earthCoinAnimTl.restart(),earthTextAnim.labels["earthCoinAnimS"])
-            .to(earthNetworkTl,{duration:(earthTextAnim.labels["goSomewhereE"]-earthTextAnim.labels["earthNetworkS"]),progress:1,ease:"none"},earthTextAnim.labels["earthNetworkS"])
+            // .to(earthNetworkTl,{duration:(earthTextAnim.labels["goSomewhereE"]-earthTextAnim.labels["earthNetworkS"]),progress:1,ease:"none"},earthTextAnim.labels["earthNetworkS"])
 
             .to(earthShineTl,{duration:(earthTextAnim.labels["manifestAnimE"]-earthTextAnim.labels["goSomewhereS"]),progress:1,ease:"none"},earthTextAnim.labels["goSomewhereS"])
 
@@ -1210,12 +1210,9 @@ window.addEventListener("load",function () {
 
 
                 ,0)
-            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},0)
-            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},4.5)
-            .set(".chatHeartBlock .content",{left:"10%",right:"initial"},9.8)
-            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},10)
 
-            .to(".chatItWorks",{autoAlpha:1},">+1")
+
+            .to(".chatItWorks",{autoAlpha:1},11.5)
             .from(".chatItWorks .content",{duration:1,width:"0%",ease:"back.out(1)"},">")
             .from(".chatItWorks .content",{duration:1,opacity:0,ease:"none"},"<")
 
@@ -1226,10 +1223,12 @@ window.addEventListener("load",function () {
             .to(".chatItWorks .content",{duration:1,width:"0%",ease:"back.out(1)"},">")
             .to(".chatItWorks",{autoAlpha:0},"<")
 
-            .set(".chatHeartBlock .content",{left:"initial",right:"10%"},14.8)
-            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},15)
-            .to(".chatHeartBlock",{autoAlpha:1,repeat:1,yoyo:true,ease:'back.out(1)'},20)
-
+            ///////chatHeartBlockFnc
+            // .call(()=>{chatHeartBlockFnc(true)},null,0)
+            // .call(()=>{chatHeartBlockFnc(true)},null,4.5)
+            // .call(()=>{chatHeartBlockFnc(true)},null,10)
+            // .call(()=>{chatHeartBlockFnc(true)},null,15)
+            // .call(()=>{chatHeartBlockFnc(true)},null,20)
 
         /**
          * presentationTl
@@ -1308,17 +1307,17 @@ window.addEventListener("load",function () {
         /**
          * endTitleTl
          */
-        // let endTitleDuration = document.querySelector(".endTitle .content").offsetHeight / 50
+        let endTitleHeight = document.querySelector(".endTitle .content").offsetHeight + window.innerHeight
         let endTitleTl = gsap.timeline({paused:true})
             .to(".endTitle",{autoAlpha:1},"qq")
-            .to(".endTitle .content",{duration:228,y:"-100%",ease:"none"},"<")
+            .to(".endTitle .content",{duration:(38*60+5)-(34*60+17.2),y:-endTitleHeight,ease:"none"},"<")
             .to(".endTitle .content",{duration:3,opacity:0,ease:"sine.out"},">-3")
             .add(
                 gsap.timeline()
-                    .to(audioStory,{duration:0.01,progress:2059})
-                    .to(audioStory.id,{duration:0.01,attr:{"data-play": true},volume:0,currentTime:2059},"<")
+                    .to(audioStory,{duration:0.01,progress:34*60+17.8})
+                    .to(audioStory.id,{duration:0.01,attr:{"data-play": true},volume:0,currentTime:34*60+17.8},"<")
                     .to(audioStory.id,{duration:3,volume:1},">")
-                    .to(audioStory,{duration:228,progress:2059 + 228,ease:"none"},"<")
+                    .to(audioStory,{duration:(38*60+5)-(34*60+17.8),progress:38*60+5,ease:"none"},"<")
                     // .to(audioStory.id,{duration:2,volume:0.2},">-10")
                     .to(audioStory.id,{duration:0.01,attr:{"data-play": false},volume:0},">")
 
@@ -1364,7 +1363,7 @@ window.addEventListener("load",function () {
 
         timeRotate = chatAfterManifest.duration()
         mainTl
-            .add(chatAfterManifest.restart(),"endManifest+=1")
+            .add(chatAfterManifest.restart(),"endManifest")
             .to(moonWrap.rotation,{duration:timeRotate,y:"+=-"+THREE.MathUtils.degToRad(360*timeRotate/120),ease:"none"},"<")
             .to(earth.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*timeRotate/60),ease:"none"},"<")
 
@@ -1385,7 +1384,7 @@ window.addEventListener("load",function () {
 
         timeRotate = chatCheckDodecadronTl.duration()+2
         mainTl
-            .to(moonWrap.rotation,{duration:timeRotate,y:"+=-"+THREE.MathUtils.degToRad(360*timeRotate/120*(720/(360*timeRotate/120))),ease:"none"},"<")
+            .to(moonWrap.rotation,{duration:timeRotate,y:"+=-"+THREE.MathUtils.degToRad(360*timeRotate/120*(720/(360*timeRotate/120))),ease:"none"},"<-1")
             .to(earth.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*timeRotate/60*(720/(360*timeRotate/120))),ease:"none"},"<")
             .to(cameraWrapper.rotation,{duration:timeRotate,y:"+="+THREE.MathUtils.degToRad(360*timeRotate/120*(720/(360*timeRotate/120))),ease:"none"},"<")
             .add(chatCheckDodecadronTl.restart(),"<+3")

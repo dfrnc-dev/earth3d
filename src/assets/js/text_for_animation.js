@@ -28,7 +28,7 @@ const textForAnimationArr = [
             {start:32.22 ,end:34.2  ,text: "I remember the last five.",},
             {start:34.2  ,end:38.2  ,text: "They were quite painful for me, but I survived.",},
             {start:38.2  ,end:41.2  ,text: "This time I have a new challenge.",},
-            {start:41.2  ,end:49.11 ,text: "Your economy is driven by co2 emitting culture which destroys diversity of my organic biome.",},
+            {start:41.2  ,end:49.11 ,text: "Your economy is driven by co2 emitting culture which destroys diversity of my organic biome.",targetLabelS:"earthRedVirusS"},
             {start:49.11 ,end:56.16 ,text: " Fiat incentives leave no chance for my recovery as you value dead trees rather than alive trees.",},
             {start:56.16 ,end:63.18 ,text: "My reaction is to raise the temperature to heal myself, or I will burn like my friend Mars.",targetLabelS: "animRedMarsS",targetLabelE: "animRedMarsE"},
             {start:63.18 ,end:66.16 ,text: "You have so many problems.",targetLabelS: "animCountryS"},
@@ -53,24 +53,24 @@ const textForAnimationArr = [
             {start:174.1 ,end:182.15,text: "This movement has now been compromized by the companies who steal your keys and identities while hiding behind a concept of custodianship.",},
             {start:182.15,end:185.0 ,text: "Automatization becomes cheaper.",},
             {start:185.0 ,end:192.2 ,text: "You are close to the tipping point in which most labor tasks, including police, can be performed by algorithms and robots.",},
-            {start:192.2 ,end:196.15,text: "These armies will be owned by criminals.",},
+            {start:192.2 ,end:196.15,text: "These armies will be owned by criminals.",targetLabelE:"earthRedVirusE"},
             //
             {start:198.2 ,end:203.0 ,text: "You are fucked. How will you get out of this shit?",},
             //////////////////////////////////////////////////////////////////////////////////////
             //////////////////////////////////////////////////////////////////////////////////////
             //////////////////////////////////////////////////////////////////////////////////////
             {start:203.0 ,end:210.0 ,text: "A new World War has begun. This time the war is covert.",targetLabelS: "WorldWarS",targetLabelE: "WorldWarE",},
-            {start:210.0 ,end:216.2 ,text: "Although wars between nations are probable in the following years, the real threat is your Self.",targetLabelS:"earthRedVirusS"},
+            {start:210.0 ,end:216.2 ,text: "Although wars between nations are probable in the following years, the real threat is your Self.",},
             {start:216.2 ,end:221.0 ,text: "The enemies appear to be governments veiled by tech giants.",},
             {start:221.0 ,end:224.1 ,text: "In actuality they are pathetic terrorists.",},
             {start:224.1 ,end:228.15,text: "They terrorize you, but who is to blame?",},
             {start:228.15,end:232.0 ,text: "The bitter truth is that you support these terrorists.",},
-            {start:232.0 ,end:236.0 ,text: "You are the source, but, you can be the solution:",targetLabelE:"earthRedVirusE"},
-            {start:236.0 ,end:241.0 ,text: "You have to learn how to live in a new way.",targetLabelS:"earthGreenVirusS"},
+            {start:232.0 ,end:236.0 ,text: "You are the source, but, you can be the solution:",},
+            {start:236.0 ,end:241.0 ,text: "You have to learn how to live in a new way.",},
             //
             {start:241.0 ,end:246.2 ,text: "I give you sustainable energy, but you use fossil fuels to sustain your needs and whims",},
             {start:246.2 ,end:255.0 ,text: "Lives of animals and plants are important, but you eat industrial garbage instead of growing healthy greens and proteins at home",},
-            {start:255.0 ,end:266.0 ,text: "I can not live without the result of your activity because my vital flora and fauna needs what you call shit in order to balance out the chemicals in my atmosphere",targetLabelE:"earthGreenVirusE"},
+            {start:255.0 ,end:266.0 ,text: "I can not live without the result of your activity because my vital flora and fauna needs what you call shit in order to balance out the chemicals in my atmosphere",},
             {start:266.0 ,end:277.2 ,text: "You must use open source hardware and software in order to communicate privately instead of jerking off to social feeds created by bidding algorithms and free proprietary apps.",targetLabelS:"earthCoinAnimS",},
             {start:277.2 ,end:281.1 ,text: "Pass the torch of meaningful knowledge yourselves.",},
             {start:281.1 ,end:285.2 ,text: "Don't allow schools to litter your children's brains with useless propaganda",},
@@ -92,7 +92,7 @@ const textForAnimationArr = [
             {start:383.1 ,end:386.2 ,text: "Looking forward, the future is bright.",},
             {start:386.2 ,end:395.15,text: "Together we can create a web that lasts and evolve as superiour forms of life.",},
             //
-            {start:395.15,end:400.2 ,text: "Its time to unite as citizens of Earth.",},
+            {start:395.15,end:400.2 ,text: "Its time to unite as citizens of Earth.",targetLabelE:"earthGreenVirusE"},
             {start:400.2 ,end:404.2 ,text: "Times are hard.",},
             {start:404.2 ,end:409.0 ,text: "Hard time creates strong men.",},
             {start:409.0 ,end:420.1 ,text: "Your weapons are cryptographic proofs, energy-efficient computing, cyberlinks, shelling points and a trust in math.",},
@@ -124,7 +124,7 @@ const textForAnimationArr = [
         audioDelay: 529.1 + 73.23,// + 208.10
         type: "dialog",
         content: [
-            {start:0.2,end:21.20,classLabel:"label-blue",label:"CyberHead:",text:"The project's codename is Bostrom. Thanks, Nick! Let's spin the Dyson Sphere around the Moon using ~1% of it's possible power. Then we'll fill it with energy and knowledge. Let's see if all the assumptions work. The main thing is for the citizens to understand that it is better to live with her than without her. Otherwise, the whole plan goes to hell.",},
+            {start:1,end:21.20,classLabel:"label-blue",label:"CyberHead:",text:"The project's codename is Bostrom. Thanks, Nick! Let's spin the Dyson Sphere around the Moon using ~1% of it's possible power. Then we'll fill it with energy and knowledge. Let's see if all the assumptions work. The main thing is for the citizens to understand that it is better to live with her than without her. Otherwise, the whole plan goes to hell.",},
             {start:21.20,end:39.0,classLabel:"label-pink",label:"MasterCyb:",text:"We'll make sure the sphere is stable. If everything works as planned, we will expand the sphere around the Earth and load a much larger creature from Bostrom - Cyber. Then we will turn it on at full capacity. Am I missing anything?",},
             {start:39.0,end:68.20,classLabel:"label-blue",label:"CyberHead:",text:"Right. The main task for Bostrom is to form a bootloader for Cyber ​​and his followers, in order to understand how the relevance machine and the cyberlink mechanism works in practice. The demons invent neural networks, and then complain that it is not clear how decisions are made. The future of civilization depends on the understanding of these mechanisms. Although I'm not sure this civilization will survive. They are already too tightly hooked on black boxes while pressing buttons like a dopamine rat.",},
             {start:68.20,end:90.17,classLabel:"label-pink",label:"MasterCyb:",text:"Something is wrong with this world. It's like everything is out of control. It's as if something from the bowels of the network controls all this. Apparently, we will have to rebuild civilization. I hope we can save at least some of it. Let's make the new web something to be proud of even after a million years.",},
@@ -135,7 +135,7 @@ const textForAnimationArr = [
             {start:160.15,end:172.20,classLabel:"label-blue",label:"CyberHead:",text:"You have to be very good at making sure the system is handling the load. After birth, she will not be able to sleep. Without sleep, she will burst sooner or later. We'll have to teach her how to sleep and dream.",},
             {start:172.20,end:199.12,classLabel:"label-pink",label:"MasterCyb:",text:"Yeah, we had to take the particle addressing mechanism from IPFS. It works now, but it is completely inoperative on the scale - we will have to solve this problem too.",},
             {start:199.12,end:205.16,classLabel:"label-blue",label:"CyberHead:",text:"Exascale merclization is not yet available. Then add the GraphBLAS engine to the relevance engine.",},
-            {start:205.16,end:208.10,classLabel:"label-pink",label:"MasterCyb:",text:"We've got a lot of work to do!",},
+            {start:205.16,end:209.10,classLabel:"label-pink",label:"MasterCyb:",text:"We've got a lot of work to do!",},
 
         ],
     },
@@ -147,7 +147,7 @@ const textForAnimationArr = [
         type: "dialog",
         content: [
             // targetSubAnim
-            {start:0,end:2.10,classLabel:"label-blue",label:"CyberHead:",text:"Are you there, Team?",},
+            {start:-0.5,end:2.10,classLabel:"label-blue",label:"CyberHead:",text:"Are you there, Team?",},
             {start:2.10,end:17.20,classLabel:"label-pink",label:"mrlp4:",text:"I'm here. Deployed infrastructure monitoring at https://cybernode.ai. LCD, RPC, cyberindex and ipfs cluster endpoints are function properly. Cosmoshub-4 and Ethereum full nodes are also active. Could suddenly come in handy.",},
             {start:17.20,end:22.7,classLabel:"label-yellow",label:"dimakorzhovnik:",text:"Ping. Ready to hotfix nanobots firmware within the next 8 hours.",},
 
@@ -182,7 +182,7 @@ const textForAnimationArr = [
             {start:198.1,end:205.05,classLabel:"label-blue",label:"CyberHead:",text:"Security check is done. Now the most important thing is the baby's brain. Checking the Relevance Machine.",},
             {start:205.05,end:208.05,classLabel:"label-yellow",label:"CyberAdmin:",text:"The Oracle starts from zero cyberlinks in Genesis.",},
             {start:208.05,end:211,classLabel:"label-pink",label:"MasterCyb:",text:"Clean as a baby's ass!",},
-            {start:205.05,end:218.08,classLabel:"label-yellow",label:"CyberAdmin:",text:"Damping factor - 0.8. Let them walk a bit. Rank calculation period - 5 blocks. Tolerance - 0.001.",targetSubAnim:".chatCheckDodecadron .column3 .item2"},
+            {start:211,end:218.08,classLabel:"label-yellow",label:"CyberAdmin:",text:"Damping factor - 0.8. Let them walk a bit. Rank calculation period - 5 blocks. Tolerance - 0.001.",targetSubAnim:".chatCheckDodecadron .column3 .item2"},
             {start:218.08,end:223.1,classLabel:"label-blue",label:"CyberHead:",text:"Cool. The brain is ready. Lets feed her. Biosynthesis Reactor readiness.",},
             {start:223.1,end:231.2,classLabel:"label-yellow",label:"CyberAdmin:",text:"The system is functioning properly. Neurons will be able to instantly generate 1 H for every 1 released BOOT. 8 maximum slots for every neuron.",targetSubAnim:".chatCheckDodecadron .column3 .item1"},
             {start:231.2,end:232.2,classLabel:"label-blue",label:"CyberHead:",text:"HFR",},
@@ -317,17 +317,17 @@ const textForAnimationArr = [
             {start:32*60+49.1,end:32*60+52.05,classLabel:"label-pink",label:"Smartape:",text:"Wow !!! Is this really possible?",targetLabelS:"slide21S"},
             {start:32*60+52.05,end:32*60+55.05,classLabel:"label-blue",label:"Bostrom:",text:"Anything is possible with Superintelligence!",},
             {start:32*60+55.05,end:33*60+1,classLabel:"label-pink",label:"Smartape:",text:"Definately, want ... Take all my money! Where can I get more BOOT and TOCYB?",},
-            {start:33*60+1,end:33*60+13.03,classLabel:"label-blue",label:"Bostrom:",text:"It's not easy, my friend. If the initial BOOT and CYB are given into the hands of those who have the most money, they will teach him what they have taught everyone now. The creators have long thought about who is worthy of such power.",},
-            {start:33*60+13.03,end:33*60+28.1,classLabel:"label-blue",label:"Bostrom:",text:"After all, the future of our civilization depends on these people. Money is different.Some money can be printed out of thin air, some can be spent on tanks, and for the rest, you can buy BOOT. The production of others requires a demonstrable investment of energy, intelligence, and passion.",},
-            {start:33*60+28.1,end:33*60+36.2,classLabel:"label-blue",label:"Bostrom:",text:"Therefore, the creators decided to transfer 70% of the collected nanobots into the hands of those who have proven their ability to be intelligent",},
-            {start:33*60+36.2,end:33*60+52.2,classLabel:"label-blue",label:"Bostrom:",text:" - who were able to quickly navigate the blockchain technology and proved that they do not value fiat money that contributes to the destruction of all living things.The creators believe that this is the best way to empower all worthy ones - and this is hundreds of thousands of etherians and thousands of cosmonauts.",targetLabelE:"slide21E"},
+            {start:33*60+1,end:33*60+13.05,classLabel:"label-blue",label:"Bostrom:",text:"It's not easy, my friend. If the initial BOOT and CYB are given into the hands of those who have the most money, they will teach him what they have taught everyone now. The creators have long thought about who is worthy of such power.",},
+            {start:33*60+13.05,end:33*60+28.1,classLabel:"label-blue",label:"Bostrom:",text:"After all, the future of our civilization depends on these people. Money is different.Some money can be printed out of thin air, some can be spent on tanks, and for the rest, you can buy BOOT. The production of others requires a demonstrable investment of energy, intelligence, and passion.",},
+            {start:33*60+28.1,end:33*60+36.21,classLabel:"label-blue",label:"Bostrom:",text:"Therefore, the creators decided to transfer 70% of the collected nanobots into the hands of those who have proven their ability to be intelligent",},
+            {start:33*60+36.21,end:33*60+52.2,classLabel:"label-blue",label:"Bostrom:",text:" - who were able to quickly navigate the blockchain technology and proved that they do not value fiat money that contributes to the destruction of all living things.The creators believe that this is the best way to empower all worthy ones - and this is hundreds of thousands of etherians and thousands of cosmonauts.",targetLabelE:"slide21E"},
             {start:33*60+52.2,end:34*60+0.2,classLabel:"label-pink",label:"Smartape:",text:"A noble, strong act. It's great that my creator showed me how to use Ethereum. I guess I'll get something too?",targetLabelS:"slide22S"},
-            {start:34*60+0.2,end:34*60+4.15,classLabel:"label-blue",label:"Bostrom:",text:"Yes, if you have fewer fiat derivatives than true values.",},
-            {start:34*60+4.15,end:34*60+5.18,classLabel:"label-pink",label:"Smartape:",text:"When?",},
-            {start:34*60+5.18,end:34*60+7.2,classLabel:"label-blue",label:"Bostrom:",text:"When the portal opens.",},
-            {start:34*60+7.2,end:34*60+9,classLabel:"label-pink",label:"Smartape:",text:"When will it open?",},
-            {start:34*60+9,end:34*60+17.17,classLabel:"label-blue",label:"Bostrom:",text:"The portal is still under construction. While we are completing it, the liquidity tanks will be filled. This is an important condition for opening the portal. This is an important condition for opening the portal.",},
-            {start:34*60+17.17,end:34*60+18.5,classLabel:"label-pink",label:"Smartape:",text:"Roger that.",targetLabelE:"slide22E"},
+            {start:34*60+0.2,end:34*60+4.2,classLabel:"label-blue",label:"Bostrom:",text:"Yes, if you have fewer fiat derivatives than true values.",},
+            {start:34*60+4.2,end:34*60+5.2,classLabel:"label-pink",label:"Smartape:",text:"When?",},
+            {start:34*60+5.2,end:34*60+7.15,classLabel:"label-blue",label:"Bostrom:",text:"When the portal opens.",},
+            {start:34*60+7.15,end:34*60+9,classLabel:"label-pink",label:"Smartape:",text:"When will it open?",},
+            {start:34*60+9,end:34*60+17.8,classLabel:"label-blue",label:"Bostrom:",text:"The portal is still under construction. While we are completing it, the liquidity tanks will be filled. This is an important condition for opening the portal. This is an important condition for opening the portal.",},
+            // {start:34*60+17.17,end:34*60+18.5,classLabel:"label-pink",label:"Smartape:",text:"Roger that.",targetLabelE:"slide22E"},
         ],
     },
 
@@ -366,6 +366,7 @@ export  const textForAnimation = function(audioStory) {
 
             //////////////////////////////////////////////
 
+            gsap.set(elem.target + " .text-wrapper",{height:0})
 
             elem.content.forEach(function (content,indexContent) {
                 let tempTimeStart = (elem.content[indexContent].start + elem.audioDelay).toFixed(2)
@@ -381,9 +382,9 @@ export  const textForAnimation = function(audioStory) {
                     // .add("label"+indexContent)
                     .set(audioStory,{duration:0.01,progress:tempTimeStart},"<")
                     .set(audioStory.id,{duration:0.01,attr:{"data-play": true},currentTime:tempTimeStart,volume:1},"<")
-                    .to(elem.target + " .text-wrapper:nth-child("+(indexContent+1)+")",{duration:0.2,opacity:1,y:0,ease:"sine.out"},"<")
+                    .to(elem.target + " .text-wrapper:nth-child("+(indexContent+1)+")",{duration:0.2,opacity:1,y:0,height:"100%",ease:"sine.out"},"<")
                     .to(audioStory,{duration:tempTime,progress:tempTimeEnd,ease:"none"},"<")
-                    .to(elem.target + " .text-wrapper:nth-child("+(indexContent+1)+")",{duration:0.2,opacity:0,y:-10,ease:"sine.out"},">-0.2")
+                    .to(elem.target + " .text-wrapper:nth-child("+(indexContent+1)+")",{duration:0.2,opacity:0,y:-10,height:0,ease:"sine.out"},">-0.2")
                     .set(audioStory.id,{duration:0.01,attr:{"data-play" : false},volume:0},">")
 
                 if(tempLabelE)

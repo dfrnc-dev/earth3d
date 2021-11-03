@@ -183,7 +183,9 @@ void main() {
 
         if(earthPointTexture.r < earthVirusPercent){
             if(earthPointTexture.r < earthGreenVirusPercent){
-                if( (earthNetworkText.r+earthNetworkText.g+earthNetworkText.b)/2.2 < earthNetworkPercent )
+//                if( (earthNetworkText.r+earthNetworkText.g+earthNetworkText.b)/2.9 < earthNetworkPercent )
+                if( (earthNetworkText.r/0.85) < earthNetworkPercent )
+//                    gl_FragColor = vec4(0.4,1.0,1.0,1.0) * addedLights;
                     gl_FragColor = vec4(0.5,0.5,1.0,1.0) * addedLights;
                 else
                     gl_FragColor = vec4(0.0,1.0,0.0,1.0) * addedLights;

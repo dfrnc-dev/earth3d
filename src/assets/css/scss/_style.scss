@@ -38,8 +38,14 @@ h1{
     position: relative;
     display: flex;
     justify-content: center;
-    width: max-content;
+    width: 100%;
+    max-width: 1000px;
     margin: auto;
+
+    img{
+        width: 100%;
+        height: auto;
+    }
 }
 .header-talking {
     position: absolute;
@@ -80,14 +86,13 @@ h1{
 
 .btn-home {
     font-family: "Play", sans-serif ;
-    height: 42px;
     white-space: nowrap;
     background-color: #000;
     border: none;
     font-family: "Play",sans-serif;
     outline: none;
-    padding: 0 50px;
-    font-size: 18px;
+    padding: 0.5em 1em;
+    font-size: calc(4vw + 4vh);
     border-radius: 3px;
     box-shadow: 0 0 10px 0 #38d6ae;
     text-shadow: 0 0 25px #36d6ae;
@@ -98,7 +103,7 @@ h1{
     transform: translate(-50%,-50%);
     margin-right: -50%;
     left: 50%;
-    bottom: 50px;
+    top: 50%;
     z-index: 20;
     cursor: pointer;
     opacity: 0;
