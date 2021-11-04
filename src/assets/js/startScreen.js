@@ -6,7 +6,7 @@ gsap.registerPlugin(Draggable)
 const widthStartScree = (window.innerWidth > 0) ? window.innerWidth : screen.width
 const containerStartScreen = document.querySelector('.startScreen')
 const durationStartScreen = 8.5
-let genesisTl
+let genesisTl,glitch
 
 const genesisAnim = () => {
     gsap.set('#gD, #geD > *', {scale: 0, transformOrigin: 'center'})
@@ -22,7 +22,7 @@ const genesisAnim = () => {
     gsap.timeline({delay: durationStartScreen + 1.5,repeat:-1,repeatDelay:3})
         .to('#geD > *', {scale: 2, duration: .25, ease: 'sine.inOut', stagger: {each: .15, repeat: 1, yoyo: true}})
 
-    const glitch = gsap.timeline({paused: true, repeat: -1, defaults: {duration: .05,transformOrigin:"50% 50%"}})
+    glitch = gsap.timeline({paused: true, repeat: -1, defaults: {duration: .05,transformOrigin:"50% 50%"}})
         .to('.glitch', {skewX: 2, ease: 'power4.inOut', duration: .1})
         .to('.glitch', {skewX: 0, ease: 'power4.inOut'})
         .to('.glitch', {opacity: 0})
@@ -326,8 +326,8 @@ if (containerStartScreen) {
         const {glitch, gF, geD, gT, gE, gA, gGL} = genesisAnim()
 
         genesisTl = gsap.timeline({defaults: {ease: 'power1.in'}, paused: false,onComplete:()=>{
-            onCompleteStartScreen()
-            gsap.to(glitch, {progress: 1, duration: .5, ease: 'none', repeat: -1, repeatDelay: 10}, '<')
+            // onCompleteStartScreen()
+            // gsap.to(glitch, {progress: 1, duration: .5, ease: 'none', repeat: -1, repeatDelay: 10}, '<')
         }})
             .to('#gD', {scale: 1, duration: 1})
             .from('#gD', {x: -1024, duration: durationStartScreen/1.17})
@@ -632,10 +632,10 @@ if (containerStartScreen) {
         const {glitch, gF, geD, gT, gE, gA, gGL} = genesisAnim()
 
         genesisTl = gsap.timeline({defaults: {ease: 'power1.in'}, onComplete: () => {
-                Draggable.create("#geG", {type:"x", bounds:".startScreen svg", inertia: true})
-                gsap.to(glitch, {progress: 1, duration: .5, ease: 'none', repeat: -1, repeatDelay: 10})
-                gsap.to('.genesis-text-opacity, #gTC', {opacity: 1})
-                onCompleteStartScreen()
+                // Draggable.create("#geG", {type:"x", bounds:".startScreen svg", inertia: true})
+                // gsap.to(glitch, {progress: 1, duration: .5, ease: 'none', repeat: -1, repeatDelay: 10})
+                // gsap.to('.genesis-text-opacity, #gTC', {opacity: 1})
+                // onCompleteStartScreen()
 
             }})
             .to('#gD', {scale: 1, duration: 1})
@@ -646,12 +646,29 @@ if (containerStartScreen) {
             .to([gF, gT, gA, gGL, geD, gE], {progress: 1, duration: durationStartScreen}, '<')
             .to('#gMT', {opacity: 1, duration: 1}, `>`)
             .set('#gTC', {opacity: 1}, '>+.5')
+            .to('.genesis-text-opacity, #gTC', {opacity: 1})
 
         document.querySelector('.startScreen .timer_container').style.fontSize = '160px'
         document.querySelector('.startScreen .timer_container').style.paddingTop = '35px'
 
     }
 }
+
+
+genesisTl
+    .to(glitch, {progress: 1, duration: .5, ease: 'none', repeat:0, repeatDelay: 10})
+    .to(".startScreen",{duration:1,autoAlpha:0,display:"none"},"<")
+    .call(()=>{
+        if(!document.body.classList.contains("animEarthStart"))
+            gsap.to(".btn-home",{autoAlpha:1})
+    })
+    // .to(".btn-home",{autoAlpha:1})
+
+// function onCompleteStartScreen(){
+//     if(!document.body.classList.contains("animEarthStart"))
+//         gsap.to(".btn-home",{autoAlpha:1})
+// }
+
 
 // HOVER
 const groupsStartScreen = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
@@ -684,7 +701,4 @@ document.querySelectorAll('#gH2 > *').forEach(item => {
 })
 
 
-function onCompleteStartScreen(){
-    if(!document.body.classList.contains("animEarthStart"))
-    gsap.to(".btn-home",{autoAlpha:1})
-}
+

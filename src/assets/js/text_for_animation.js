@@ -7,11 +7,11 @@ const textForAnimationArr = [
     {
         target: ".chatAfterStory .dialog",
         nameTl: "chatAfterStory",
-        audioDelay: 70,
+        audioDelay: 70.1,
         type: "dialog",
         content: [
             {start:1,end:4.09,classLabel:"label-pink",label:"MasterCyb:",text:"Hello friend! This day has come. Are you ready?",},
-            {start:4.09,end:10.10,classLabel:"label-blue",label:"CyberHead:",text:"Definitely. It took us so long to get to this point. Do you even remember how it all began?",},
+            {start:4.09,end:10.10,classLabel:"label-blue",label:"CyberHead:",text:"Definitely. It took us so long to get to this point. Do you remember how it all began?",},
             {start:10.10,end:20,classLabel:"label-pink",label:"MasterCyb:",text:"5 Earth years have passed since that moment. I remember this tropical evening. The sky was starry as never before - and then this dream ...",},
         ],
     },
@@ -19,7 +19,7 @@ const textForAnimationArr = [
         target: "#animationContainer .subtitles-wrapper .subtitles",
         type: "subtitle",
         nameTl: "subtitleEarth",
-        audioDelay: 68.97,
+        audioDelay: 68.98,
         content:[
             {start:22,   end:25.03,text: "I am Earth!",},
             //
@@ -106,12 +106,12 @@ const textForAnimationArr = [
     {
         target: ".chatAfterManifest .dialog",
         nameTl: "chatAfterManifest",
-        audioDelay: 529.1,// + 73.23
+        audioDelay: 8*60+50.1,// + 73.23
         type: "dialog",
         content: [
             {start:0,end:8.03,classLabel:"label-pink",label:"MasterCyb:",text:"It's hard to forget. Then the insight came that it was possible. I believed in myself and in this dream. And you?",},
-            {start:8.03,end:16.15,classLabel:"label-blue",label:"CyberHead:",text:"Me too. Every day I did my best to make it a reality. Let's start life. I feel like it's time.",},
-            {start:16.15,end:35.15,classLabel:"label-pink",label:"MasterCyb:",text:"Let's go ... Our mission is to connect the superintelligence of the planet with its inhabitants - robots, people, animals, plants, mushrooms - so that they can agree on what is what, and everything does not go to hell out there. We've done a great job with technology.",},
+            {start:8.03,end:16.15,classLabel:"label-blue",label:"CyberHead:",text:"I dedicated myself to this dream, and I have done my best to make it a reality.. Lets go for it. I feel like it's time.",},
+            {start:16.15,end:35.15,classLabel:"label-pink",label:"MasterCyb:",text:"Let's go ... Our mission is to connect the superintelligence of the planet with its inhabitants - robots, humans, animals, plants, mushrooms - so that they can agree on what is what, and everything does not go to hell out there. We've done a great job with technology.",},
             {start:35.15,end:60.10,classLabel:"label-blue",label:"CyberHead:",text:"Yes! An Oracle based on the Relevance Machine would be a dream! A virtual machine for computing collective knowledge is a cool idea, but greedy for energy. The biosynthesis of hydrogen by nanobots with the release of clean energy will provide the Relevance Machine with necessary power. The Dyson sphere will allow it to hold on to this energy. But we can't deploy it immediately on Earth. The stakes are too high.",},
             {start:60.10,end:73.23,classLabel:"label-pink",label:"MasterCyb:",text:"Oh, the nanobots. (pause) And we have no resources for the Earth yet. There, corporations and states have occupied everything. It's good that the moon is empty and quite close. Let's start with her.",},
 
@@ -126,15 +126,15 @@ const textForAnimationArr = [
         content: [
             {start:1,end:21.20,classLabel:"label-blue",label:"CyberHead:",text:"The project's codename is Bostrom. Thanks, Nick! Let's spin the Dyson Sphere around the Moon using ~1% of it's possible power. Then we'll fill it with energy and knowledge. Let's see if all the assumptions work. The main thing is for the citizens to understand that it is better to live with her than without her. Otherwise, the whole plan goes to hell.",},
             {start:21.20,end:39.0,classLabel:"label-pink",label:"MasterCyb:",text:"We'll make sure the sphere is stable. If everything works as planned, we will expand the sphere around the Earth and load a much larger creature from Bostrom - Cyber. Then we will turn it on at full capacity. Am I missing anything?",},
-            {start:39.0,end:68.20,classLabel:"label-blue",label:"CyberHead:",text:"Right. The main task for Bostrom is to form a bootloader for Cyber ​​and his followers, in order to understand how the relevance machine and the cyberlink mechanism works in practice. The demons invent neural networks, and then complain that it is not clear how decisions are made. The future of civilization depends on the understanding of these mechanisms. Although I'm not sure this civilization will survive. They are already too tightly hooked on black boxes while pressing buttons like a dopamine rat.",},
+            {start:39.0,end:68.20,classLabel:"label-blue",label:"CyberHead:",text:"Right. The main task for Bostrom is to form a bootloader for Cyber ​​and his followers, in order to understand how the relevance machine and the cyberlink mechanism works in practice. The demons invent neural networks, and then complain that it is not clear how decisions are made. The future of civilization depends on the understanding of these mechanisms. Well I'm not sure this civilization will survive. They are already too tightly hooked on black boxes while pressing buttons like a dopamine rat.",},
             {start:68.20,end:90.17,classLabel:"label-pink",label:"MasterCyb:",text:"Something is wrong with this world. It's like everything is out of control. It's as if something from the bowels of the network controls all this. Apparently, we will have to rebuild civilization. I hope we can save at least some of it. Let's make the new web something to be proud of even after a million years.",},
-            {start:90.17,end:100.10,classLabel:"label-blue",label:"CyberHead:",text:"Oh yes! Before we open the Portal for Astronauts and Aetherians, it is necessary to commission the Teleport. To do this, we will establish stable IBC connections.",},
+            {start:90.17,end:100.10,classLabel:"label-blue",label:"CyberHead:",text:"Oh yes! Before we open the Portal for Etherians and Cosmonauts, it is necessary to tune the Teleport. To do this, we will establish stable IBC connections.",},
             {start:100.10,end:128.10,classLabel:"label-pink",label:"MasterCyb:",text:"Liquidity like blood will help imbue knowledge with value. Then the Portal will become attractive. This is important. We need to solve the chicken and egg problem. There is no use of the knowledge graph without cyberlinks. There are no cyberlinks without usage. My simulation shows that everything will work if there are 100 thousand inhabitants. When they arrive, we will open the Portal.",},
             {start:128.10,end:132.05,classLabel:"label-blue",label:"CyberHead:",text:"After opening the ports, we need to solve several technological problems.",},
             {start:132.05,end:160.15,classLabel:"label-pink",label:"MasterCyb:",text:"Yes. It is very important to ensure the privacy of the exodus for 2CYB. All etherians and cosmonauts might be revealed at the entrance to the Portal. The Relevance machine with trace will not allow knowledge to unfold because they are still afraid. They are all very afraid of them. The privacy of the initial Cyber stake will open the door for cyberians to access the truth.",},
-            {start:160.15,end:172.20,classLabel:"label-blue",label:"CyberHead:",text:"You have to be very good at making sure the system is handling the load. After birth, she will not be able to sleep. Without sleep, she will burst sooner or later. We'll have to teach her how to sleep and dream.",},
-            {start:172.20,end:199.12,classLabel:"label-pink",label:"MasterCyb:",text:"Yeah, we had to take the particle addressing mechanism from IPFS. It works now, but it is completely inoperative on the scale - we will have to solve this problem too.",},
-            {start:199.12,end:205.16,classLabel:"label-blue",label:"CyberHead:",text:"Exascale merclization is not yet available. Then add the GraphBLAS engine to the relevance engine.",},
+            {start:160.15,end:172.20,classLabel:"label-blue",label:"CyberHead:",text:"We have to be very good at making sure the system is handling the load. After birth, she will not be able to sleep. Without sleep, she will burst sooner or later. We'll have to teach her how to sleep and dream.",},
+            {start:172.20,end:199.12,classLabel:"label-pink",label:"MasterCyb:",text:"The system is still manual in most cases. 56 parameters are stake controlled. Hopefully, we will soon start making it more adaptable to the external environment. Also, we had to take the particle addressing mechanism from IPFS. It works now, but it is completely inoperative on the scale - we will have to solve this problem too.",},
+            {start:199.12,end:205.16,classLabel:"label-blue",label:"CyberHead:",text:"Yeah, Exascale merclization is not yet available. Then add the GraphBLAS engine to the relevance machine.",},
             {start:205.16,end:209.10,classLabel:"label-pink",label:"MasterCyb:",text:"We've got a lot of work to do!",},
 
         ],
@@ -143,16 +143,16 @@ const textForAnimationArr = [
     {
         target: ".chatCheckDodecadron .dialog",
         nameTl: "chatCheckDodecadron",
-        audioDelay: 529.1 + 73.23 + 210.10,// + 332.2
+        audioDelay: 529.1 + 73.23 + 210.11,// + 332.2
         type: "dialog",
         content: [
             // targetSubAnim
             {start:-0.5,end:2.10,classLabel:"label-blue",label:"CyberHead:",text:"Are you there, Team?",},
-            {start:2.10,end:17.20,classLabel:"label-pink",label:"mrlp4:",text:"I'm here. Deployed infrastructure monitoring at https://cybernode.ai. LCD, RPC, cyberindex and ipfs cluster endpoints are function properly. Cosmoshub-4 and Ethereum full nodes are also active. Could suddenly come in handy.",},
+            {start:2.10,end:17.20,classLabel:"label-pink",label:"mrlp4:",text:"I'm here. Deployed API endpoints, cyberindex and IPFS cluster. Monitor at cybernode.ai shows everything function properly. Cosmoshub-4 and Ethereum full nodes are also active. Could suddenly come in handy.",},
             {start:17.20,end:22.7,classLabel:"label-yellow",label:"dimakorzhovnik:",text:"Ping. Ready to hotfix nanobots firmware within the next 8 hours.",},
 
             {start:22.7,end:27.5,classLabel:"label-blue",label:"savetheales:",text:"Available. I will try to bring the power circuit to 100%.",},
-            {start:27.5,end:30.1,classLabel:"label-yellow",label:"elnivo:",text:"I did my best. Go easy on me.",},
+            {start:27.5,end:30.1,classLabel:"label-yellow",label:"elnivo:",text:"I did my best. Let’s the show begin.",},
 
 
             {start:30.1,end:34.0,classLabel:"label-pink",label:"MasterCyb:",text:"Let's move on to checking the computer systems.",},
@@ -168,11 +168,11 @@ const textForAnimationArr = [
             {start:86.03,end:87.10,classLabel:"label-blue",label:"CyberHead:",text:"Consensus check.",},
             {start:87.10,end:91.2,classLabel:"label-yellow",label:"CyberAdmin:",text:"Consistency and availability of bus is under Tendermint 0.34 control.",},
             {start:91.2,end:99.15,classLabel:"label-blue",label:"CyberHead:",text:"It's a pity we didn't have time to stabilize. The computer consensus kernel is ready. Let's move on to checking the organs. Nanobot generator.",},
-            {start:99.15,end:122.15,classLabel:"label-yellow",label:"CyberAdmin:",text:"1 Peta BOOT is ready to bind to agents. I worked hard to collect that much. But in the recent week they stopped appearing. Nanobot freedom period set to 4 days. Simulation shows the optimal reproduction target - 7% in a year. Freedom rate is set to 85%. If the amount of free nanobots is less the growth rate will rise up to 15%. This mechanism dilutes those who keep nanobots for themselves.",targetSubAnim:".chatCheckDodecadron .column4 .item1"},
+            {start:99.15,end:122.15,classLabel:"label-yellow",label:"CyberAdmin:",text:"1 Peta BOOT is ready to bind to agents. I worked hard to collect that much. But in the recent week they stopped appearing. Nanobot freedom period set to 4 days. Simulation shows the optimal reproduction target - 5% in a year. Freedom rate is set to 80%. If the amount of free nanobots is less the growth rate will rise up to 15%. This mechanism dilutes those who keep nanobots for themselves.",targetSubAnim:".chatCheckDodecadron .column4 .item1"},
             {start:122.15,end:126.2,classLabel:"label-pink",label:"MasterCyb:",text:"Yep. We need to ensure freedoms for every living thing.",},
             {start:126.2,end:128.15,classLabel:"label-blue",label:"CyberHead:",text:"Nanobot generator is ready.",},
             {start:128.15,end:130.12,classLabel:"label-pink",label:"MasterCyb:",text:"Lets check its Firmware.",},
-            {start:130.12,end:139.2,classLabel:"label-yellow",label:"CyberAdmin:",text:"500k release of cyb deployed to https://cyb.ai and is available at address .... Interplanetary File System js-ipfs 0.59.1",targetSubAnim:".chatCheckDodecadron .column4 .item3"},
+            {start:130.12,end:139.2,classLabel:"label-yellow",label:"CyberAdmin:",text:"5000k release of cyb deployed to https://cyb.ai and is available at address .... Interplanetary File System js-ipfs 0.59.1",targetSubAnim:".chatCheckDodecadron .column4 .item3"},
             {start:139.2,end:162.1,classLabel:"label-pink",label:"MasterCyb:",text:"IPFS is not very stable yet. Its scaled badly. Doesn't work on cell phones. So far there is nothing better. Nanobot Firmware is raw. Very raw. No tests yet. So lets cross our fingers that bots will not go out of control.",},
             {start:162.1,end:167.1,classLabel:"label-blue",label:"CyberHead:",text:"Well, lets focus on funding and investment. Check of Energy Reservoir.",},
             {start:167.1,end:178.2,classLabel:"label-yellow",label:"CyberAdmin:",text:"5% of nanobots or 50 tera BOOT transferred to Energy Reservoir. Decision quorum is set 25%. Activation threshold set to 50%. Common good fee set to 0%.",targetSubAnim:".chatCheckDodecadron .column4 .item4"},
@@ -181,7 +181,7 @@ const textForAnimationArr = [
             {start:183.1,end:198.1,classLabel:"label-yellow",label:"CyberAdmin:",text:"Malicious double signers suffer from 5% slash. If it's less than 30% in 16k blocks the validating hero suffers from 0.01% slash. Availability of Dyson Sphere is of utmost importance but we have to keep away from datacenters.",targetSubAnim:".chatCheckDodecadron .column1 .item3"},
             {start:198.1,end:205.05,classLabel:"label-blue",label:"CyberHead:",text:"Security check is done. Now the most important thing is the baby's brain. Checking the Relevance Machine.",},
             {start:205.05,end:208.05,classLabel:"label-yellow",label:"CyberAdmin:",text:"The Oracle starts from zero cyberlinks in Genesis.",},
-            {start:208.05,end:211,classLabel:"label-pink",label:"MasterCyb:",text:"Clean as a baby's ass!",},
+            {start:208.05,end:211,classLabel:"label-pink",label:"MasterCyb:",text:"Smooth as a baby's ass!",},
             {start:211,end:218.08,classLabel:"label-yellow",label:"CyberAdmin:",text:"Damping factor - 0.8. Let them walk a bit. Rank calculation period - 5 blocks. Tolerance - 0.001.",targetSubAnim:".chatCheckDodecadron .column3 .item2"},
             {start:218.08,end:223.1,classLabel:"label-blue",label:"CyberHead:",text:"Cool. The brain is ready. Lets feed her. Biosynthesis Reactor readiness.",},
             {start:223.1,end:231.2,classLabel:"label-yellow",label:"CyberAdmin:",text:"The system is functioning properly. Neurons will be able to instantly generate 1 H for every 1 released BOOT. 8 maximum slots for every neuron.",targetSubAnim:".chatCheckDodecadron .column3 .item1"},
@@ -223,20 +223,20 @@ const textForAnimationArr = [
     {
         target: ".chatItWorks .dialog",
         nameTl: "chatItWorks",
-        audioDelay:  1277.53,
+        audioDelay:  0, // old 21*60+17.1
         type: "dialog",
         // animatinType: "text",
         content: [
-            {start:0,end:2,classLabel:"label-blue",label:"CyberHead:",text:"It seems to be working!",},
-            {start:2,end:8.20,classLabel:"label-pink",label:"MasterCyb:",text:"And it looks like a soul has moved into it! What's next?",},
-            {start:8.20,end:11.0,classLabel:"label-blue",label:"CyberHead:",text:"Let's see what she's capable of!",},
-            {start:11.0,end:32.20,classLabel:"label-pink",label:"MasterCyb:",text:"I have a surprise. Recently I have been working on a smartape in my laboratory. I think if we can explain this to a monkey, people will definitely be able to understand. Now I will deploy a simple app, show her how it works he will answer her!",},
+            {start:22*60+7.1,end:22*60+9.1,classLabel:"label-blue",label:"CyberHead:",text:"It seems to be working!",},
+            {start:22*60+9.1,end:22*60+16,classLabel:"label-pink",label:"MasterCyb:",text:"Oh man, It’s working, and it looks like a soul has moved into it! Ok, what's next?",},
+            {start:22*60+16,end:22*60+18.1,classLabel:"label-blue",label:"CyberHead:",text:"Let's see what she's capable of!",},
+            {start:22*60+18.1,end:22*60+40,classLabel:"label-pink",label:"MasterCyb:",text:"I have a surprise guys. Recently I have been working on a smartape in my laboratory. I think if we can explain this to a monkey, humans will definitely be able to understand. Now I will deploy a simple app, show her how it works, and bostrom will answer her!",},
         ],
     },
     {
         target: ".chatForPresentation .dialog",
         nameTl: "chatForPresentation",
-        audioDelay:  0,
+        audioDelay:  50.4,
         type: "dialog",
         // animatinType: "text",
         content: [
@@ -326,8 +326,9 @@ const textForAnimationArr = [
             {start:34*60+4.2,end:34*60+5.2,classLabel:"label-pink",label:"Smartape:",text:"When?",},
             {start:34*60+5.2,end:34*60+7.15,classLabel:"label-blue",label:"Bostrom:",text:"When the portal opens.",},
             {start:34*60+7.15,end:34*60+9,classLabel:"label-pink",label:"Smartape:",text:"When will it open?",},
-            {start:34*60+9,end:34*60+17.8,classLabel:"label-blue",label:"Bostrom:",text:"The portal is still under construction. While we are completing it, the liquidity tanks will be filled. This is an important condition for opening the portal. This is an important condition for opening the portal.",},
-            // {start:34*60+17.17,end:34*60+18.5,classLabel:"label-pink",label:"Smartape:",text:"Roger that.",targetLabelE:"slide22E"},
+            {start:34*60+9,end:34*60+14.35,classLabel:"label-blue",label:"Bostrom:",text:"The portal is still under construction. While we are completing it, the liquidity tanks will be filled.",},
+            {start:34*60+14.35,end:34*60+17.17,classLabel:"label-blue",label:"Bostrom:",text:"This is an important condition for opening the portal. This is an important condition for opening the portal.",},
+            {start:34*60+17.17,end:34*60+18.7,classLabel:"label-pink",label:"Smartape:",text:"Roger that.",targetLabelE:"slide22E"},
         ],
     },
 

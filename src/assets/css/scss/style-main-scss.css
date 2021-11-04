@@ -75,7 +75,7 @@ h1 {
 .btn-home {
   font-family: "Play", sans-serif;
   white-space: nowrap;
-  background-color: #000;
+  background-color: transparent;
   border: none;
   font-family: "Play",sans-serif;
   outline: none;
@@ -498,7 +498,7 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
     width: 135%;
-    height: auto; }
+    height: 135%; }
   .smartapePresentation .chatForStory .title {
     width: 50%;
     margin: 20vh 10vw 10vh 40vw;
