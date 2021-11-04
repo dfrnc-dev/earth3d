@@ -13,7 +13,7 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
-import Stats from 'three/examples/jsm/libs/stats.module'
+// import Stats from 'three/examples/jsm/libs/stats.module'
 
 /**
  * shader
@@ -70,7 +70,9 @@ import {textForAnimation} from "@assets/js/text_for_animation.js"
 
 
 // let genesisDate = "Nov 05, 2021 13:45:00"
-let genesisDate = '2021-11-05T13:00:00Z';
+// let genesisDate = '2021-11-05T13:00:00Z';
+let genesisDate = Date.parse(new Date(new Date().getTime()+1.3*60000).toUTCString());
+
 let timerInterval
 
 function timerEnd() {
@@ -99,9 +101,18 @@ function timerEnd() {
             item.innerText = `${days} : ${hours} : ${minutes} : ${seconds}`
         })
 
-        // if (distance < 0) {
-        //     clearInterval(timerInterval);
-        // }
+        if(distance == 60000){
+            gsap.timeline()
+                .to(".startScreen #genesis",{duration:1,autoAlpha:0})
+                .to(".startScreen",{duration:1,backgroundColor:"rgba(0,0,0,0)"},">")
+                .to(".btn-home",{duration:1,autoAlpha:1},"<")
+                .to(".startScreen svg",{duration:1,y:"-20%",ease:"sine.inOut"},"<")
+        }
+        if (distance <= 0) {
+            clearInterval(timerInterval);
+            gsap.timeline()
+                .to(".startScreen",{duration:1,autoAlpha:0},"<")
+        }
     }
 
     changeTime()
@@ -298,9 +309,8 @@ window.addEventListener("load",function () {
         // const controls = new OrbitControls( camera, renderer.domElement );
         // controls.update();
 
-        // if(window.location.hostname == "localhost"){}
-        stats = Stats()
-        document.body.appendChild(stats.dom)
+        // stats = Stats()
+        // document.body.appendChild(stats.dom)
 
         function animate() {
 
@@ -1502,15 +1512,6 @@ window.addEventListener("load",function () {
         document.querySelector(".btn-home").addEventListener("mousedown",function () {
             mainTl.restart()
         })
-
-        function startMainTl() {
-            gsap.timeline()
-                .to(".startScreen",{duration:1,autoAlpha:0,display:"none"},"<")
-                .to(".btn-home",{autoAlpha:1})
-        }
-
-        // temp start
-        document.body.addEventListener("click",startMainTl)
 
 
         if(window.location.hostname != "localhost")
