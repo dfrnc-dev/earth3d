@@ -326,7 +326,7 @@ if (containerStartScreen) {
         const {glitch, gF, geD, gT, gE, gA, gGL} = genesisAnim()
 
         genesisTl = gsap.timeline({defaults: {ease: 'power1.in'}, paused: false,onComplete:()=>{
-            // onCompleteStartScreen()
+            onCompleteStartScreen()
             // gsap.to(glitch, {progress: 1, duration: .5, ease: 'none', repeat: -1, repeatDelay: 10}, '<')
         }})
             .to('#gD', {scale: 1, duration: 1})
@@ -632,11 +632,10 @@ if (containerStartScreen) {
         const {glitch, gF, geD, gT, gE, gA, gGL} = genesisAnim()
 
         genesisTl = gsap.timeline({defaults: {ease: 'power1.in'}, onComplete: () => {
-                // Draggable.create("#geG", {type:"x", bounds:".startScreen svg", inertia: true})
+                Draggable.create("#geG", {type:"x", bounds:".startScreen svg", inertia: true})
                 // gsap.to(glitch, {progress: 1, duration: .5, ease: 'none', repeat: -1, repeatDelay: 10})
                 // gsap.to('.genesis-text-opacity, #gTC', {opacity: 1})
-                // onCompleteStartScreen()
-
+                onCompleteStartScreen()
             }})
             .to('#gD', {scale: 1, duration: 1})
             .to('#gD', {x: 1024, duration: durationStartScreen/1.17})
@@ -654,20 +653,9 @@ if (containerStartScreen) {
     }
 }
 
-
-genesisTl
-    .to(glitch, {progress: 1, duration: .5, ease: 'none', repeat:0, repeatDelay: 10})
-    .to(".startScreen",{duration:1,autoAlpha:0,display:"none"},"<")
-    .call(()=>{
-        if(!document.body.classList.contains("animEarthStart"))
-            gsap.to(".btn-home",{autoAlpha:1})
-    })
-    // .to(".btn-home",{autoAlpha:1})
-
-// function onCompleteStartScreen(){
-//     if(!document.body.classList.contains("animEarthStart"))
-//         gsap.to(".btn-home",{autoAlpha:1})
-// }
+function onCompleteStartScreen(){
+    gsap.to(glitch, {progress: 1, duration: .5, ease: 'none', repeat:-1, repeatDelay: 10})
+}
 
 
 // HOVER

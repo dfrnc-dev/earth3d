@@ -1503,6 +1503,15 @@ window.addEventListener("load",function () {
             mainTl.restart()
         })
 
+        function startMainTl() {
+            gsap.timeline()
+                .to(".startScreen",{duration:1,autoAlpha:0,display:"none"},"<")
+                .to(".btn-home",{autoAlpha:1})
+        }
+
+        // temp start
+        document.body.addEventListener("click",startMainTl)
+
 
         if(window.location.hostname != "localhost")
             GSDevTools.create({animation:"mainTl",hideGlobalTimeline:true,timeScale:1,visibility:"auto",persist: false,inTime:0});
