@@ -119,7 +119,7 @@ function timerEnd() {
     changeTime()
     timerInterval = setInterval(changeTime, 1000)
 }
-timerEnd()
+// timerEnd()
 
 
 
@@ -1522,6 +1522,8 @@ window.addEventListener("load",function () {
 
         document.querySelector(".btn-home").addEventListener("mousedown",function () {
             startScreenTl.restart()
+            genesisDate = Date.parse(new Date(new Date().getTime()+20000).toUTCString());
+            timerEnd()
         })
     }
 
