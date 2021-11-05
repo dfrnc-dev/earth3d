@@ -8,39 +8,6 @@ const containerStartScreen = document.querySelector('.startScreen')
 const durationStartScreen = 8.5
 let genesisTl,glitch
 
-const genesisAnim = () => {
-    gsap.set('#gD, #geD > *', {scale: 0, transformOrigin: 'center'})
-    gsap.set('#gL > *', {strokeDasharray: 1496, strokeDashoffset: 1496})
-    gsap.set('#gGL > *', {scaleY: 0, transformOrigin: '50% 100%'})
-    gsap.set('#gML', {scaleX: 0, transformOrigin: 'left'})
-    gsap.set('#gF > *', {scaleY: 0, transformOrigin: '0% 100%'})
-    gsap.set('#gD', {x: -4, y: 2})
-
-    gsap.timeline({repeat: -1, repeatDelay: 2, delay: durationStartScreen})
-        .to('#wgD', {scale: 1.2, ease: 'sine.inOut', transformOrigin: 'center', duration: .15, repeat: 3, yoyo: true})
-
-    gsap.timeline({delay: durationStartScreen + 1.5,repeat:-1,repeatDelay:3})
-        .to('#geD > *', {scale: 2, duration: .25, ease: 'sine.inOut', stagger: {each: .15, repeat: 1, yoyo: true}})
-
-    glitch = gsap.timeline({paused: true, repeat: -1, defaults: {duration: .05,transformOrigin:"50% 50%"}})
-        .to('.glitch', {skewX: 2, ease: 'power4.inOut', duration: .1})
-        .to('.glitch', {skewX: 0, ease: 'power4.inOut'})
-        .to('.glitch', {opacity: 0})
-        .to('.glitch', {opacity: 1})
-        .to('.glitch', {x: -2})
-        .to('.glitch', {x: 2})
-        .to('.glitch', {scaleY: 1.05, ease: 'power4.inOut'})
-        .to('.glitch', {scaleY: 1, ease: 'power4.inOut'})
-
-    const gF = gsap.to('#gF > *', {scaleY: 1, duration: 2.5, ease: 'none', stagger: durationStartScreen/12, paused: true})
-    const geD = gsap.to('#geD > *', {scale: 1, duration: 1, stagger: {each: durationStartScreen/12}, paused: true})
-    const gT = gsap.to('#gT > *', {opacity: 1, duration: 1, stagger: {each: durationStartScreen/12}, paused: true})
-    const gE = gsap.to('#gE > *', {opacity: 1, duration: 1, stagger: {each: durationStartScreen/12}, paused: true})
-    const gA = gsap.to('#gA > *', {opacity: 1, duration: 2.5, ease: 'sine.inOut', stagger: {each: durationStartScreen/12}, paused: true})
-    const gGL = gsap.to('#gGL > *', {scaleY: 1, duration: 1.5, ease: 'sine.inOut', stagger: {each: -durationStartScreen/12}, paused: true})
-
-    return {glitch, gF, geD, gT, gE, gA, gGL}
-}
 
 if (containerStartScreen) {
     if (widthStartScree >= 500) {
@@ -322,22 +289,6 @@ if (containerStartScreen) {
               </foreignObject>
             </g>
             </svg>  `
-        gsap.set('#gE > *, #gA > *, #gBe, #gAf, #gT > *, #gMT, #gGD > *, #gTC', {opacity: 0})
-        const {glitch, gF, geD, gT, gE, gA, gGL} = genesisAnim()
-
-        genesisTl = gsap.timeline({defaults: {ease: 'power1.in'}, paused: false,onComplete:()=>{
-            onCompleteStartScreen()
-            // gsap.to(glitch, {progress: 1, duration: .5, ease: 'none', repeat: -1, repeatDelay: 10}, '<')
-        }})
-            .to('#gD', {scale: 1, duration: 1})
-            .from('#gD', {x: -1024, duration: durationStartScreen/1.17})
-            .to('#gL > *', {strokeDashoffset: 0, duration: durationStartScreen}, '<')
-            .to('#gML', {scaleX: 1, duration: durationStartScreen}, '<')
-            .to([gF, gT, gA, gGL, geD], {progress: 1, duration: durationStartScreen}, '<')
-            .to(gE, {progress: 1, duration: durationStartScreen}, '<+2')
-            .to('#gBe', {opacity: 1, duration: 1}, `<+${durationStartScreen/2 - 2}`)
-            .to('#gAf, #gMT', {opacity: 1, duration: 1}, `<+${durationStartScreen/2}`)
-            .set('#gTC', {opacity: 1}, '<+.5')
     }
     else {
         containerStartScreen.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1711 1060">
@@ -624,17 +575,73 @@ if (containerStartScreen) {
 </g>
 </svg>
 `
+    }
+}
+
+////////////////////////////
+////////////////////////////
+////////////////////////////
+const startScreenTl =gsap.timeline({paused:true})
+    .set('.startScreen svg', {autoAlpha: 1})
+    .to(".launch-btn-wrapper",{autoAlpha:0})
+
+gsap.set('#gD, #geD > *', {scale: 0, transformOrigin: 'center'})
+gsap.set('#gL > *', {strokeDasharray: 1496, strokeDashoffset: 1496})
+gsap.set('#gGL > *', {scaleY: 0, transformOrigin: '50% 100%'})
+gsap.set('#gML', {scaleX: 0, transformOrigin: 'left'})
+gsap.set('#gF > *', {scaleY: 0, transformOrigin: '0% 100%'})
+gsap.set('#gD', {x: -4, y: 2})
+
+
+glitch = gsap.timeline({paused: true, repeat: -1, defaults: {duration: .05,transformOrigin:"50% 50%"}})
+    .to('.glitch', {skewX: 2, ease: 'power4.inOut', duration: .1})
+    .to('.glitch', {skewX: 0, ease: 'power4.inOut'})
+    .to('.glitch', {opacity: 0})
+    .to('.glitch', {opacity: 1})
+    .to('.glitch', {x: -2})
+    .to('.glitch', {x: 2})
+    .to('.glitch', {scaleY: 1.05, ease: 'power4.inOut'})
+    .to('.glitch', {scaleY: 1, ease: 'power4.inOut'})
+
+const gF = gsap.to('#gF > *', {scaleY: 1, duration: 2.5, ease: 'none', stagger: durationStartScreen/12, paused: true})
+const geD = gsap.to('#geD > *', {scale: 1, duration: 1, stagger: {each: durationStartScreen/12}, paused: true})
+const gT = gsap.to('#gT > *', {opacity: 1, duration: 1, stagger: {each: durationStartScreen/12}, paused: true})
+const gE = gsap.to('#gE > *', {opacity: 1, duration: 1, stagger: {each: durationStartScreen/12}, paused: true})
+const gA = gsap.to('#gA > *', {opacity: 1, duration: 2.5, ease: 'sine.inOut', stagger: {each: durationStartScreen/12}, paused: true})
+const gGL = gsap.to('#gGL > *', {scaleY: 1, duration: 1.5, ease: 'sine.inOut', stagger: {each: -durationStartScreen/12}, paused: true})
+
+
+if (containerStartScreen) {
+    if (widthStartScree >= 500){
+
+        gsap.set('#gE > *, #gA > *, #gBe, #gAf, #gT > *, #gMT, #gGD > *, #gTC', {opacity: 0})
+        // const {gF, geD, gT, gE, gA, gGL} = genesisAnim()
+
+        genesisTl = gsap.timeline({paused:true,defaults: {ease: 'power1.in'},onComplete:()=>{
+                onCompleteStartScreen()
+                // gsap.to(glitch, {progress: 1, duration: .5, ease: 'none', repeat: -1, repeatDelay: 10}, '<')
+            }})
+            .to('#gD', {scale: 1, duration: 1})
+            .from('#gD', {x: -1024, duration: durationStartScreen/1.17})
+            .to('#gL > *', {strokeDashoffset: 0, duration: durationStartScreen}, '<')
+            .to('#gML', {scaleX: 1, duration: durationStartScreen}, '<')
+            .to([gF, gT, gA, gGL, geD], {progress: 1, duration: durationStartScreen}, '<')
+            .to(gE, {progress: 1, duration: durationStartScreen}, '<+2')
+            .to('#gBe', {opacity: 1, duration: 1}, `<+${durationStartScreen/2 - 2}`)
+            .to('#gAf, #gMT', {opacity: 1, duration: 1}, `<+${durationStartScreen/2}`)
+            .set('#gTC', {opacity: 1}, '<+.5')
+
+        startScreenTl.add(genesisTl.restart())
+    }
+    else{
+        ///////// mobile
 
         gsap.set('#gE > *, #gA > *, #gT > *, #gMT, #gGD > *, #gTC', {opacity: 0})
         gsap.set('#genesis', {scale: 3, x: '55%', y: 0, transformOrigin: '25% 50%', pointerEvents: 'all'})
-        // gsap.set('#gMT', {x: "17%"})
         gsap.set('.genesis-text-opacity', {opacity: 0})
-        const {glitch, gF, geD, gT, gE, gA, gGL} = genesisAnim()
 
-        genesisTl = gsap.timeline({defaults: {ease: 'power1.in'}, onComplete: () => {
+        genesisTl = gsap.timeline({paused:true,defaults: {ease: 'power1.in'}, onComplete: () => {
                 Draggable.create("#geG", {type:"x", bounds:".startScreen svg", inertia: true})
-                // gsap.to(glitch, {progress: 1, duration: .5, ease: 'none', repeat: -1, repeatDelay: 10})
-                // gsap.to('.genesis-text-opacity, #gTC', {opacity: 1})
                 onCompleteStartScreen()
             }})
             .to('#gD', {scale: 1, duration: 1})
@@ -644,23 +651,27 @@ if (containerStartScreen) {
             .to('#gML', {scaleX: 1, duration: durationStartScreen}, '<')
             .to([gF, gT, gA, gGL, geD, gE], {progress: 1, duration: durationStartScreen}, '<')
             .to('#gMT', {opacity: 1, duration: 1}, `>`)
-            .set('#gTC', {opacity: 1}, '>+.5')
+            // .set('#gTC', {opacity: 1}, '>+.5')
             .to('.genesis-text-opacity, #gTC', {opacity: 1})
 
         document.querySelector('.startScreen .timer_container').style.fontSize = '160px'
         document.querySelector('.startScreen .timer_container').style.paddingTop = '35px'
 
+        startScreenTl.add(genesisTl.restart())
     }
 }
 
 function onCompleteStartScreen(){
+    gsap.timeline({repeat: -1, repeatDelay: 2})
+        .to('#wgD', {scale: 1.2, ease: 'sine.inOut', transformOrigin: 'center', duration: .15, repeat: 3, yoyo: true})
+    gsap.timeline({delay: 1.5,repeat:-1,repeatDelay:3})
+        .to('#geD > *', {scale: 2, duration: .25, ease: 'sine.inOut', stagger: {each: .15, repeat: 1, yoyo: true}})
     gsap.to(glitch, {progress: 1, duration: .5, ease: 'none', repeat:-1, repeatDelay: 10})
 }
 
 
 // HOVER
 const groupsStartScreen = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
-gsap.set('.startScreen svg', {opacity: 1})
 gsap.set('#gH1 > *, #gH2 > *', {pointerEvents: 'all', cursor: 'pointer'})
 gsap.set('#gF > *', {opacity: .4})
 
@@ -688,5 +699,4 @@ document.querySelectorAll('#gH2 > *').forEach(item => {
     })
 })
 
-
-
+export default  startScreenTl;

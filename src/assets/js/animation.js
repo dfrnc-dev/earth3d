@@ -3,6 +3,7 @@ import { gsap } from "gsap/all";
 import GSDevTools from "@assets/js/dtgsap.min.js"
 import {typeAnim} from "@assets/js/typeAnim"
 import { slideAnimation } from "@assets/js/slideAnimation";
+import  startScreenTl from "@assets/js/startScreen";
 import { WEBGL } from 'three/examples/jsm/WebGL.js';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'
 import { Flow  } from "three/examples/jsm/modifiers/CurveModifier";
@@ -101,18 +102,18 @@ function timerEnd() {
             item.innerText = `${days} : ${hours} : ${minutes} : ${seconds}`
         })
 
-        if(distance == 60000){
-            gsap.timeline()
-                .to(".startScreen #genesis",{duration:1,autoAlpha:0})
-                .to(".startScreen",{duration:1,backgroundColor:"rgba(0,0,0,0)"},">")
-                .to(".btn-home",{duration:1,autoAlpha:1},"<")
-                .to(".startScreen svg",{duration:1,y:"-20%",ease:"sine.inOut"},"<")
-        }
-        if (distance <= 0) {
-            clearInterval(timerInterval);
-            gsap.timeline()
-                .to(".startScreen",{duration:1,autoAlpha:0},"<")
-        }
+        // if(distance == 60000){
+        //     gsap.timeline()
+        //         .to(".startScreen #genesis",{duration:1,autoAlpha:0})
+        //         .to(".startScreen",{duration:1,backgroundColor:"rgba(0,0,0,0)"},">")
+        //         .to(".btn-home",{duration:1,autoAlpha:1},"<")
+        //         .to(".startScreen svg",{duration:1,y:"-20%",ease:"sine.inOut"},"<")
+        // }
+        // if (distance <= 0) {
+        //     clearInterval(timerInterval);
+        //     gsap.timeline()
+        //         .to(".startScreen",{duration:1,autoAlpha:0},"<")
+        // }
     }
 
     changeTime()
@@ -1355,8 +1356,9 @@ window.addEventListener("load",function () {
             } })
 
             .set(".text-wrapper",{opacity:0,y:10})
-            .to(".btn-home",{duration:0.5,autoAlpha:0})
+            // .to(".btn-home",{duration:0.5,autoAlpha:0})
             .to(".startScreen",{duration:1,autoAlpha:0,display:"none"},"<")
+            .to(".gs-dev-tools",{duration:1,autoAlpha:1,y:"-100%"},"<")
 
             .add(starWarsTl.restart())
             .add(chatAfterStoryTl.restart(),">-2")
@@ -1509,15 +1511,25 @@ window.addEventListener("load",function () {
         document.addEventListener("keypress",firstLoadAudio)
 
 
-        document.querySelector(".btn-home").addEventListener("mousedown",function () {
-            mainTl.restart()
-        })
-
-
         if(window.location.hostname != "localhost")
             GSDevTools.create({animation:"mainTl",hideGlobalTimeline:true,timeScale:1,visibility:"auto",persist: false,inTime:0});
         else
             GSDevTools.create({animation:"mainTl",hideGlobalTimeline:true,timeScale:1,visibility:"auto",persist: false,inTime:0});
+
+        //////////
+        // first start
+        gsap.timeline()
+            .to(".btn-home",{duration:1,autoAlpha:1},"<")
+
+        document.querySelector(".btn-home").addEventListener("mousedown",function () {
+            startScreenTl.restart()
+
+            // for test
+            document.body.addEventListener("dblclick",function () {
+                // for start main animation
+                mainTl.restart()
+            })
+        })
 
     }
 
