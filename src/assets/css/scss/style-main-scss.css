@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 html {
   min-height: -webkit-fill-available; }
 
@@ -23,6 +26,30 @@ h1 {
   z-index: 100;
   opacity: 0;
   visibility: hidden; }
+  .header svg {
+    width: 100%;
+    height: 100%; }
+
+.header-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto; }
+  .header-container img {
+    width: 100%;
+    height: auto; }
+
+.header-talking {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 40px;
+  left: 30px; }
+  .header-talking #ctg-talking > * {
+    opacity: 0;
+    transform: translate(-5px, -5px); }
 
 /********************/
 .wrapper-animation {
@@ -45,16 +72,24 @@ h1 {
   color: #ffffff;
   text-align: center; }
 
+.launch-btn-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 11; }
+
 .btn-home {
   font-family: "Play", sans-serif;
-  height: 42px;
   white-space: nowrap;
-  background-color: #000;
+  background-color: transparent;
   border: none;
   font-family: "Play",sans-serif;
   outline: none;
-  padding: 0 50px;
-  font-size: 18px;
+  padding: 0.5em 1em;
+  font-size: calc(4vw + 4vh);
   border-radius: 3px;
   box-shadow: 0 0 10px 0 #38d6ae;
   text-shadow: 0 0 25px #36d6ae;
@@ -65,9 +100,11 @@ h1 {
   transform: translate(-50%, -50%);
   margin-right: -50%;
   left: 50%;
-  bottom: 50px;
+  top: 50%;
   z-index: 20;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden; }
 
 .chatContainer {
   position: absolute;
@@ -77,30 +114,6 @@ h1 {
   z-index: 10;
   opacity: 0;
   visibility: hidden; }
-
-.slidesContainer {
-  position: absolute;
-  top: 0%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 15;
-  opacity: 0;
-  visibility: hidden;
-  background: black; }
-
-.slide-content {
-  padding: 10%;
-  font-size: calc(16px + (30 - 16) * (100vw - 400px) / (800 - 400));
-  text-align: justify;
-  overflow: hidden;
-  color: yellow; }
-
-.slide-title {
-  color: #4bd5ee;
-  font-size: calc(16px + (30 - 16) * (100vw - 400px) / (800 - 400));
-  line-height: 1em;
-  font-weight: 200; }
 
 .finalTitleContainer {
   position: absolute;
@@ -115,13 +128,56 @@ h1 {
 
 .gs-dev-tools {
   z-index: 9999;
-  position: fixed; }
+  position: fixed;
+  transform: translateY(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s; }
+
+.animEarthStart .gs-dev-tools {
+  transform: translateY(0%);
+  opacity: 1;
+  visibility: visible; }
 
 .gs-dev-tools .time-scale,
 .gs-dev-tools .rewind,
 .gs-dev-tools .select-animation,
-.gs-dev-tools .loop {
+.gs-dev-tools .loop,
+.gs-bottom-right > a {
   display: none; }
+
+.startScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  z-index: 10; }
+  .startScreen svg {
+    width: 100%;
+    height: 100%;
+    max-height: 80%;
+    opacity: 0; }
+  .startScreen .genesis-text {
+    font-family: 'Play', sans-serif;
+    font-size: 90px;
+    color: #ffffff;
+    text-align: center; }
+  .startScreen .genesis-text-small {
+    font-family: 'Play', sans-serif;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+    opacity: .5; }
+  .startScreen .timer_container {
+    font-family: 'Play', sans-serif;
+    font-size: 70px;
+    color: #ffffff;
+    text-align: center; }
 
 .story {
   /*background-color: black;*/
@@ -152,7 +208,8 @@ h1 {
     font-weight: 200;
     margin-right: -50%;
     padding: 0 2em;
-    opacity: 0; }
+    opacity: 0;
+    text-align: center; }
   .story section {
     top: 45%;
     left: 50%;
@@ -213,9 +270,9 @@ h1 {
     left: 0;
     right: 0;
     margin: auto;
-    width: 0%;
-    min-height: 2.6em;
-    padding: 10px 40px;
+    width: 50%;
+    min-height: 3.9em;
+    padding: 0.75em 1em;
     opacity: 0;
     z-index: 10;
     display: flex;
@@ -224,15 +281,15 @@ h1 {
   #animationContainer .subtitles {
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    flex-direction: column; }
   #animationContainer .text-wrapper {
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px 40px; }
+    justify-content: center; }
   #animationContainer .text-wrapper.textRelative {
     /*position: relative;*/ }
   #animationContainer .column {
@@ -255,13 +312,12 @@ h1 {
   @media (max-width: 1100px) {
     #animationContainer .subtitles-wrapper {
       font-size: 18px; } }
+  @media (max-width: 980px) {
+    #animationContainer .subtitles-wrapper {
+      width: 80%; } }
   @media (max-width: 680px) {
     #animationContainer .subtitles-wrapper {
-      font-size: 14px;
-      min-height: 3.6em;
-      padding: 10px 20px; }
-    #animationContainer .text-wrapper {
-      padding: 10px 20px; } }
+      font-size: 14px; } }
 
 .chatForStory {
   position: absolute;
@@ -274,17 +330,17 @@ h1 {
   opacity: 0;
   visibility: hidden; }
   .chatForStory .title {
-    margin: 5% 10%;
+    margin: 5vh 10%;
     text-align: center;
     color: #C8CAFF; }
     .chatForStory .title h2 {
-      font-size: 50px;
+      font-size: calc( 2vw + 2vh);
       margin: 0;
       line-height: 1.3em;
       font-weight: normal;
       opacity: 0; }
     .chatForStory .title h3 {
-      font-size: 45px;
+      font-size: calc( 1.8vw + 1.8vh);
       margin: 0;
       line-height: 1.3em;
       font-weight: normal;
@@ -301,7 +357,7 @@ h1 {
     height: max-content;
     min-height: 1em;
     max-height: 50%;
-    padding: 20px 25px;
+    padding: 0.75em 25px;
     margin: auto;
     display: flex;
     line-height: 1.3em; }
@@ -399,13 +455,55 @@ h1 {
 .chatCheckDodecadron .content,
 .chatForBottom .content {
   width: 80%;
-  max-height: 2.6em;
+  max-height: 3.9em;
   top: initial;
   bottom: 5%; }
 
 .chatHeartBlock .content {
   width: max-content;
-  max-height: 100%; }
+  max-height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+@media (orientation: portrait) {
+  .chatForStory .content {
+    width: 80%;
+    max-height: 5.1em; }
+
+  .chatAfterManifest .content,
+  .chatAfterDodecadron .content {
+    left: 0;
+    right: 0;
+    top: initial;
+    bottom: 50px;
+    max-height: 25vh; } }
+.videoHowInstall {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 100%;
+  overflow: hidden; }
+  .videoHowInstall video {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down; }
+
+.smartapeMonkey {
+  position: absolute;
+  bottom: -1%;
+  right: 0;
+  width: 20%;
+  max-width: 300px; }
+  .smartapeMonkey img {
+    width: 100%;
+    height: auto; }
 
 .smartapePresentation {
   position: absolute;
@@ -413,6 +511,13 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%; }
+  .smartapePresentation svg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 135%;
+    height: 135%; }
   .smartapePresentation .chatForStory .title {
     width: 50%;
     margin: 20vh 10vw 10vh 40vw;
@@ -422,23 +527,73 @@ h1 {
       font-size: calc(3vw + 3vh); }
   .smartapePresentation .chatForStory .content {
     width: 80%;
-    max-height: 20%;
+    max-height: 3.9em;
     top: initial;
     bottom: 5%; }
   .smartapePresentation .slideContainer {
     position: absolute;
     top: 0;
+    left: 0;
     right: 0;
-    width: 80%;
-    height: 100%;
-    overflow: hidden; }
+    width: 100%;
+    max-width: 1000px;
+    height: 80%;
+    margin: auto; }
+    .smartapePresentation .slideContainer .slide-content {
+      padding: 10%;
+      font-size: calc(16px + (30 - 16) * (100vw - 400px) / (800 - 400));
+      text-align: justify;
+      overflow: hidden;
+      color: yellow; }
+    .smartapePresentation .slideContainer .slide-title {
+      color: #4bd5ee;
+      font-size: calc(16px + (30 - 16) * (100vw - 400px) / (800 - 400));
+      line-height: 1em;
+      font-weight: 200; }
     .smartapePresentation .slideContainer .slide {
       position: absolute;
       top: 0;
       left: 0;
       opacity: 0;
       visibility: hidden; }
+    .smartapePresentation .slideContainer .header-talking {
+      position: absolute;
+      transform-origin: center;
+      transform: rotate(60deg);
+      width: 40px;
+      height: 40px;
+      border-right: 2px solid #7AFAA1;
+      border-radius: 50%;
+      left: 0;
+      top: 12px;
+      left: 4px;
+      z-index: 55; }
+    .smartapePresentation .slideContainer .header-container {
+      position: relative;
+      display: flex;
+      justify-content: center; }
+    .smartapePresentation .slideContainer .header-container img {
+      z-index: 2; }
+    .smartapePresentation .slideContainer .slideAfterSvg {
+      position: absolute;
+      width: 100%;
+      height: 85%;
+      top: 15%; }
+      .smartapePresentation .slideContainer .slideAfterSvg img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; }
+    .smartapePresentation .slideContainer #sl1T, .smartapePresentation .slideContainer #sl1, .smartapePresentation .slideContainer #gsl12, .smartapePresentation .slideContainer #gsl13,
+    .smartapePresentation .slideContainer #sl2, .smartapePresentation .slideContainer #sl2Mon, .smartapePresentation .slideContainer #sl2P, .smartapePresentation .slideContainer #sl3, .smartapePresentation .slideContainer #gsl32, .smartapePresentation .slideContainer #gsl33, .smartapePresentation .slideContainer #sl4, .smartapePresentation .slideContainer #sl5, .smartapePresentation .slideContainer #gsl52, .smartapePresentation .slideContainer #gsl53, .smartapePresentation .slideContainer #gsl54,
+    .smartapePresentation .slideContainer #sl6, .smartapePresentation .slideContainer #gsl62, .smartapePresentation .slideContainer #sl7, .smartapePresentation .slideContainer #sl8, .smartapePresentation .slideContainer #gsl82, .smartapePresentation .slideContainer #sl10, .smartapePresentation .slideContainer #sl11, .smartapePresentation .slideContainer #sl12, .smartapePresentation .slideContainer #sl13, .smartapePresentation .slideContainer #gsl132, .smartapePresentation .slideContainer #gsl133, .smartapePresentation .slideContainer #sl14,
+    .smartapePresentation .slideContainer #sl15, .smartapePresentation .slideContainer #gsl152, .smartapePresentation .slideContainer #sl16, .smartapePresentation .slideContainer #gsl162, .smartapePresentation .slideContainer #sl17, .smartapePresentation .slideContainer #sl18, .smartapePresentation .slideContainer #sl19, .smartapePresentation .slideContainer #sl20, .smartapePresentation .slideContainer #sl21, .smartapePresentation .slideContainer #gsl212, .smartapePresentation .slideContainer #sl22 {
+      opacity: 0; }
 
+@media (orientation: portrait) {
+  .smartapePresentation .chatForStory .content {
+    width: 80%;
+    max-height: 5.1em; } }
 .endTitle {
   position: absolute;
   top: 0;
@@ -455,6 +610,20 @@ h1 {
     transform: translateY(100vh);
     text-align: center;
     color: white; }
+    .endTitle .content .item {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 2% 0; }
+      .endTitle .content .item .item-title {
+        min-width: 56%;
+        text-align: left; }
+      .endTitle .content .item .item-num1 {
+        min-width: 22%;
+        text-align: right; }
+      .endTitle .content .item .item-num2 {
+        min-width: 22%;
+        text-align: right; }
     .endTitle .content h2 {
       margin: 7% auto;
       font-size: calc(3vw + 3vh); }
@@ -462,8 +631,8 @@ h1 {
       margin: 5% auto;
       font-size: calc(2.5vw + 2.5vh); }
     .endTitle .content h4 {
-      margin: 3% auto;
-      font-size: calc(2vw + 2vh); }
+      margin: 1% auto;
+      font-size: calc(1.5vw + 1.5vh); }
     .endTitle .content p {
       font-size: calc(1vw + 1vh);
       line-height: 1.3em; }

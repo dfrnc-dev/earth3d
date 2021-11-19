@@ -3,8 +3,12 @@ precision mediump float;
 uniform sampler2D earthTexture;
 uniform sampler2D earthMagmaTexture;
 uniform sampler2D earthPointTexture;
+uniform sampler2D earthNetworkTexture;
 uniform float earthMagmaPercent;
+uniform float earthNetworkPercent;
 uniform float earthVirusPercent;
+uniform float earthGreenVirusPercent;
+uniform float earthGlitchPercent;
 uniform float lightIntensity;
 uniform vec3 colorEarth;
 uniform vec3 colorSea;
@@ -139,12 +143,14 @@ void main() {
     vec4 mainEarthTex = texture2D(earthTexture,textureCoord);
     vec4 magmaEarthTex = texture2D(earthMagmaTexture, textureCoord);
     vec4 earthPointTexture = texture2D(earthPointTexture, textureCoord);
+    vec4 earthNetworkText = texture2D(earthNetworkTexture, textureCoord);
 
     vec4 texColor = mainEarthTex;
     vec4 texColor2 = magmaEarthTex;
     float texColorKof1 = 1.0-earthMagmaPercent;
     float texColorKof2 = (texColor2.r + texColor2.g + texColor2.b) * earthMagmaPercent;
     float texColorKof = texColorKof1+texColorKof2;
+
 
 
     if((mainEarthTex.r + mainEarthTex.g + mainEarthTex.b) > 2.0  ){
@@ -176,7 +182,16 @@ void main() {
             gl_FragColor = finalColor * addedLights;
 
         if(earthPointTexture.r < earthVirusPercent){
-            gl_FragColor = vec4(1.0,0.0,0.0,1.0) * addedLights;
+            if(earthPointTexture.r < earthGreenVirusPercent){
+//                if( (earthNetworkText.r+earthNetworkText.g+earthNetworkText.b)/2.9 < earthNetworkPercent )
+                if( (earthNetworkText.r/0.85) < earthNetworkPercent )
+//                    gl_FragColor = vec4(0.4,1.0,1.0,1.0) * addedLights;
+                    gl_FragColor = vec4(0.5,0.5,1.0,1.0) * addedLights;
+                else
+                    gl_FragColor = vec4(0.0,1.0,0.0,1.0) * addedLights;
+            }else{
+                gl_FragColor = vec4(1.0,0.0,0.0,1.0) * addedLights;
+            }
         }else{
             gl_FragColor = finalColor * addedLights;
         }
@@ -190,58 +205,59 @@ void main() {
     ////////////////////////////////
     ////////////////////////////////
 //
-//    ///////////
-//    // glitch
-//    const float interval = 0.0;
-//    float time = time * 2.0;
-//    float strength = smoothstep(interval * 0.5, interval, interval - mod(time, interval));
-//    vec2 shake = vec2(strength * 8.0 + 0.5) * vec2(
-//    random(vec2(time)) * 2.0 - 1.0,
-//    random(vec2(time * 2.0)) * 2.0 - 1.0
-//    ) / resolution;
-//
-//    float y = textureCoord.y * resolution.y;
-//    float rgbWave = (
-//    snoise3(vec3(0.0, y * 0.01, time * 400.0)) * (2.0 + strength * 32.0)
-//    * snoise3(vec3(0.0, y * 0.02, time * 200.0)) * (1.0 + strength * 4.0)
-//    + step(0.9995, sin(y * 0.005 + time * 1.6)) * 12.0
-//    + step(0.9999, sin(y * 0.005 + time * 2.0)) * -18.0
-//    ) / resolution.x;
-//    float rgbDiff = (6.0 + sin(time * 500.0 + textureCoord.y * 40.0) * (20.0 * strength + 1.0)) / resolution.x;
-//    float rgbUvX = textureCoord.x + rgbWave;
-//
-//    float r = texture2D(earthTexture, vec2(rgbUvX + rgbDiff, textureCoord.y) + shake).r * gl_FragColor.r;
-//    float g = texture2D(earthTexture, vec2(rgbUvX, textureCoord.y) + shake).g * gl_FragColor.g;
-//    float b = texture2D(earthTexture, vec2(rgbUvX - rgbDiff, textureCoord.y) + shake).b * gl_FragColor.b;
-//
-//    float whiteNoise = (random(textureCoord + mod(time, 10.0)) * 2.0 - 1.0) * (0.15 + strength * 0.15);
-//
-//    float bnTime = floor(time * 20.0) * 200.0;
-//    float noiseX = step((snoise3(vec3(0.0, textureCoord.x * 3.0, bnTime)) + 1.0) / 2.0, 0.12 + strength * 0.3);
-//    float noiseY = step((snoise3(vec3(0.0, textureCoord.y * 3.0, bnTime)) + 1.0) / 2.0, 0.12 + strength * 0.3);
-//    float bnMask = noiseX * noiseY;
-//    float bnUvX = textureCoord.x + sin(bnTime) * 0.2 + rgbWave;
-//
-//    float bnR = texture2D(earthTexture, vec2(bnUvX + rgbDiff, textureCoord.y)).r * bnMask * gl_FragColor.r;
-//    float bnG = texture2D(earthTexture, vec2(bnUvX, textureCoord.y)).g * bnMask * gl_FragColor.g;
-//    float bnB = texture2D(earthTexture, vec2(bnUvX - rgbDiff, textureCoord.y)).b * bnMask * gl_FragColor.b;
-//
-//    vec4 blockNoise = vec4(bnR, bnG, bnB, 1.0);
-//
-//    float bnTime2 = floor(time * 25.0) * 300.0;
-//    float noiseX2 = step((snoise3(vec3(0.0, textureCoord.x * 2.0, bnTime2)) + 1.0) / 2.0, 0.12 + strength * 0.5);
-//    float noiseY2 = step((snoise3(vec3(0.0, textureCoord.y * 8.0, bnTime2)) + 1.0) / 2.0, 0.12 + strength * 0.3);
-//    float bnMask2 = noiseX2 * noiseY2;
-//    float bnR2 = texture2D(earthTexture, vec2(bnUvX + rgbDiff, textureCoord.y)).r * bnMask2  * gl_FragColor.r;
-//    float bnG2 = texture2D(earthTexture, vec2(bnUvX, textureCoord.y)).g * bnMask2 * gl_FragColor.g;
-//    float bnB2 = texture2D(earthTexture, vec2(bnUvX - rgbDiff, textureCoord.y)).b * bnMask2 * gl_FragColor.b;
-//    vec4 blockNoise2 = vec4(bnR2, bnG2, bnB2, 1.0);
-//
-//    float waveNoise = (sin(textureCoord.y * 1200.0) + 1.0) / 2.0 * (0.15 + strength * 0.2);
-//
-//    gl_FragColor = vec4(r, g, b, 1.0) * (1.0 - bnMask - bnMask2) + (whiteNoise + blockNoise + blockNoise2 - waveNoise);
-//
+    ///////////
+    // glitch
+    if(earthGlitchPercent == 1.0){
+        const float interval = 0.0;
+        float time = time * 0.1;
+        float strength = smoothstep(interval * 0.5, interval, interval - mod(time, interval));
+        vec2 shake = vec2(strength * 8.0 + 0.5) * vec2(
+        random(vec2(time)) * 2.0 - 1.0,
+        random(vec2(time * 2.0)) * 2.0 - 1.0
+        ) / resolution;
 
+        float y = textureCoord.y * resolution.y;
+        float rgbWave = (
+        snoise3(vec3(0.0, y * 0.01, time * 400.0)) * (2.0 + strength * 32.0)
+        * snoise3(vec3(0.0, y * 0.02, time * 200.0)) * (1.0 + strength * 4.0)
+        + step(0.9995, sin(y * 0.005 + time * 1.6)) * 12.0
+        + step(0.9999, sin(y * 0.005 + time * 2.0)) * -18.0
+        ) / resolution.x;
+        float rgbDiff = (6.0 + sin(time * 500.0 + textureCoord.y * 40.0) * (20.0 * strength + 1.0)) / resolution.x;
+        float rgbUvX = textureCoord.x + rgbWave;
+
+        float r = texture2D(earthTexture, vec2(rgbUvX + rgbDiff, textureCoord.y) + shake).r * gl_FragColor.r;
+        float g = texture2D(earthTexture, vec2(rgbUvX, textureCoord.y) + shake).g * gl_FragColor.g;
+        float b = texture2D(earthTexture, vec2(rgbUvX - rgbDiff, textureCoord.y) + shake).b * gl_FragColor.b;
+
+        float whiteNoise = (random(textureCoord + mod(time, 10.0)) * 2.0 - 1.0) * (0.15 + strength * 0.15);
+
+        float bnTime = floor(time * 20.0) * 200.0;
+        float noiseX = step((snoise3(vec3(0.0, textureCoord.x * 3.0, bnTime)) + 1.0) / 2.0, 0.12 + strength * 0.3);
+        float noiseY = step((snoise3(vec3(0.0, textureCoord.y * 3.0, bnTime)) + 1.0) / 2.0, 0.12 + strength * 0.3);
+        float bnMask = noiseX * noiseY;
+        float bnUvX = textureCoord.x + sin(bnTime) * 0.2 + rgbWave;
+
+        float bnR = texture2D(earthTexture, vec2(bnUvX + rgbDiff, textureCoord.y)).r * bnMask;
+        float bnG = texture2D(earthTexture, vec2(bnUvX, textureCoord.y)).g * bnMask;
+        float bnB = texture2D(earthTexture, vec2(bnUvX - rgbDiff, textureCoord.y)).b * bnMask;
+
+        vec4 blockNoise = vec4(bnR, bnG, bnB, 1.0);
+
+        float bnTime2 = floor(time * 25.0) * 300.0;
+        float noiseX2 = step((snoise3(vec3(0.0, textureCoord.x * 2.0, bnTime2)) + 1.0) / 2.0, 0.12 + strength * 0.5);
+        float noiseY2 = step((snoise3(vec3(0.0, textureCoord.y * 8.0, bnTime2)) + 1.0) / 2.0, 0.12 + strength * 0.3);
+        float bnMask2 = noiseX2 * noiseY2;
+        float bnR2 = texture2D(earthTexture, vec2(bnUvX + rgbDiff, textureCoord.y)).r * bnMask2;
+        float bnG2 = texture2D(earthTexture, vec2(bnUvX, textureCoord.y)).g * bnMask2;
+        float bnB2 = texture2D(earthTexture, vec2(bnUvX - rgbDiff, textureCoord.y)).b * bnMask2;
+        vec4 blockNoise2 = vec4(bnR2, bnG2, bnB2, 1.0);
+
+        float waveNoise = (sin(textureCoord.y * 1200.0) + 1.0) / 2.0 * (0.15 + strength * 0.2);
+
+        gl_FragColor = vec4(r, g, b, 1.0) * (1.0 - bnMask - bnMask2) + (whiteNoise + blockNoise + blockNoise2 - waveNoise);
+
+    }
 
 
 }
