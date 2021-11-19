@@ -2,6 +2,32 @@ import { gsap } from "gsap/all";
 
 export const slideAnimation = function(tlname) {
 
+    gsap.set('#sl1T, #sl1, #gsl12, #gsl13', {opacity: 0})
+    gsap.set('#sl2, #sl2Mon, #sl2P', {opacity: 0})
+    gsap.set('#sl3, #gsl32, #gsl33', {opacity: 0})
+    gsap.set('#sl4', {opacity: 0})
+    gsap.set('#sl5, #gsl52, #gsl53, #gsl54', {opacity: 0})
+    gsap.set('#sl6, #gsl62', {opacity: 0})
+    gsap.set('#sl7', {opacity: 0})
+    gsap.set('#sl8, #gsl82', {opacity: 0})
+    gsap.set('#sl10', {opacity: 0})
+    gsap.set('#sl11', {opacity: 0})
+    gsap.set('#sl12', {opacity: 0})
+    gsap.set('#sl13, #gsl132, #gsl133', {opacity: 0})
+    gsap.set('#gsl13g3', {opacity: 0,x:36,y:351})
+    gsap.set('#gsl13g4', {scale: 0,transformOrigin:"0% 0%"})
+    gsap.set('#gsl131g5', {opacity: 0})
+
+    gsap.set('#sl14', {opacity: 0})
+    gsap.set('#sl15, #gsl151, #gsl152, #gsl153, #gsl154', {opacity: 0})
+    gsap.set('#sl16, #gsl162', {opacity: 0})
+    gsap.set('#sl17', {opacity: 0})
+    gsap.set('#sl18', {opacity: 0})
+    gsap.set('#sl19', {opacity: 0})
+    gsap.set('#sl20', {opacity: 0})
+    gsap.set('#sl21, #gsl212', {opacity: 0})
+    gsap.set('#sl22', {opacity: 0})
+
     const slide2MouseClick = gsap.timeline({paused: true})
         .to('#sl2Mou', {scale: .8, rotate: -10, duration: .15, transformOrigin: 'center', repeat: 1, yoyo: true})
 
@@ -116,10 +142,14 @@ export const slideAnimation = function(tlname) {
     const slide13 = gsap.timeline({paused: true, defaults: {duration: 1}})
         .to('#sl13', {opacity: 1}, '<')
         .to(slide13Anim1, {progress: 1, duration: 1.5, ease: 'none'})
+        .to('#gsl13g3', {opacity: 1}, '<')
         .to('#gsl131', {opacity: 0}, '>+5')
         .to('#gsl132', {opacity: 1}, '<')
+        .to('#gsl13g3', {x:0,y:0}, '>')
+        .to('#gsl13g4', {scale: 1},">")
+        .to('#gsl131g5', {opacity: 1}, '>')
         .to(slide13Anim2, {progress: 1, duration: 1.5, ease: 'none'})
-        .to('#gsl132', {opacity: 0}, '>+5')
+        .to('#gsl132', {opacity: 0}, '>+2')
         .to('#gsl133', {opacity: 1}, '<')
         .to('#sl13', {opacity: 0}, '>+5')
 
