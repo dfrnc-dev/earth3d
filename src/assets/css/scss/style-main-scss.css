@@ -584,11 +584,6 @@ h1 {
         width: 100%;
         height: 100%;
         object-fit: contain; }
-    .smartapePresentation .slideContainer #sl1T, .smartapePresentation .slideContainer #sl1, .smartapePresentation .slideContainer #gsl12, .smartapePresentation .slideContainer #gsl13,
-    .smartapePresentation .slideContainer #sl2, .smartapePresentation .slideContainer #sl2Mon, .smartapePresentation .slideContainer #sl2P, .smartapePresentation .slideContainer #sl3, .smartapePresentation .slideContainer #gsl32, .smartapePresentation .slideContainer #gsl33, .smartapePresentation .slideContainer #sl4, .smartapePresentation .slideContainer #sl5, .smartapePresentation .slideContainer #gsl52, .smartapePresentation .slideContainer #gsl53, .smartapePresentation .slideContainer #gsl54,
-    .smartapePresentation .slideContainer #sl6, .smartapePresentation .slideContainer #gsl62, .smartapePresentation .slideContainer #sl7, .smartapePresentation .slideContainer #sl8, .smartapePresentation .slideContainer #gsl82, .smartapePresentation .slideContainer #sl10, .smartapePresentation .slideContainer #sl11, .smartapePresentation .slideContainer #sl12, .smartapePresentation .slideContainer #sl13, .smartapePresentation .slideContainer #gsl132, .smartapePresentation .slideContainer #gsl133, .smartapePresentation .slideContainer #sl14,
-    .smartapePresentation .slideContainer #sl15, .smartapePresentation .slideContainer #gsl152, .smartapePresentation .slideContainer #sl16, .smartapePresentation .slideContainer #gsl162, .smartapePresentation .slideContainer #sl17, .smartapePresentation .slideContainer #sl18, .smartapePresentation .slideContainer #sl19, .smartapePresentation .slideContainer #sl20, .smartapePresentation .slideContainer #sl21, .smartapePresentation .slideContainer #gsl212, .smartapePresentation .slideContainer #sl22 {
-      opacity: 0; }
 
 @media (orientation: portrait) {
   .smartapePresentation .chatForStory .content {

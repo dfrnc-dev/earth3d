@@ -16,7 +16,7 @@ export const slideAnimation = function(tlname) {
     gsap.set('#sl13, #gsl132, #gsl133', {opacity: 0})
     gsap.set('#gsl13g3', {opacity: 0,x:36,y:351})
     gsap.set('#gsl13g4', {scale: 0,transformOrigin:"0% 0%"})
-    gsap.set('#gsl131g5', {opacity: 0})
+    gsap.set('#sl131g5', {opacity: 0})
 
     gsap.set('#sl14', {opacity: 0})
     gsap.set('#sl15, #gsl151, #gsl152, #gsl153, #gsl154', {opacity: 0})
@@ -147,7 +147,7 @@ export const slideAnimation = function(tlname) {
         .to('#gsl132', {opacity: 1}, '<')
         .to('#gsl13g3', {x:0,y:0}, '>')
         .to('#gsl13g4', {scale: 1},">")
-        .to('#gsl131g5', {opacity: 1}, '>')
+        .to('#sl131g5', {opacity: 1}, '>')
         .to(slide13Anim2, {progress: 1, duration: 1.5, ease: 'none'})
         .to('#gsl132', {opacity: 0}, '>+2')
         .to('#gsl133', {opacity: 1}, '<')
