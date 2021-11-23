@@ -3,6 +3,7 @@
 node_modules/
 dist/
 src/assets/css/scss/.sass-cache
+src/assets/css/.sass-cache
 .DS_Store
 *.tgz
 *.zip
